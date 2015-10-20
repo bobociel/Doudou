@@ -1,0 +1,105 @@
+PODS:
+  - AFNetworking (2.5.4):
+    - AFNetworking/NSURLConnection (= 2.5.4)
+    - AFNetworking/NSURLSession (= 2.5.4)
+    - AFNetworking/Reachability (= 2.5.4)
+    - AFNetworking/Security (= 2.5.4)
+    - AFNetworking/Serialization (= 2.5.4)
+    - AFNetworking/UIKit (= 2.5.4)
+  - AFNetworking/NSURLConnection (2.5.4):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/NSURLSession (2.5.4):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (2.5.4)
+  - AFNetworking/Security (2.5.4)
+  - AFNetworking/Serialization (2.5.4)
+  - AFNetworking/UIKit (2.5.4):
+    - AFNetworking/NSURLConnection
+    - AFNetworking/NSURLSession
+  - CTAssetsPickerController (2.9.5)
+  - DTCoreText (1.6.16):
+    - DTFoundation/Core (~> 1.7.5)
+    - DTFoundation/DTAnimatedGIF (~> 1.7.5)
+    - DTFoundation/DTHTMLParser (~> 1.7.5)
+    - DTFoundation/UIKit (~> 1.7.5)
+  - DTFoundation/Core (1.7.8)
+  - DTFoundation/DTAnimatedGIF (1.7.8)
+  - DTFoundation/DTHTMLParser (1.7.8):
+    - DTFoundation/Core
+  - DTFoundation/UIKit (1.7.8):
+    - DTFoundation/Core
+  - EaseMobSDK (2.2.0.1)
+  - FastImageCache (1.3)
+  - FMDB (2.5):
+    - FMDB/standard (= 2.5)
+  - FMDB/common (2.5)
+  - FMDB/standard (2.5):
+    - FMDB/common
+  - IQKeyboardManager (3.3.2)
+  - JDStatusBarNotification (1.5.2)
+  - JVFloatLabeledTextField (1.1.0)
+  - Masonry (0.6.3)
+  - MJExtension (2.3.8)
+  - MJRefresh (2.0.4)
+  - pop (1.0.8)
+  - SDWebImage (3.7.3):
+    - SDWebImage/Core (= 3.7.3)
+  - SDWebImage/Core (3.7.3)
+
+DEPENDENCIES:
+  - AFNetworking (~> 2.5.2)
+  - CTAssetsPickerController (~> 2.9.5)
+  - DTCoreText
+  - EaseMobSDK (from `https://github.com/easemob/sdk-ios-cocoapods.git`)
+  - FastImageCache (~> 1.3)
+  - FMDB
+  - IQKeyboardManager
+  - JDStatusBarNotification
+  - JVFloatLabeledTextField (from `https://github.com/jverdi/JVFloatLabeledTextField.git`)
+  - Masonry
+  - MJExtension (~> 2.3.4)
+  - MJRefresh (~> 2.0.1)
+  - pop (from `https://github.com/facebook/pop.git`)
+  - SDWebImage (~> 3.7.2)
+
+EXTERNAL SOURCES:
+  EaseMobSDK:
+    :git: https://github.com/easemob/sdk-ios-cocoapods.git
+  JVFloatLabeledTextField:
+    :git: https://github.com/jverdi/JVFloatLabeledTextField.git
+  pop:
+    :git: https://github.com/facebook/pop.git
+
+CHECKOUT OPTIONS:
+  EaseMobSDK:
+    :commit: d7476b878044564357f47bb95279019f20448e19
+    :git: https://github.com/easemob/sdk-ios-cocoapods.git
+  JVFloatLabeledTextField:
+    :commit: e37d9153c72ce29a1d954ff030b1a2b900a99872
+    :git: https://github.com/jverdi/JVFloatLabeledTextField.git
+  pop:
+    :commit: c8a7530c4d06d803f09c88a1b81ef5cf247d23c0
+    :git: https://github.com/facebook/pop.git
+
+SPEC CHECKSUMS:
+  AFNetworking: 05edc0ac4c4c8cf57bcf4b84be5b0744b6d8e71e
+  CTAssetsPickerController: b413fece2194ae3dbf22fbc544cf6f2a6d516a4d
+  DTCoreText: 934a16fe9ffdd169c96261721b39dc312b75713d
+  DTFoundation: 46e2b2fafe78d67febfd8d1f85fe9845a093f00e
+  EaseMobSDK: dd9f205c4ff5e202ca4ece9e470f3cb4b1901c55
+  FastImageCache: 25f214fd46405daca3d1995d783fb83b9036c62e
+  FMDB: 96e8f1bcc1329e269330f99770ad4285d9003e52
+  IQKeyboardManager: d863eb0bca424d1f6dad6bdd1f856af52664add8
+  JDStatusBarNotification: a36d09ccbb047217572b074a61e7ca10dddc5f0a
+  JVFloatLabeledTextField: ea4a3d8387ddd43724c472bb2b8ab39b79af05d4
+  Masonry: ff105a956abcd19a618b2028b121cb638d7a8e2f
+  MJExtension: d83b55e6cb95c6274388539c782386b56f394a6d
+  MJRefresh: ea153717001d3c02444bd22b75c111d2937d2104
+  pop: bb773ae2c791ca2629de13b347e7a8b450fa6a57
+  SDWebImage: 1d2b1a1efda1ade1b00b6f8498865f8ddedc8a84
+
+COCOAPODS: 0.39.0
