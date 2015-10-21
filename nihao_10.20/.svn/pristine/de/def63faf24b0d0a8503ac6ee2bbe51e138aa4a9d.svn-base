@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6724" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6711"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AddFriendsViewController">
+            <connections>
+                <outlet property="peopleYouMayKnow" destination="Kef-Ep-Fo5" id="4ri-dN-fF1"/>
+                <outlet property="phone" destination="34w-Sy-AJR" id="9X9-mx-RCN"/>
+                <outlet property="searchDController" destination="RAA-Df-HJv" id="X92-gb-9uY"/>
+                <outlet property="searchDisplayController" destination="RAA-Df-HJv" id="r8x-bb-KxT"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="34w-Sy-AJR" customClass="UIControl">
+                    <rect key="frame" x="0.0" y="120" width="320" height="60"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mobile Contacts" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e4H-jI-gor">
+                            <rect key="frame" x="62" y="21" width="99" height="17"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="14"/>
+                            <color key="textColor" red="0.3411764705882353" green="0.3411764705882353" blue="0.3411764705882353" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_from_contacts" translatesAutoresizingMaskIntoConstraints="NO" id="biD-fa-UcW">
+                            <rect key="frame" x="13" y="13" width="34" height="34"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="34" id="BQB-OS-DRb"/>
+                                <constraint firstAttribute="height" constant="34" id="BvV-oC-anJ"/>
+                            </constraints>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="biD-fa-UcW" firstAttribute="leading" secondItem="34w-Sy-AJR" secondAttribute="leading" constant="13" id="7J4-PD-6Ny"/>
+                        <constraint firstAttribute="height" constant="60" id="ARf-Ce-pXb"/>
+                        <constraint firstAttribute="centerY" secondItem="biD-fa-UcW" secondAttribute="centerY" id="DfD-Ag-Pzy"/>
+                        <constraint firstAttribute="bottom" secondItem="biD-fa-UcW" secondAttribute="bottom" constant="13" id="Mww-Ss-ddB"/>
+                        <constraint firstItem="biD-fa-UcW" firstAttribute="top" secondItem="34w-Sy-AJR" secondAttribute="top" constant="13" id="Wpz-c4-HYM"/>
+                        <constraint firstAttribute="centerY" secondItem="biD-fa-UcW" secondAttribute="centerY" id="Xfr-BH-W7d"/>
+                        <constraint firstItem="biD-fa-UcW" firstAttribute="leading" secondItem="34w-Sy-AJR" secondAttribute="leading" constant="13" id="in8-VI-VCv"/>
+                        <constraint firstAttribute="centerY" secondItem="e4H-jI-gor" secondAttribute="centerY" id="ohz-I2-Ui7"/>
+                        <constraint firstItem="e4H-jI-gor" firstAttribute="leading" secondItem="biD-fa-UcW" secondAttribute="trailing" constant="15" id="upO-VR-S3z"/>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="7J4-PD-6Ny"/>
+                            <exclude reference="Mww-Ss-ddB"/>
+                            <exclude reference="Wpz-c4-HYM"/>
+                            <exclude reference="Xfr-BH-W7d"/>
+                        </mask>
+                    </variation>
+                    <connections>
+                        <action selector="addMobileContacts:" destination="-1" eventType="touchUpInside" id="ify-MM-DU0"/>
+                    </connections>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kef-Ep-Fo5" customClass="UIControl">
+                    <rect key="frame" x="0.0" y="60" width="320" height="60"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="People you may know" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VbQ-vm-UTj">
+                            <rect key="frame" x="62" y="21" width="134" height="17"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="134" id="3kQ-fu-WEa"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="14"/>
+                            <color key="textColor" red="0.3411764706" green="0.3411764706" blue="0.3411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_people_you_may_know" translatesAutoresizingMaskIntoConstraints="NO" id="VES-VI-fEG">
+                            <rect key="frame" x="13" y="13" width="34" height="34"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="34" id="Gcs-Ua-ueU"/>
+                                <constraint firstAttribute="width" constant="34" id="rNc-hi-1sQ"/>
+                            </constraints>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="VbQ-vm-UTj" firstAttribute="leading" secondItem="VES-VI-fEG" secondAttribute="trailing" constant="15" id="Ee0-Fw-2FP"/>
+                        <constraint firstAttribute="centerY" secondItem="VES-VI-fEG" secondAttribute="centerY" id="PfY-0M-b3A"/>
+                        <constraint firstItem="VES-VI-fEG" firstAttribute="top" secondItem="Kef-Ep-Fo5" secondAttribute="top" constant="13" id="R8P-4a-D1M"/>
+                        <constraint firstItem="VES-VI-fEG" firstAttribute="leading" secondItem="Kef-Ep-Fo5" secondAttribute="leading" constant="13" id="V64-xi-snc"/>
+                        <constraint firstItem="VES-VI-fEG" firstAttribute="leading" secondItem="Kef-Ep-Fo5" secondAttribute="leading" constant="13" id="YGR-6I-N12"/>
+                        <constraint firstAttribute="bottom" secondItem="VbQ-vm-UTj" secondAttribute="bottom" constant="22" id="ekq-LN-djn"/>
+                        <constraint firstAttribute="height" constant="60" id="iOC-mU-4h6"/>
+                        <constraint firstAttribute="bottom" secondItem="VES-VI-fEG" secondAttribute="bottom" constant="13" id="of3-EB-Xq9"/>
+                        <constraint firstItem="VbQ-vm-UTj" firstAttribute="top" secondItem="Kef-Ep-Fo5" secondAttribute="top" constant="21" id="pUd-Xz-1wL"/>
+                        <constraint firstAttribute="centerY" secondItem="VES-VI-fEG" secondAttribute="centerY" id="val-JZ-ycH"/>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="PfY-0M-b3A"/>
+                            <exclude reference="R8P-4a-D1M"/>
+                            <exclude reference="YGR-6I-N12"/>
+                            <exclude reference="of3-EB-Xq9"/>
+                        </mask>
+                    </variation>
+                    <connections>
+                        <action selector="viewPeopleYouMayKnow:" destination="-1" eventType="touchUpInside" id="NIb-Zn-dPH"/>
+                    </connections>
+                </view>
+                <searchBar contentMode="redraw" placeholder="Search new friends" translatesAutoresizingMaskIntoConstraints="NO" id="Kin-Rh-iFR">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                    <textInputTraits key="textInputTraits"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="U9g-zB-MR4"/>
+                    </connections>
+                </searchBar>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="34w-Sy-AJR" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Cv0-Oq-67Q"/>
+                <constraint firstItem="Kef-Ep-Fo5" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="HK1-ts-KPL"/>
+                <constraint firstAttribute="trailing" secondItem="Kef-Ep-Fo5" secondAttribute="trailing" id="JNB-DC-L3R"/>
+                <constraint firstItem="Kin-Rh-iFR" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="PK6-e3-dXR"/>
+                <constraint firstItem="Kin-Rh-iFR" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="lqx-qH-9pM"/>
+                <constraint firstItem="Kef-Ep-Fo5" firstAttribute="top" secondItem="Kin-Rh-iFR" secondAttribute="bottom" constant="16" id="mfu-ON-4ae"/>
+                <constraint firstAttribute="trailing" secondItem="34w-Sy-AJR" secondAttribute="trailing" id="nHV-1Z-cVg"/>
+                <constraint firstAttribute="trailing" secondItem="Kin-Rh-iFR" secondAttribute="trailing" id="pIo-e8-hmk"/>
+                <constraint firstItem="34w-Sy-AJR" firstAttribute="top" secondItem="Kef-Ep-Fo5" secondAttribute="bottom" id="qnA-s2-RrY"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+            <point key="canvasLocation" x="485" y="332"/>
+        </view>
+        <searchDisplayController id="RAA-Df-HJv">
+            <connections>
+                <outlet property="delegate" destination="-1" id="Bko-F1-At7"/>
+                <outlet property="searchBar" destination="Kin-Rh-iFR" id="6yn-FF-PuU"/>
+                <outlet property="searchContentsController" destination="-1" id="m5A-6D-kpF"/>
+                <outlet property="searchResultsDataSource" destination="-1" id="WzL-XZ-bLh"/>
+                <outlet property="searchResultsDelegate" destination="-1" id="73y-ZK-tcQ"/>
+            </connections>
+        </searchDisplayController>
+    </objects>
+    <resources>
+        <image name="icon_people_you_may_know" width="34" height="34"/>
+        <image name="img_from_contacts" width="34" height="34"/>
+    </resources>
+</document>

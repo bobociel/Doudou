@@ -1,0 +1,580 @@
+[
+        {
+        "cities" : [
+            "Anqing",
+            "Bengbu",
+            "Bozhou",
+            "Chaohu",
+            "Chizhou",
+            "Chuzhou",
+            "Fuyang",
+            "Hefei",
+            "Huaibei",
+            "Huainan",
+            "Huangshan",
+            "Lu'an",
+            "Ma'anshan",
+            "Suzhou",
+            "Tongling",
+            "Wuhu",
+            "Xuancheng"
+        ],
+        "province_name" : "Anhui"
+    },
+        {
+        "cities" : [
+        ],
+        "province_name" : "Beijing"
+    },
+        {
+        "cities" : [
+        ],
+        "province_name" : "Chongqing"
+    },
+        {
+        "cities" : [
+            "Fuzhou",
+            "Longyan",
+            "Nanping",
+            "Ningde",
+            "Putian",
+            "Quanzhou",
+            "Sanming",
+            "Xiamen",
+            "Zhangzhou"
+        ],
+        "province_name" : "Fujian"
+    },
+        {
+        "cities" : [
+            "Baiyin",
+            "Dingxi",
+            "Gannan",
+            "Jiayuguan",
+            "Jinchang",
+            "Jiuquan",
+            "Lanzhou",
+            "Linxia",
+            "Longnan",
+            "Pingliang",
+            "Qingyang",
+            "Tinshui",
+            "Wuwei",
+            "Zhangye"
+        ],
+        "province_name" : "Gansu"
+    },
+        {
+        "cities" : [
+            "Chaozhou",
+            "Dongguan",
+            "Foshan",
+            "Guangzhou",
+            "Heyuan",
+            "Huizhou",
+            "Jiangmen",
+            "Jieyang",
+            "Maoming",
+            "Meizhou",
+            "Qingyuan",
+            "Shantou",
+            "Shanwei",
+            "Shaoguan",
+            "Shenzhen",
+            "Yangjiang",
+            "Yunfu",
+            "Zhanjiang",
+            "Zhaoqing",
+            "Zhongshan",
+            "Zhuhai"
+        ],
+        "province_name" : "Guangdong"
+    },
+        {
+        "cities" : [
+            "Baise",
+            "Beihai",
+            "Chongzuo",
+            "Fangchenggang",
+            "Guigang",
+            "Guilin",
+            "Hechi",
+            "Hezhou",
+            "Laibin",
+            "Liuzhou",
+            "Nanning",
+            "Qinzhou",
+            "Wuzhou",
+            "Yulin"
+        ],
+        "province_name" : "Guangxi"
+    },
+        {
+        "cities" : [
+            "Anshun",
+            "Bijie",
+            "Buyi and Miao Autonomous Prefecture of Qiannan",
+            "Guiyang",
+            "Liupanshui",
+            "Qiandongnan Miao and Dong Autonomous Prefecture",
+            "Qianxinan Buyei and Miao Autonomous Prefecture",
+            "Tongren",
+            "Zunyi"
+        ],
+        "province_name" : "Guizhou"
+    },
+        {
+        "cities" : [
+            "Baoting",
+            "Changjiang",
+            "Chengmai",
+            "Danzhou",
+            "East",
+            "Fingers",
+            "Haikou",
+            "Honour",
+            "Lingshui",
+            "Manning",
+            "Music East",
+            "Pro High",
+            "Qionghai",
+            "Qiongzhong",
+            "Sansha",
+            "Sanya",
+            "Tunchang",
+            "Wenchang",
+            "White Sands"
+        ],
+        "province_name" : "Hainan"
+    },
+        {
+        "cities" : [
+            "Baoding",
+            "Cangzhou",
+            "Chengde",
+            "Handan",
+            "Hengshui",
+            "Langfang",
+            "Qinhuangdao",
+            "Shijiazhuang",
+            "Tangshan",
+            "Xingtai",
+            "Zhangjiakou"
+        ],
+        "province_name" : "Hebei"
+    },
+        {
+        "cities" : [
+            "Daqing",
+            "Greater Khingan Range region",
+            "Harbin",
+            "Hegang",
+            "Heihe",
+            "Jiamusi",
+            "Jixi",
+            "Mudanjiang",
+            "Qiqihar",
+            "Qitaihe",
+            "Shuangyashan",
+            "Suihua",
+            "Yichun"
+        ],
+        "province_name" : "Heilongjiang"
+    },
+        {
+        "cities" : [
+            "Anyang",
+            "Hebi",
+            "Jiaozuo",
+            "Kaifeng",
+            "Luohe",
+            "Luoyang",
+            "Nanyang",
+            "Pingdingshan",
+            "Puyang",
+            "Sanmenxia",
+            "Shangqiu",
+            "Xinxiang",
+            "Xinyang",
+            "Xuchang",
+            "Zhengzhou",
+            "Zhoukou",
+            "Zhumadian"
+        ],
+        "province_name" : "Henan"
+    },
+        {
+        "cities" : [
+            "Central and Western",
+            "Eastern",
+            "Islands",
+            "Kowloon City",
+            "Kwai Tsing",
+            "Kwun Tong",
+            "North",
+            "Sai Kung",
+            "Sha Tin",	
+            "Sham Shui Po",
+            "Southern",
+            "Tai Po",
+            "Tsuen Wan",
+            "Tuen Mun",
+            "Wan Chai",
+            "Wong Tai Sin",
+            "Yau Tsim Mong",
+            "Yuen Long"
+        ],
+        "province_name" : "Hong Kong"
+    },
+        {
+        "cities" : [
+            "Enshi Tujia and Miao Autonomous Prefecture",
+            "Ezhou",
+            "Huanggang",
+            "Huangshi",
+            "Jingmen",
+            "Jingzhou",
+            "Qianjiang",  
+            "Shennongjia",
+            "Shiyan",
+            "Suizhou",
+            "Tianmen",
+            "Wuhan",
+            "Xianning",
+            "Xiantao",
+            "Xiangfan",
+            "Xiaogan",
+            "Yangyang",
+            "Yichang"
+        ],
+        "province_name" : "Hubei"
+    },
+        {
+        "cities" : [
+            "Changde",
+            "Changsha",
+            "Chenzhou",
+            "Hengyang",
+            "Huaihua",
+            "Loudi",
+            "Shaoyang",
+            "Xiangtan",
+            "Xiangxi Tujia and Miao Autonomous Prefecture",
+            "Yiyang",
+            "Yongzhou",
+            "Yueyang",
+            "Zhangjiajie",
+            "Zhuzhou"
+        ],
+        "province_name" : "Hunan"
+    },
+        {
+        "cities" : [
+            "Alashan",
+            "Baotou",
+            "Bayannaoer",
+            "Chifeng",
+            "Hohhot",
+            "Hulunbeier",
+            "Ordos",
+            "Tongliao",
+            "Wuhai",
+            "Wulanchabu",
+            "Xilinguole Meng",
+            "Xing'an"
+        ],
+        "province_name" : "Inner Mongolia"
+    },
+        {
+        "cities" : [
+            "Changzhou",
+            "Huai'an",
+            "Lianyungang",
+            "Nanjing",
+            "Nantong",
+            "Suqian",
+            "Suzhou",
+            "Taizhou",
+            "Wuxi",
+            "Xuzhou",
+            "Yancheng",
+            "Yangzhou",
+            "Zhenjiang"
+        ],
+        "province_name" : "Jiangsu"
+    },
+        {
+        "cities" : [
+            "Fuzhou",
+            "Ganzhou",
+            "Ji'an",
+            "Jingdezhen",
+            "Jiujiang",
+            "Nanchang",
+            "Pingxiang",
+            "Shangrao",
+            "Xinyu",
+            "Yichun",
+            "Yingtan"
+        ],
+        "province_name" : "Jiangxi"
+    },
+        {
+        "cities" : [
+            "Baicheng",
+            "Baishan",
+            "Changchun",
+            "Jilin",
+            "Liaoyuan",
+            "Siping",
+            "Songyuan",
+            "Tonghua",
+            "Yanbian"
+        ],
+        "province_name" : "Jilin"
+    },
+        {
+        "cities" : [
+            "Anshan",
+            "Benxi",
+            "Chaoyang",
+            "Dalian",
+            "Dandong",
+            "Fushun",
+            "Fuxin",
+            "Huludao",
+            "Jinzhou",
+            "Liaoyang",
+            "Panjin",
+            "Shenyang",
+            "Tieling",
+            "Yingkou"
+        ],
+        "province_name" : "Liaoning"
+    },
+        {
+        "cities" : [
+            "Cathedral",
+            "Coloane",
+            "Fatima",
+            "St. Anthony",
+            "St. Lawrence",
+            "St. Lazarus",
+            "Taipa"
+        ],
+        "province_name" : "Macao"
+    },
+        {
+        "cities" : [
+            "Guyuan",
+            "Shizuishan",
+            "Wuzhong",
+            "Yinchuan",
+            "Zhongwei"
+        ],
+        "province_name" : "Ningxia"
+    },
+        {
+        "cities" : [
+            "Golog Tibetan",
+            "Haibei Tibetan",
+            "Haidong",
+            "Hainan",
+            "Haixi Mongolia Tibetan",
+            "Huangnan",
+            "Xining",
+            "Yushu"
+        ],
+        "province_name" : "Qinghai"
+    },
+        {
+        "cities" : [
+            "Ankang",
+            "Baoji",
+            "Hanzhong",
+            "Shangluo",
+            "Tongchuan",
+            "Weinan",
+            "Xi'an",
+            "Xianyang",
+            "Yanan",
+            "Yulin"
+        ],
+        "province_name" : "Shanxi(陕西)"
+    },
+        {
+        "cities" : [
+            "Binzhou",
+            "Dezhou",
+            "Dongying",
+            "Heze",
+            "Ji'nan",
+            "Jining",
+            "Laiwu",
+            "Liaocheng",
+            "Linyi",
+            "Qingdao",
+            "Rizhao",
+            "Tai'an",
+            "Weifang",
+            "Weihai",
+            "Yantai",
+            "Zaozhuang",
+            "Zibo"
+        ],
+        "province_name" : "Shandong"
+    },
+        {
+        "cities" : [
+            
+        ],
+        "province_name" : "Shanghai"
+    },
+        {
+        "cities" : [
+            "Changzhi",
+            "Datong",
+            "Jincheng",
+            "Jinzhong",
+            "Linfen",
+            "Lvliang",
+            "Shuozhou",
+            "Taiyuan",
+            "Xinzhou",
+            "Yangquan",
+            "Yuncheng"
+        ],
+        "province_name" : "Shanxi(山西)"
+    },
+        {
+        "cities" : [
+            "Aba",
+            "Bazhong",
+            "Chengdu",
+            "Dazhou", 
+            "Deyang",
+            "Ganzi",
+            "Guang'an",
+            "Guangyuan",
+            "Leshan",
+            "Liangshan",
+            "Luzhou",
+            "Meishan",
+            "Mianyang",
+            "Nanchong",
+            "Neijiang",
+            "Panzhihua",
+            "Suining",
+            "Ya'an",
+            "Yibin",
+            "Zigong",
+            "Ziyang"
+        ],
+        "province_name" : "Sichuan"
+    },
+        {
+        "cities" : [
+            "Changhua County",
+            "Chiayi City",
+            "Chiayi County",
+            "Hsinchu City",
+            "Hsinchu County",
+            "Hualien County",
+            "Kaohsiung City",
+            "Keelung City",
+            "Kinmen County",
+            "Lianjiang County",
+            "Miaoli County",
+            "Nantou County",
+            "New Taipei City",
+            "Penghu County",
+            "Pingtung County",
+            "Taichung City",
+            "Tainan City",
+            "Taipei",
+            "Taitung County",
+            "Taoyuan County",
+            "Yilan County",
+            "Yunlin County"
+        ],
+        "province_name" : "Taiwan"
+    },
+        {
+        "cities" : [
+        ],
+        "province_name" : "Tianjin"
+    },
+        {
+        "cities" : [
+            "Ali",
+            "Lhasa",
+            "Nagqu",
+            "Nyingchi",
+            "Qamdo",
+            "Shannan",
+            "Shigatse"
+        ],
+        "province_name" : "Tibet"
+    },
+        {
+        "cities" : [
+            "Aksu",
+            "Alar",
+            "Aletai",  
+            "Bayinguoleng",
+            "Bortala",         
+            "Changji",            
+            "Hami",
+            "Karamay",
+            "Kashi",
+            "Kirgiz",
+            "Shihezi",
+            "Tacheng",
+            "Tumushuke",
+            "Turpan",
+            "Urumqi",
+            "Wujiaqu",
+            "Yili Kazak"
+        ],
+        "province_name" : "Xinjiang"
+    },
+        {
+        "cities" : [
+            "Baoshan",
+            "Chuxiong",
+            "Dali",
+            "Dehong",
+            "Diqing",
+            "Honghe",
+            "Jinghong",
+            "Kunming",
+            "Lijiang",
+            "Lincang",
+            "Nujiang",
+            "Pu'er",
+            "Qujing",
+            "Simao",
+            "Wenshan",
+            "Xishuangbanna",
+            "Yuxi",
+            "Zhaotong"
+        ],
+        "province_name" : "Yunnan"
+    },
+        {
+        "cities" : [
+            "Hangzhou",
+            "Huzhou",
+            "Jiaxing",
+            "Jinhua",
+            "Lishui",
+            "Ningbo",
+            "Quzhou",
+            "Shaoxing",
+            "Taizhou",
+            "Wenzhou",
+            "Zhoushan"
+        ],
+        "province_name" : "Zhejiang"
+    }
+]

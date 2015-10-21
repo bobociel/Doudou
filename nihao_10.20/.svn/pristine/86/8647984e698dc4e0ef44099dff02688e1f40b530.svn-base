@@ -1,0 +1,241 @@
+{
+"晴" : {
+"en_name" : "Sunny",
+"home_image_name" : "icon_home_weather_sunny",
+"weather_status_image_name" : "icon_weather_status_sunny",
+"weather_forecast_image_name" : "icon_forecast_weather_sunny",
+"weather_bg_image_name" : "weather_sunny.jpg"
+
+},
+"多云" : {
+"en_name" : "Cloudy",
+"home_image_name" : "icon_home_weather_cloudy",
+"weather_status_image_name" : "icon_weather_status_cloudy",
+"weather_forecast_image_name" : "icon_forecast_weather_cloudy",
+"weather_bg_image_name" : "weather_cloudy.jpg"
+},
+"阴" : {
+"en_name" : "Overcast",
+"home_image_name" : "icon_home_weather_overcast",
+"weather_status_image_name" : "icon_weather_status_overcast",
+"weather_forecast_image_name" : "icon_forecast_weather_overcast",
+"weather_bg_image_name" : "weather_overcast.jpg"
+},
+"阵雨" : {
+"en_name" : "Shower",
+"home_image_name" : "icon_home_weather_shower",
+"weather_status_image_name" : "icon_weather_status_shower",
+"weather_forecast_image_name" : "icon_forecast_weather_shower",
+"weather_bg_image_name" : "weather_shower.jpg"
+},
+"雷阵雨" : {
+"en_name" : "Thundershower",
+"home_image_name" : "icon_home_weather_thundershower",
+"weather_status_image_name" : "icon_weather_status_thundershower",
+"weather_forecast_image_name" : "icon_forecast_weather_thundershower",
+"weather_bg_image_name" : "weather_thundershower.jpg"
+},
+"雷阵雨伴有冰雹" : {
+"en_name" : "Thundershower with hail",
+"home_image_name" : "icon_home_weather_thundershower_with_hail",
+"weather_status_image_name" : "icon_weather_status_thundershower_with_hail",
+"weather_forecast_image_name" : "icon_forecast_weather_thundershower_with_hail",
+"weather_bg_image_name" : "weather_thundershower.jpg"
+},
+"雨夹雪" : {
+"en_name" : "Sleet",
+"home_image_name" : "icon_home_weather_sleet",
+"weather_status_image_name" : "icon_weather_status_sleet",
+"weather_forecast_image_name" : "icon_forecast_weather_sleet",
+"weather_bg_image_name" : "weather_sleet.jpg"
+},
+"小雨" : {
+"en_name" : "Light rain",
+"home_image_name" : "icon_home_weather_light_rain",
+"weather_status_image_name" : "icon_weather_status_light_rain",
+"weather_forecast_image_name" : "icon_forecast_weather_light_rain",
+"weather_bg_image_name" : "weather_rain.jpg"
+},
+"中雨" : {
+"en_name" : "Moderate rain",
+"home_image_name" : "icon_home_weather_moderate_rain",
+"weather_status_image_name" : "icon_weather_status_moderate_rain",
+"weather_forecast_image_name" : "icon_forecast_weather_moderate_rain",
+"weather_bg_image_name" : "weather_rain.jpg"
+},
+"大雨" : {
+"en_name" : "Heavy rain",
+"home_image_name" : "icon_home_weather_heavy_rain",
+"weather_status_image_name" : "icon_weather_status_heavy_rain",
+"weather_forecast_image_name" : "icon_forecast_weather_heavy_rain",
+"weather_bg_image_name" : "weather_heavy_rain.jpg"
+},
+"暴雨" : {
+"en_name" : "Storm",
+"home_image_name" : "icon_home_weather_storm",
+"weather_status_image_name" : "icon_weather_status_storm",
+"weather_forecast_image_name" : "icon_forecast_weather_storm",
+"weather_bg_image_name" : "weather_heavy_rain.jpg"
+},
+"大暴雨" : {
+"en_name" : "Heavy storm",
+"home_image_name" : "icon_home_weather_heavy_storm",
+"weather_status_image_name" : "icon_weather_status_heavy_storm",
+"weather_forecast_image_name" : "icon_forecast_weather_heavy_storm",
+"weather_bg_image_name" : "weather_heavy_rain.jpg"
+},
+"特大暴雨" : {
+"en_name" : "Severe storm",
+"home_image_name" : "icon_home_weather_severe_storm",
+"weather_status_image_name" : "icon_weather_status_severe_storm",
+"weather_forecast_image_name" : "icon_forecast_weather_severe_storm",
+"weather_bg_image_name" : "weather_heavy_rain.jpg"
+},
+"阵雪" : {
+"en_name" : "Snow flurry",
+"home_image_name" : "icon_home_weather_snow_flurry",
+"weather_status_image_name" : "icon_weather_status_snow_flurry",
+"weather_forecast_image_name" : "icon_forecast_weather_snow_flurry",
+"weather_bg_image_name" : "weather_snow_flurry.jpg"
+},
+"小雪" : {
+"en_name" : "Light snow",
+"home_image_name" : "icon_home_weather_light_snow",
+"weather_status_image_name" : "icon_weather_status_light_snow",
+"weather_forecast_image_name" : "icon_forecast_weather_light_snow",
+"weather_bg_image_name" : "weather_snow.jpg"
+},
+"中雪" : {
+"en_name" : "Moderate snow",
+"home_image_name" : "icon_home_weather_moderate_snow",
+"weather_status_image_name" : "icon_weather_status_moderate_snow",
+"weather_forecast_image_name" : "icon_forecast_weather_moderate_snow",
+"weather_bg_image_name" : "weather_snow.jpg"
+},
+"大雪" : {
+"en_name" : "Heavy snow",
+"home_image_name" : "icon_home_weather_heavy_snow",
+"weather_status_image_name" : "icon_weather_status_heavy_snow",
+"weather_forecast_image_name" : "icon_forecast_weather_heavy_snow",
+"weather_bg_image_name" : "weather_heavy_snow.jpg"
+},
+"暴雪" : {
+"en_name" : "Snowstorm",
+"home_image_name" : "icon_home_weather_snowstorm",
+"weather_status_image_name" : "icon_weather_status_snowstorm",
+"weather_forecast_image_name" : "icon_forecast_weather_snowstorm",
+"weather_bg_image_name" : "weather_heavy_snow.jpg"
+},
+"雾" : {
+"en_name" : "Foggy",
+"home_image_name" : "icon_home_weather_foggy",
+"weather_status_image_name" : "icon_weather_status_foggy",
+"weather_forecast_image_name" : "icon_forecast_weather_foggy",
+"weather_bg_image_name" : "weather_foggy.jpg"
+},
+"冻雨" : {
+"en_name" : "Ice rain",
+"home_image_name" : "icon_home_weather_ice_rain",
+"weather_status_image_name" : "icon_weather_status_ice_rain",
+"weather_forecast_image_name" : "icon_forecast_weather_ice_rain",
+"weather_bg_image_name" : "weather_ice_rain.jpg"
+},
+"沙尘暴" : {
+"en_name" : "Dust storm",
+"home_image_name" : "icon_home_weather_dust_storm",
+"weather_status_image_name" : "icon_weather_status_dust_storm",
+"weather_forecast_image_name" : "icon_forecast_weather_dust_storm",
+"weather_bg_image_name" : "weather_sandstorm.jpg"
+},
+"小到中雨" : {
+"en_name" : "Light to moderate rain",
+"home_image_name" : "icon_home_weather_light_rain",
+"weather_status_image_name" : "icon_weather_status_light_rain",
+"weather_forecast_image_name" : "icon_forecast_weather_light_rain",
+"weather_bg_image_name" : "weather_rain.jpg"
+},
+"中到大雨" : {
+"en_name" : "Moderate to heavy rain",
+"home_image_name" : "icon_home_weather_moderate_rain",
+"weather_status_image_name" : "icon_weather_status_moderate_rain",
+"weather_forecast_image_name" : "icon_forecast_weather_moderate_rain",
+"weather_bg_image_name" : "weather_rain.jpg"
+},
+"大到暴雨" : {
+"en_name" : "Heavy rain to storm",
+"home_image_name" : "icon_home_weather_heavy_rain",
+"weather_status_image_name" : "icon_weather_status_heavy_rain",
+"weather_forecast_image_name" : "icon_forecast_weather_heavy_rain",
+"weather_bg_image_name" : "weather_heavy_rain.jpg"
+},
+"暴雨到大暴雨" : {
+"en_name" : "Storm to heavy storm",
+"home_image_name" : "icon_home_weather_storm",
+"weather_status_image_name" : "icon_weather_status_storm",
+"weather_forecast_image_name" : "icon_forecast_weather_storm",
+"weather_bg_image_name" : "weather_heavy_rain.jpg"
+},
+"大暴雨到特大暴雨" : {
+"en_name" : "Heavy to severe storm",
+"home_image_name" : "icon_home_weather_storm",
+"weather_status_image_name" : "icon_weather_status_storm",
+"weather_forecast_image_name" : "icon_forecast_weather_storm",
+"weather_bg_image_name" : "weather_heavy_rain.jpg"
+},
+"小到中雪" : {
+"en_name" : "Light to moderate snow",
+"home_image_name" : "icon_home_weather_light_snow",
+"weather_status_image_name" : "icon_weather_status_light_snow",
+"weather_forecast_image_name" : "icon_forecast_weather_light_snow",
+"weather_bg_image_name" : "weather_snow.jpg"
+},
+"中到大雪" : {
+"en_name" : "Moderate to heavy snow",
+"home_image_name" : "icon_home_weather_moderate_snow",
+"weather_status_image_name" : "icon_weather_status_moderate_snow",
+"weather_forecast_image_name" : "icon_forecast_weather_moderate_snow",
+"weather_bg_image_name" : "weather_snow.jpg"
+},
+"大到暴雪" : {
+"en_name" : "Heavy snow to snowstorm",
+"home_image_name" : "icon_home_weather_snowstorm",
+"weather_status_image_name" : "icon_weather_status_snowstorm",
+"weather_forecast_image_name" : "icon_forecast_weather_snowstorm",
+"weather_bg_image_name" : "weather_heavy_snow.jpg"
+},
+"浮尘" : {
+"en_name" : "Dust",
+"home_image_name" : "icon_home_weather_haze",
+"weather_status_image_name" : "icon_weather_status_haze",
+"weather_forecast_image_name" : "icon_forecast_weather_haze",
+"weather_bg_image_name" : "weather_foggy.jpg"
+},
+"扬沙" : {
+"en_name" : "Sand",
+"home_image_name" : "icon_home_weather_sandstorm",
+"weather_status_image_name" : "icon_weather_status_sandstorm",
+"weather_forecast_image_name" : "icon_forecast_weather_sandstorm",
+"weather_bg_image_name" : "weather_sandstorm.jpg"
+},
+"强沙尘暴" : {
+"en_name" : "Sandstorm",
+"home_image_name" : "icon_home_weather_sandstorm",
+"weather_status_image_name" : "icon_weather_status_sandstorm",
+"weather_forecast_image_name" : "icon_forecast_weather_sandstorm",
+"weather_bg_image_name" : "weather_sandstorm.jpg"
+},
+"霾" : {
+"en_name" : "Haze",
+"home_image_name" : "icon_home_weather_haze",
+"weather_status_image_name" : "icon_weather_status_haze",
+"weather_forecast_image_name" : "icon_forecast_weather_haze",
+"weather_bg_image_name" : "weather_haze.jpg"
+},
+"无" : {
+"en_name" : "Unknown",
+"home_image_name" : "",
+"weather_status_image_name" : "",
+"weather_forecast_image_name" : "",
+"weather_bg_image_name" : ""
+}
+}

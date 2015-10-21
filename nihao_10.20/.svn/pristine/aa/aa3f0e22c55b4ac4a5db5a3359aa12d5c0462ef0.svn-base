@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="AskCategoryCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="81"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xp7-8J-NNf">
+                        <rect key="frame" x="16" y="10" width="60" height="60"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="60" id="Tja-gs-lZl"/>
+                            <constraint firstAttribute="height" constant="60" id="uvZ-Nb-ba7"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qeX-bH-wT3">
+                        <rect key="frame" x="96" y="18" width="196" height="21.5"/>
+                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="18"/>
+                        <color key="textColor" red="0.19607843137254902" green="0.19607843137254902" blue="0.19607843137254902" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EiV-gA-dUb">
+                        <rect key="frame" x="96" y="44" width="37.5" height="19"/>
+                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="16"/>
+                        <color key="textColor" red="0.29019607843137257" green="0.71764705882352942" blue="0.99215686274509807" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="questions" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Jg-Nj-YST">
+                        <rect key="frame" x="135" y="48" width="50" height="14.5"/>
+                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="12"/>
+                        <color key="textColor" red="0.61960784313725492" green="0.61960784313725492" blue="0.61960784313725492" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="9Jg-Nj-YST" firstAttribute="leading" secondItem="EiV-gA-dUb" secondAttribute="trailing" constant="2" id="276-Fl-IOD"/>
+                    <constraint firstItem="xp7-8J-NNf" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="8" id="4eZ-Nc-0PG"/>
+                    <constraint firstAttribute="centerY" secondItem="xp7-8J-NNf" secondAttribute="centerY" id="CCv-eT-lB3"/>
+                    <constraint firstItem="EiV-gA-dUb" firstAttribute="leading" secondItem="xp7-8J-NNf" secondAttribute="trailing" constant="20" id="JpC-wO-0uq"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="qeX-bH-wT3" secondAttribute="trailing" constant="20" id="NsW-Cm-Tdb"/>
+                    <constraint firstItem="qeX-bH-wT3" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="10" id="Xl8-v9-lcC"/>
+                    <constraint firstItem="EiV-gA-dUb" firstAttribute="baseline" secondItem="9Jg-Nj-YST" secondAttribute="baseline" id="XrY-ra-yfK"/>
+                    <constraint firstItem="EiV-gA-dUb" firstAttribute="top" secondItem="qeX-bH-wT3" secondAttribute="bottom" constant="5" id="pmI-dD-JDL"/>
+                    <constraint firstItem="qeX-bH-wT3" firstAttribute="leading" secondItem="xp7-8J-NNf" secondAttribute="trailing" constant="20" id="ppc-SW-NSd"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="categoryImageView" destination="xp7-8J-NNf" id="nYs-Pz-tfg"/>
+                <outlet property="categoryNameLabel" destination="qeX-bH-wT3" id="qb5-80-yM8"/>
+                <outlet property="categoryQuestionCountLabel" destination="EiV-gA-dUb" id="FYd-hZ-SoX"/>
+            </connections>
+            <point key="canvasLocation" x="360" y="371.5"/>
+        </tableViewCell>
+    </objects>
+</document>
