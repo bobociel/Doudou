@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="xzW-VL-FoS" customClass="SelectCityHeaderView">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="192"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7D7-FK-u4X">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="40"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Wu-nn-H42">
+                            <rect key="frame" x="15" y="6" width="570" height="28"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="28" id="3Pg-kj-XnR"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="14"/>
+                            <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            <inset key="titleEdgeInsets" minX="9" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            <state key="normal" title="City" image="common_icon_search_gray">
+                                <color key="titleColor" red="0.82352941180000006" green="0.82352941180000006" blue="0.82352941180000006" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="searchCity:" destination="xzW-VL-FoS" eventType="touchUpInside" id="IGX-LW-SXZ"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.95686274509803915" green="0.95686274509803915" blue="0.95686274509803915" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="IAV-8r-B5k"/>
+                        <constraint firstItem="2Wu-nn-H42" firstAttribute="leading" secondItem="7D7-FK-u4X" secondAttribute="leading" constant="15" id="MqR-9L-kDr"/>
+                        <constraint firstAttribute="centerY" secondItem="2Wu-nn-H42" secondAttribute="centerY" id="OA7-qZ-lF3"/>
+                        <constraint firstAttribute="trailing" secondItem="2Wu-nn-H42" secondAttribute="trailing" constant="15" id="e8Q-c0-Ftd"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KTI-xV-QgK">
+                    <rect key="frame" x="0.0" y="40" width="600" height="60"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current positioning city" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g4u-RV-USq">
+                            <rect key="frame" x="15" y="21" width="138.5" height="17"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="14"/>
+                            <color key="textColor" red="0.3411764706" green="0.3411764706" blue="0.3411764706" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hhG-Wh-QYS">
+                            <rect key="frame" x="503" y="15" width="82" height="30"/>
+                            <color key="backgroundColor" red="0.2901960784" green="0.71764705880000002" blue="0.99215686270000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="30" id="lNF-pN-zuu"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="14"/>
+                            <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
+                            <state key="normal" title="Hangzhou">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="selectLocateCity:" destination="xzW-VL-FoS" eventType="touchUpInside" id="Qc3-cD-UNT"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="2uu-Fr-c0M"/>
+                        <constraint firstAttribute="trailing" secondItem="hhG-Wh-QYS" secondAttribute="trailing" constant="15" id="AuC-8B-ZlK"/>
+                        <constraint firstAttribute="centerY" secondItem="hhG-Wh-QYS" secondAttribute="centerY" id="LcG-in-0SU"/>
+                        <constraint firstItem="g4u-RV-USq" firstAttribute="leading" secondItem="KTI-xV-QgK" secondAttribute="leading" constant="15" id="XRk-zE-tSd"/>
+                        <constraint firstAttribute="centerY" secondItem="g4u-RV-USq" secondAttribute="centerY" id="yUN-xg-9k4"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PZg-oD-rqO">
+                    <rect key="frame" x="0.0" y="100" width="600" height="52"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hot City" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mXj-o1-KFo">
+                            <rect key="frame" x="15" y="15" width="49" height="17"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="14"/>
+                            <color key="textColor" red="0.3411764706" green="0.3411764706" blue="0.3411764706" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="xr3-ko-o1J">
+                            <rect key="frame" x="15" y="42" width="570" height="0.0"/>
+                            <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="3gM-5p-adY">
+                                <size key="itemSize" width="0.0" height="0.0"/>
+                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            </collectionViewFlowLayout>
+                        </collectionView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="xr3-ko-o1J" secondAttribute="trailing" constant="15" id="2Hm-aZ-SV2"/>
+                        <constraint firstItem="mXj-o1-KFo" firstAttribute="leading" secondItem="PZg-oD-rqO" secondAttribute="leading" constant="15" id="45U-o3-4qP"/>
+                        <constraint firstAttribute="bottom" secondItem="xr3-ko-o1J" secondAttribute="bottom" constant="10" id="DOH-UG-GYy"/>
+                        <constraint firstItem="xr3-ko-o1J" firstAttribute="leading" secondItem="PZg-oD-rqO" secondAttribute="leading" constant="15" id="HH7-aB-hFO"/>
+                        <constraint firstItem="mXj-o1-KFo" firstAttribute="top" secondItem="PZg-oD-rqO" secondAttribute="top" constant="15" id="h4b-za-38C"/>
+                        <constraint firstItem="xr3-ko-o1J" firstAttribute="top" secondItem="mXj-o1-KFo" secondAttribute="bottom" constant="10" id="jB3-It-JuG"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Itj-jE-Xs9">
+                    <rect key="frame" x="0.0" y="152" width="600" height="40"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="All Cities" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d1I-jg-bMS">
+                            <rect key="frame" x="15" y="11" width="51.5" height="17"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="14"/>
+                            <color key="textColor" red="0.3411764706" green="0.3411764706" blue="0.3411764706" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="centerY" secondItem="d1I-jg-bMS" secondAttribute="centerY" id="Mk0-Mr-IpK"/>
+                        <constraint firstItem="d1I-jg-bMS" firstAttribute="leading" secondItem="Itj-jE-Xs9" secondAttribute="leading" constant="15" id="pKH-aj-gi1"/>
+                        <constraint firstAttribute="height" constant="40" id="s4e-m0-BNv"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="KTI-xV-QgK" firstAttribute="top" secondItem="7D7-FK-u4X" secondAttribute="bottom" id="1WM-VD-llS"/>
+                <constraint firstItem="Itj-jE-Xs9" firstAttribute="top" secondItem="PZg-oD-rqO" secondAttribute="bottom" id="6WR-ww-bm1"/>
+                <constraint firstAttribute="trailing" secondItem="KTI-xV-QgK" secondAttribute="trailing" id="Eqj-f2-V6x"/>
+                <constraint firstItem="Itj-jE-Xs9" firstAttribute="leading" secondItem="xzW-VL-FoS" secondAttribute="leading" id="Ew9-gf-9Xk"/>
+                <constraint firstItem="7D7-FK-u4X" firstAttribute="top" secondItem="xzW-VL-FoS" secondAttribute="top" id="JuW-DD-V4T"/>
+                <constraint firstItem="KTI-xV-QgK" firstAttribute="leading" secondItem="xzW-VL-FoS" secondAttribute="leading" id="SyW-iO-5As"/>
+                <constraint firstItem="7D7-FK-u4X" firstAttribute="leading" secondItem="xzW-VL-FoS" secondAttribute="leading" id="YRy-jm-5c2"/>
+                <constraint firstAttribute="bottom" secondItem="Itj-jE-Xs9" secondAttribute="bottom" id="e9d-D4-iF9"/>
+                <constraint firstAttribute="trailing" secondItem="7D7-FK-u4X" secondAttribute="trailing" id="hx6-os-rO6"/>
+                <constraint firstItem="PZg-oD-rqO" firstAttribute="top" secondItem="KTI-xV-QgK" secondAttribute="bottom" id="rGK-1M-zQ7"/>
+                <constraint firstItem="PZg-oD-rqO" firstAttribute="leading" secondItem="xzW-VL-FoS" secondAttribute="leading" id="tdM-f2-1qp"/>
+                <constraint firstAttribute="trailing" secondItem="Itj-jE-Xs9" secondAttribute="trailing" id="zCb-FE-dy9"/>
+                <constraint firstAttribute="trailing" secondItem="PZg-oD-rqO" secondAttribute="trailing" id="zzk-EC-BOR"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="allCitiesView" destination="Itj-jE-Xs9" id="cqX-MT-Jsb"/>
+                <outlet property="collectionView" destination="xr3-ko-o1J" id="GaA-Nr-Pe7"/>
+                <outlet property="currentCityNameBtn" destination="hhG-Wh-QYS" id="sdY-yK-vpT"/>
+                <outlet property="searchBtn" destination="2Wu-nn-H42" id="cHg-Zg-qTW"/>
+            </connections>
+            <point key="canvasLocation" x="556" y="171"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="common_icon_search_gray" width="15" height="15"/>
+    </resources>
+</document>

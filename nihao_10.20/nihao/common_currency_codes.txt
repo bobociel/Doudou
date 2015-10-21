@@ -1,0 +1,55 @@
+{
+"codes" : [
+{
+"country_currency_code" : "CNY",
+"country_currency_symbol" : "China Yuan Renminbi",
+"country_name_zh" : "人民币"
+},
+{
+"country_currency_code" : "USD",
+"country_currency_symbol" : "US Dollar",
+"country_name_zh" : "美元"
+},
+{
+"country_currency_code" : "HKD",
+"country_currency_symbol" : "Hong Kong Dollar",
+"country_name_zh" : "港币"
+},
+{
+"country_currency_code" : "EUR",
+"country_currency_symbol" : "Euro",
+"country_name_zh" : "欧元"
+},
+{
+"country_currency_code" : "JPY",
+"country_currency_symbol" : "Japan Yen",
+"country_name_zh" : "日元"
+},
+{
+"country_currency_code" : "GBP",
+"country_currency_symbol" : "Britain Pound",
+"country_name_zh" : "英镑"
+},
+{
+"country_currency_code" : "TWD",
+"country_currency_symbol" : "Taiwan Dollar",
+"country_name_zh" : "新台币"
+},
+{
+"country_currency_code" : "MOP",
+"country_currency_symbol" : "Macau Pataca",
+"country_name_zh" : "澳门币"
+},
+{
+"country_currency_code" : "AUD",
+"country_currency_symbol" : "Australia Dollar",
+"country_name_zh" : "澳大利亚元"
+},
+{
+"country_currency_code" : "CAD",
+"country_currency_symbol" : "Canada Dollar",
+"country_name_zh" : "加拿大元"
+}
+
+]
+}
