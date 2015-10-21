@@ -25,7 +25,7 @@
     
     UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 100, 300, 40)];
     
-    NSMutableAttributedString *attributeString = [[NSMutableAttributedString alloc] initWithString:@"123 89 998 😊🇨🇳🇩🇪🇫🇷你好嗷嗷啊"];
+    NSMutableAttributedString *attributeString = [[NSMutableAttributedString alloc] initWithString:@"123 89 998 😊🇨🇳🇩🇪🇫🇷你好嗷嗷啊 999900000"];
     NSMutableArray *rangeArray = [NSMutableArray array];
     for(NSInteger i=0; i < attributeString.length; i++)
     {
