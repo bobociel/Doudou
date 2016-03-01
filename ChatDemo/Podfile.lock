@@ -1,0 +1,22 @@
+PODS:
+  - AVOSCloud (3.2.5.1)
+  - AVOSCloudIM (3.2.5.1):
+    - AVOSCloud
+  - FMDB (2.6):
+    - FMDB/standard (= 2.6)
+  - FMDB/standard (2.6)
+  - JSBadgeView (1.4.1)
+
+DEPENDENCIES:
+  - AVOSCloud
+  - AVOSCloudIM
+  - FMDB
+  - JSBadgeView
+
+SPEC CHECKSUMS:
+  AVOSCloud: f5b1f8d04b2ad4035d01b6b96fb9ed450fd7a1cd
+  AVOSCloudIM: 9683efb1a7f022196cb8b4c54f67bd1df826bbbe
+  FMDB: c1968bab3ab0aed38f66cb778ae1e7fa9a652b6e
+  JSBadgeView: 3861ddee41094284d9468e6d0af5107f703aaac5
+
+COCOAPODS: 0.39.0
