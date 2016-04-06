@@ -7,8 +7,10 @@
 //
 #import "WTImageSelectViewController.h"
 #import "WTImageCell.h"
+#import "WTWeddingStory.h"
 #import "AppDelegate.h"
-#define kNavBarHeight 64.0
+#import "WTAlertView.h"
+#import "LWUtil.h"
 #define kButtonHeight 50.0
 #define kCellWidth ((screenWidth - 15) / 4.0)
 #define kCellHeight ((screenWidth - 15) / 4.0)
@@ -27,20 +29,10 @@
 
 @implementation WTImageSelectViewController
 
-+ (ALAssetsLibrary *)assetLibrary
-{
-	static ALAssetsLibrary *assetLibrary;
-	static dispatch_once_t onceToken;
-	dispatch_once(&onceToken, ^{
-		assetLibrary = [[ALAssetsLibrary alloc] init];
-	});
-	return assetLibrary;
-}
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    self.title =  self.fileType == WTFileTypeImage ? @"所有相片" : @"所有视频";
+    self.title = self.fileType == WTFileTypeImage ? @"所有相片" : @"所有视频";
 
 	self.localAssets = [NSMutableArray array];
 	self.selectedAssets = [NSMutableArray array];
@@ -52,7 +44,7 @@
 
 	self.sureButton = [UIButton buttonWithType:UIButtonTypeSystem];
 	self.sureButton.frame = CGRectMake(0, screenHeight-kNavBarHeight , screenWidth,kButtonHeight);
-	[self.sureButton setBackgroundColor:WeddingTimeBaseColor];
+	[self.sureButton setBackgroundColor:treasureRedColor];
 	[self.sureButton setTitle:@"确定" forState:UIControlStateNormal];
 	[self.sureButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
 	[self.view addSubview:self.sureButton];
@@ -62,7 +54,7 @@
 - (void)loadAsset
 {
 	[self.activityView startAnimating];
-	[[WTImageSelectViewController assetLibrary] enumerateGroupsWithTypes:ALAssetsGroupSavedPhotos usingBlock:^(ALAssetsGroup *group, BOOL *stop) {
+	[[AppDelegate assetLibrary] enumerateGroupsWithTypes:ALAssetsGroupSavedPhotos usingBlock:^(ALAssetsGroup *group, BOOL *stop) {
 		if(group){
 			ALAssetsFilter *filter = self.fileType == WTFileTypeImage ? [ALAssetsFilter allPhotos] : [ALAssetsFilter allVideos];
 			[group setAssetsFilter:filter];
@@ -89,8 +81,23 @@
 
 - (void)choosedImage:(UIButton *)btn
 {
-	self.block(WTFileTypeImage,self.selectedAssets,nil);
-	[self.navigationController popViewControllerAnimated:YES];
+	[self showLoadingViewTitle:@"图片处理中..."];
+	dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+		for (NSInteger i=0; i < self.selectedAssets.count; i++) {
+			ALAsset *imageAsset = self.selectedAssets[i];
+			if(imageAsset.defaultRepresentation.size > kMaxImageAssetSize)
+			{
+				UIImage *uploadImage = [UIImage imageWithCGImage:imageAsset.defaultRepresentation.fullScreenImage scale:1.0 orientation:UIImageOrientationUp];
+				NSData *imageData = UIImageJPEGRepresentation(uploadImage, 0.8);
+				[self.selectedAssets replaceObjectAtIndex:i withObject:imageData];
+			}
+		}
+		dispatch_async(dispatch_get_main_queue(), ^{
+			if(self.block) { self.block(WTFileTypeImage,self.selectedAssets,nil); }
+			[self hideLoadingView];
+			[self.navigationController popViewControllerAnimated:YES];
+		});
+	});
 }
 
 #pragma mark - Collection View
@@ -112,10 +119,20 @@
 {
 	if(self.fileType == WTFileTypeImage)
     {
-		if(asset )
-        {
-			![self.selectedAssets containsObject:asset] ? [self.selectedAssets addObject:asset] : [self.selectedAssets removeObject:asset] ;
+		if(cell.markImageView.highlighted && self.selectedAssets.count + 1 > 9)
+		{
+			cell.markImageView.highlighted = NO;
+			WTAlertView *alertView = [[WTAlertView alloc]initWithText:@"每次最多可选择九张照片" centerImage:nil];
+			[alertView setButtonTitles:@[@"关闭"]];
+			[alertView setOnButtonTouchUpInside:^(WTAlertView *alertView, int buttonIndex) {
+               [alertView close];
+			}];
+			[alertView show];
+			return ;
 		}
+
+		![self.selectedAssets containsObject:asset] ? [self.selectedAssets addObject:asset] : [self.selectedAssets removeObject:asset] ;
+
 		CGFloat y = self.selectedAssets.count > 0 ? screenHeight - kNavBarHeight - kButtonHeight : screenHeight - kNavBarHeight ;
 		[UIView animateWithDuration:0.1 animations:^{
 			self.sureButton.frame = CGRectMake(0, y , screenWidth, kButtonHeight);

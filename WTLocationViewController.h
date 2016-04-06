@@ -6,7 +6,6 @@
 //  Copyright © 2015年 lovewith.me. All rights reserved.
 //
 #import <MapKit/MapKit.h>
-#import <BMapKit.h>
 #import "BaseViewController.h"
 typedef void(^LocationBlock)(NSString *weddingAddress,NSString *weddingMapPoint);
 

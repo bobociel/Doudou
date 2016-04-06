@@ -45,9 +45,11 @@
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
 {
-    if([self.delegate respondsToSelector:@selector(uploadManager:didChangeUploadState:)]){
-        [self.delegate uploadManager:self didChangeUploadState:(WTUploadStatue)[change[NSKeyValueChangeNewKey] integerValue]];
-    }
+	dispatch_async(dispatch_get_main_queue(), ^{
+		if([self.delegate respondsToSelector:@selector(uploadManager:didChangeUploadState:)]){
+			[self.delegate uploadManager:self didChangeUploadState:(WTUploadStatue)[change[NSKeyValueChangeNewKey] integerValue]];
+		}
+	});
 }
 
 #pragma mark -  Local Cache
@@ -64,16 +66,16 @@
 	dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
 		NSError *error;
 		ALAssetRepresentation *representation = [asset defaultRepresentation];
-		NSMutableData *assetData = [NSMutableData dataWithCapacity:representation.size];
-		[representation getBytes:[assetData mutableBytes] fromOffset:0 length:representation.size error:&error];
-		assetData = [NSMutableData dataWithBytes:[assetData mutableBytes] length:representation.size];
+		Byte *buffer = (Byte *)malloc((long)representation.size);
+		NSUInteger bufferd = [representation getBytes:buffer fromOffset:0 length:(NSUInteger)representation.size error:&error];
+		NSMutableData *assetData = [NSMutableData dataWithBytesNoCopy:buffer length:bufferd freeWhenDone:YES];
 
 		NSDateFormatter * dateFormatter = [[NSDateFormatter alloc] init];
 		[dateFormatter setDateFormat:@"yyyy-MM-dd-HH-mm-ss"];
 		NSString * dateStr = [dateFormatter stringFromDate:[NSDate date]];
-		NSString *fileName = [NSString stringWithFormat:@"%@%@",dateStr,representation.filename];
-		NSString *savingPath = [NSTemporaryDirectory() stringByAppendingString:fileName];
+		NSString *fileName = [NSString stringWithFormat:@"%@_%@%@",[Constant instance].userId,dateStr,representation.filename];
 
+		NSString *savingPath = [NSTemporaryDirectory() stringByAppendingString:fileName];
 		BOOL isSave = [assetData writeToFile:savingPath atomically:YES];
 
 		callback(isSave,savingPath);
@@ -87,7 +89,7 @@
 	NSDateFormatter * dateFormatter = [[NSDateFormatter alloc] init];
 	[dateFormatter setDateFormat:@"yyyy-MM-dd-HH-mm-ss"];
 	NSString * dateStr = [dateFormatter stringFromDate:[NSDate date]];
-	NSString *savingPath = [NSTemporaryDirectory() stringByAppendingString:[NSString stringWithFormat:@"%@%lu",dateStr,(unsigned long)mediaInfo.hash]];
+	NSString *savingPath = [NSTemporaryDirectory() stringByAppendingString:[NSString stringWithFormat:@"%@_%@%lu",[Constant instance].userId,dateStr,(unsigned long)mediaInfo.hash]];
 
 	BOOL isSave = [[NSFileManager defaultManager] copyItemAtPath:filePath toPath:savingPath error:nil];
 
@@ -165,17 +167,32 @@
                 [self.delegate uploadManager:self didFailedUpload:error];
             }
         }else{
-            NSString *token = result[@"uptoken"];
-			if([fileInfo isKindOfClass:[NSData class]]){
-				[self uploadFileWIthData:fileInfo andToken:token];
-			}else if([fileInfo isKindOfClass:[NSString class]]){
+            NSString *token = result[@"token"];
+			if([fileInfo isKindOfClass:[NSData class]])
+			{
+				[self uploadFileWIthData:fileInfo andIndex:0 andToken:token];
+			}
+			else if([fileInfo isKindOfClass:[NSString class]])
+			{
 				[self uploadFileWithPath:fileInfo andToken:token];
-			}else if([fileInfo isKindOfClass:[ALAsset class]]){
+			}
+			else if([fileInfo isKindOfClass:[ALAsset class]])
+			{
 				[self uploadFileWithAsset:fileInfo andToken:token];
-			}else if([fileInfo isKindOfClass:[NSArray class]]){
-				[fileInfo enumerateObjectsUsingBlock:^(id   obj, NSUInteger idx, BOOL *  stop) {
-					ALAsset *asset = (ALAsset *)obj;
-					[self uploadFileWithAsset:asset andToken:token];
+			}
+			else if([fileInfo isKindOfClass:[NSArray class]])
+			{
+				[fileInfo enumerateObjectsUsingBlock:^(id  obj, NSUInteger idx, BOOL *  stop){
+					if([obj isKindOfClass:[NSData class]])
+					{
+						NSData *imageData = (NSData *)obj;
+						[self uploadFileWIthData:imageData andIndex:idx andToken:token];
+					}
+					else if([obj isKindOfClass:[ALAsset class]])
+					{
+						ALAsset *imageAsset = (ALAsset *)obj;
+						[self uploadFileWithAsset:imageAsset andToken:token];
+					}
 				}];
 			}
         }
@@ -183,13 +200,14 @@
 }
 
 //上传Data类型数据
-- (void)uploadFileWIthData:(NSData *)data andToken:(NSString *)token
+- (void)uploadFileWIthData:(NSData *)data andIndex:(NSInteger)index andToken:(NSString *)token
 {
     NSDateFormatter * dateFormatter = [[NSDateFormatter alloc] init];
     [dateFormatter setDateFormat:@"yyyy-MM-dd-HH-mm-ss"];
     NSString * dateStr = [dateFormatter stringFromDate:[NSDate date]];
-    NSString *key = [NSString stringWithFormat:@"%@%lu",dateStr,dateStr.hash];
+    NSString *key = [NSString stringWithFormat:@"%@_%@%ld",[Constant instance].userId,dateStr,(long)index];
 
+	NSLog(@"uploadKey:%@",key);
     [self.uploadManager putData:data key:key token:token complete:^(QNResponseInfo *info, NSString *key, NSDictionary *resp) {
         if(resp){
             self.uploadState = WTUploadStatueFinished;
@@ -197,6 +215,7 @@
                 [self.delegate uploadManager:self didFinishedUploadWithKey:key];
             }
         }else{
+			NSLog(@"uploadKey:%@  uploadFile:%@",key,info.xlog);
             if(self.uploadState != WTUploadStatueCanceled){
                 self.uploadState = WTUploadStatueFailed;
                 if([self.delegate respondsToSelector:@selector(uploadManager:didFailedUpload:)]){
@@ -213,7 +232,7 @@
     NSDateFormatter * dateFormatter = [[NSDateFormatter alloc] init];
     [dateFormatter setDateFormat:@"yyyy-MM-dd-HH-mm-ss"];
     NSString * dateStr = [dateFormatter stringFromDate:[NSDate date]];
-    NSString *akey =  [NSString stringWithFormat:@"%@%lu",dateStr,(unsigned long)filePath.hash];
+    NSString *akey =  [NSString stringWithFormat:@"%@_%@%lu",[Constant instance].userId,dateStr,(unsigned long)filePath.hash];
     NSString *key = self.fileKey.length > 0 ? self.fileKey : akey ;
 	
 	NSString *afilePath = [NSTemporaryDirectory()  stringByAppendingString:[[filePath componentsSeparatedByString:@"/"] lastObject]];
@@ -244,7 +263,7 @@
 	NSDateFormatter * dateFormatter = [[NSDateFormatter alloc] init];
 	[dateFormatter setDateFormat:@"yyyy-MM-dd-HH-mm-ss"];
 	NSString * dateStr = [dateFormatter stringFromDate:[NSDate date]];
-	NSString *akey =  [NSString stringWithFormat:@"%@%lu",dateStr,(unsigned long)fileAsset.hash];
+	NSString *akey =  [NSString stringWithFormat:@"%@_%@%lu",[Constant instance].userId,dateStr,(unsigned long)fileAsset.hash];
 	NSString *key = self.fileKey.length > 0 ? self.fileKey : akey ;
 
 	[self.uploadManager putALAsset:fileAsset key:key token:token complete:^(QNResponseInfo *info, NSString *key, NSDictionary *resp) {
