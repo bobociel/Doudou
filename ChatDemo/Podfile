@@ -8,5 +8,6 @@ pod 'AVOSCloud'
 pod 'AVOSCloudIM'
 pod 'FMDB'
 pod 'JSBadgeView'
+pod "AFNetworking", '2.6.3'
 end
 
