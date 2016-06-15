@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "UIImage+Utils.h"
 #import "LBAlertView.h"
+#import <AFNetworking/AFNetworking.h>
 @interface ViewController ()
 @property (nonatomic, strong) UIView *redView;
 @property (nonatomic, assign) BOOL rotate;
@@ -21,7 +22,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
+
+	// Animation
+	/*
 	UIButton *centerButton = [UIButton buttonWithType:UIButtonTypeCustom];
 	centerButton.backgroundColor = [UIColor yellowColor];
 	centerButton.frame = CGRectMake(100, 100, 100, 30);
@@ -37,14 +40,18 @@
 	_bottomLayer.frame = CGRectMake((100-32)/2, (30-2)/2, 30, 2);
 	_bottomLayer.backgroundColor = [UIColor blackColor].CGColor;
 	[centerButton.layer addSublayer:_bottomLayer];
+	 */
+
 }
 
 - (void)viewDidAppear:(BOOL)animated
 {
 	[super viewDidAppear:animated];
-	NSLog(@"====%@====",[NSDate date]);
 }
 
+
+
+#pragma mark - Animation
 - (void)animationAction:(UIButton *)sender
 {
 	sender.selected = !sender.selected;
