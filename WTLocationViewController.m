@@ -114,7 +114,7 @@
 	self.tableViewHeight.constant = 0;
 	[self.tableView reloadData];
 
-	NSString *searchCity = @"杭州";
+	NSString *searchCity = [UserInfoManager instance].city_name.length == 0 ? @"杭州":[UserInfoManager instance].city_name;
 	self.searchOption.city = searchCity;
     self.searchOption.keyword = self.addressTextField.text;
     [self.poiSearch poiSearchInCity:self.searchOption];
@@ -176,12 +176,12 @@
 		if([self.poiInfoArry[indexPath.row] isKindOfClass:[BMKPoiInfo class]])
 		{
 			BMKPoiInfo *info = self.poiInfoArry[indexPath.row];
-			cell.addressLabel.text = info.name;
+			cell.addressName = info.name;
 		}
 		else if ([self.poiInfoArry[indexPath.row] isKindOfClass:[BMKGeoCodeResult class]])
 		{
 			BMKGeoCodeResult *geoResult = self.poiInfoArry[indexPath.row];
-			cell.addressLabel.text = geoResult.address;
+			cell.addressName = geoResult.address;
 		}
 		return cell;
 	}
@@ -248,6 +248,22 @@
         [self startLocation];
     }
 }
+/*
+- (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation
+{
+    if([annotation isEqual:self.pointAnno] && self.pointAnno){
+        MKPinAnnotationView *anno = (MKPinAnnotationView *)[mapView dequeueReusableAnnotationViewWithIdentifier:@"anno"];
+        if(!anno){
+            anno = [[MKPinAnnotationView alloc] init];
+        }
+        anno.pinColor = MKPinAnnotationColorGreen;
+        anno.canShowCallout = YES;
+        anno.animatesDrop = YES;
+//        anno.title = self.addressTextField.text;
+    }
+    return nil;
+}
+*/
 
 #pragma mark - BMKPoiSearchDelegate
 - (void)onGetPoiResult:(BMKPoiSearch *)searcher result:(BMKPoiResult *)poiResult errorCode:(BMKSearchErrorCode)errorCode
@@ -263,7 +279,7 @@
 
 	if(_poiInfoArry.count > 0)
 	{
-		self.tableViewHeight.constant = screenHeight - TableViewY - kNavBarHeight - kTabBarHeight;
+		self.tableViewHeight.constant = screenHeight - TableViewY -kNavBarHeight;
 		[self.tableView reloadData];
 		self.tableView.alpha = 0;
 		[UIView animateWithDuration:0.2 animations:^{
@@ -307,7 +323,7 @@
 
 	if(_poiInfoArry.count > 0)
 	{
-		self.tableViewHeight.constant = screenHeight - TableViewY -kNavBarHeight - kTabBarHeight;
+		self.tableViewHeight.constant = screenHeight - TableViewY -kNavBarHeight;
 		[self.tableView reloadData];
 		self.tableView.alpha = 0;
 		[UIView animateWithDuration:0.2 animations:^{

@@ -7,11 +7,9 @@
 //
 
 #import "WTUploadManager.h"
-#import "PostDataService.h"
 #import "GetService.h"
 #define kCombineString @"&&"
 #define kPathString         @"#"
-#define kReachabilityURL @"https://www.baidu.com"
 @interface  WTUploadManager()
 @property (nonatomic, copy) NSString *pathAndKey;
 @property (nonatomic, copy) NSString *fileKey;
@@ -34,10 +32,8 @@
     self = [super init];
     if(self){
 		self.fileRecord = [QNFileRecorder fileRecorderWithFolder:[self fileRecordPath] error:nil];
-        self.reachebility = [QNReachability reachabilityWithHostName:APIHOST] ;
         self.uploadState = WTUploadStatueNone;
         self.isCancelUpload = NO;
-        [self.reachebility startNotifier];
         [self addObserver:self forKeyPath:@"uploadState" options:NSKeyValueObservingOptionNew context:nil];
     }
     return self;
@@ -65,15 +61,18 @@
 {
 	dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
 		NSError *error;
-		ALAssetRepresentation *representation = [asset defaultRepresentation];
-		Byte *buffer = (Byte *)malloc((long)representation.size);
-		NSUInteger bufferd = [representation getBytes:buffer fromOffset:0 length:(NSUInteger)representation.size error:&error];
-		NSMutableData *assetData = [NSMutableData dataWithBytesNoCopy:buffer length:bufferd freeWhenDone:YES];
+		CGFloat byteArraySize = asset.defaultRepresentation.size;
+
+		NSMutableData* assetData = [[NSMutableData alloc]initWithCapacity:byteArraySize];
+		void* bufferPointer = [assetData mutableBytes];
+
+		[asset.defaultRepresentation getBytes:bufferPointer fromOffset:0 length:byteArraySize error:&error];
+		assetData = [NSMutableData dataWithBytes:bufferPointer length:byteArraySize];
 
 		NSDateFormatter * dateFormatter = [[NSDateFormatter alloc] init];
 		[dateFormatter setDateFormat:@"yyyy-MM-dd-HH-mm-ss"];
 		NSString * dateStr = [dateFormatter stringFromDate:[NSDate date]];
-		NSString *fileName = [NSString stringWithFormat:@"%@_%@%@",[Constant instance].userId,dateStr,representation.filename];
+		NSString *fileName = [NSString stringWithFormat:@"%@_%@%@",[UserInfoManager instance].userId_self,dateStr,asset.defaultRepresentation.filename];
 
 		NSString *savingPath = [NSTemporaryDirectory() stringByAppendingString:fileName];
 		BOOL isSave = [assetData writeToFile:savingPath atomically:YES];
@@ -89,7 +88,7 @@
 	NSDateFormatter * dateFormatter = [[NSDateFormatter alloc] init];
 	[dateFormatter setDateFormat:@"yyyy-MM-dd-HH-mm-ss"];
 	NSString * dateStr = [dateFormatter stringFromDate:[NSDate date]];
-	NSString *savingPath = [NSTemporaryDirectory() stringByAppendingString:[NSString stringWithFormat:@"%@_%@%lu",[Constant instance].userId,dateStr,(unsigned long)mediaInfo.hash]];
+	NSString *savingPath = [NSTemporaryDirectory() stringByAppendingString:[NSString stringWithFormat:@"%@_%@%lu",[UserInfoManager instance].userId_self,dateStr,(unsigned long)mediaInfo.hash]];
 
 	BOOL isSave = [[NSFileManager defaultManager] copyItemAtPath:filePath toPath:savingPath error:nil];
 
@@ -167,7 +166,7 @@
                 [self.delegate uploadManager:self didFailedUpload:error];
             }
         }else{
-            NSString *token = result[@"token"];
+            NSString *token = result[@"uptoken"];
 			if([fileInfo isKindOfClass:[NSData class]])
 			{
 				[self uploadFileWIthData:fileInfo andIndex:0 andToken:token];
@@ -205,24 +204,26 @@
     NSDateFormatter * dateFormatter = [[NSDateFormatter alloc] init];
     [dateFormatter setDateFormat:@"yyyy-MM-dd-HH-mm-ss"];
     NSString * dateStr = [dateFormatter stringFromDate:[NSDate date]];
-    NSString *key = [NSString stringWithFormat:@"%@_%@%ld",[Constant instance].userId,dateStr,(long)index];
+    NSString *key = [NSString stringWithFormat:@"%@_%@%ld",[UserInfoManager instance].userId_self,dateStr,(long)index];
 
 	NSLog(@"uploadKey:%@",key);
     [self.uploadManager putData:data key:key token:token complete:^(QNResponseInfo *info, NSString *key, NSDictionary *resp) {
-        if(resp){
-            self.uploadState = WTUploadStatueFinished;
-            if([self.delegate respondsToSelector:@selector(uploadManager:didFinishedUploadWithKey:)]){
-                [self.delegate uploadManager:self didFinishedUploadWithKey:key];
-            }
-        }else{
-			NSLog(@"uploadKey:%@  uploadFile:%@",key,info.xlog);
-            if(self.uploadState != WTUploadStatueCanceled){
-                self.uploadState = WTUploadStatueFailed;
-                if([self.delegate respondsToSelector:@selector(uploadManager:didFailedUpload:)]){
-                    [self.delegate uploadManager:self didFailedUpload:nil];
-                }
-            }
-        }
+		dispatch_async(dispatch_get_main_queue(), ^{
+			if(resp){
+				self.uploadState = WTUploadStatueFinished;
+				if([self.delegate respondsToSelector:@selector(uploadManager:didFinishedUploadWithKey:)]){
+					[self.delegate uploadManager:self didFinishedUploadWithKey:key];
+				}
+			}else{
+				NSLog(@"uploadKey:%@  uploadFile:%@",key,info.xlog);
+				if(self.uploadState != WTUploadStatueCanceled){
+					self.uploadState = WTUploadStatueFailed;
+					if([self.delegate respondsToSelector:@selector(uploadManager:didFailedUpload:)]){
+						[self.delegate uploadManager:self didFailedUpload:nil];
+					}
+				}
+			}
+		});
     } option:self.uploadOption];
 }
 
@@ -232,28 +233,30 @@
     NSDateFormatter * dateFormatter = [[NSDateFormatter alloc] init];
     [dateFormatter setDateFormat:@"yyyy-MM-dd-HH-mm-ss"];
     NSString * dateStr = [dateFormatter stringFromDate:[NSDate date]];
-    NSString *akey =  [NSString stringWithFormat:@"%@_%@%lu",[Constant instance].userId,dateStr,(unsigned long)filePath.hash];
+    NSString *akey =  [NSString stringWithFormat:@"%@_%@%lu",[UserInfoManager instance].userId_self,dateStr,(unsigned long)filePath.hash];
     NSString *key = self.fileKey.length > 0 ? self.fileKey : akey ;
 	
 	NSString *afilePath = [NSTemporaryDirectory()  stringByAppendingString:[[filePath componentsSeparatedByString:@"/"] lastObject]];
 
     [self.uploadManager putFile:afilePath key:key token:token complete:^(QNResponseInfo *info, NSString *key, NSDictionary *resp) {
-        if(resp){
-            self.uploadState = WTUploadStatueFinished;
-            if([self.delegate respondsToSelector:@selector(uploadManager:didFinishedUploadWithKey:)]){
-                [self.delegate uploadManager:self didFinishedUploadWithKey:key];
-            }
-        }else{
-            if(self.uploadState != WTUploadStatueCanceled){
-                if(info.error.code == File_Not_Exist){
-                    [self deleteCache];
-                }
-                self.uploadState = WTUploadStatueFailed;
-                if([self.delegate respondsToSelector:@selector(uploadManager:didFailedUpload:)]){
-                    [self.delegate uploadManager:self didFailedUpload:info.error];
-                }
-            }
-        }
+		dispatch_async(dispatch_get_main_queue(), ^{
+			if(resp){
+				self.uploadState = WTUploadStatueFinished;
+				if([self.delegate respondsToSelector:@selector(uploadManager:didFinishedUploadWithKey:)]){
+					[self.delegate uploadManager:self didFinishedUploadWithKey:key];
+				}
+			}else{
+				if(self.uploadState != WTUploadStatueCanceled){
+					if(info.error.code == File_Not_Exist){
+						[self deleteCache];
+					}
+					self.uploadState = WTUploadStatueFailed;
+					if([self.delegate respondsToSelector:@selector(uploadManager:didFailedUpload:)]){
+						[self.delegate uploadManager:self didFailedUpload:info.error];
+					}
+				}
+			}
+		});
     } option:self.uploadOption];
 }
 
@@ -263,29 +266,30 @@
 	NSDateFormatter * dateFormatter = [[NSDateFormatter alloc] init];
 	[dateFormatter setDateFormat:@"yyyy-MM-dd-HH-mm-ss"];
 	NSString * dateStr = [dateFormatter stringFromDate:[NSDate date]];
-	NSString *akey =  [NSString stringWithFormat:@"%@_%@%lu",[Constant instance].userId,dateStr,(unsigned long)fileAsset.hash];
+	NSString *akey =  [NSString stringWithFormat:@"%@_%@%lu",[UserInfoManager instance].userId_self,dateStr,(unsigned long)fileAsset.hash];
 	NSString *key = self.fileKey.length > 0 ? self.fileKey : akey ;
 
 	[self.uploadManager putALAsset:fileAsset key:key token:token complete:^(QNResponseInfo *info, NSString *key, NSDictionary *resp) {
-		if(resp){
-			self.uploadState = WTUploadStatueFinished;
-			if([self.delegate respondsToSelector:@selector(uploadManager:didFinishedUploadWithKey:)]){
-				[self.delegate uploadManager:self didFinishedUploadWithKey:key];
-			}
-		}else{
-			if(self.uploadState != WTUploadStatueCanceled){
-				self.uploadState = WTUploadStatueFailed;
-				if([self.delegate respondsToSelector:@selector(uploadManager:didFailedUpload:)]){
-					[self.delegate uploadManager:self didFailedUpload:nil];
+		dispatch_async(dispatch_get_main_queue(), ^{
+			if(resp){
+				self.uploadState = WTUploadStatueFinished;
+				if([self.delegate respondsToSelector:@selector(uploadManager:didFinishedUploadWithKey:)]){
+					[self.delegate uploadManager:self didFinishedUploadWithKey:key];
+				}
+			}else{
+				if(self.uploadState != WTUploadStatueCanceled){
+					self.uploadState = WTUploadStatueFailed;
+					if([self.delegate respondsToSelector:@selector(uploadManager:didFailedUpload:)]){
+						[self.delegate uploadManager:self didFailedUpload:nil];
+					}
 				}
 			}
-		}
+		});
 	} option:self.uploadOption];
 }
 
 - (void)dealloc
 {
-    [self.reachebility stopNotifier];
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 

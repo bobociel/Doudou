@@ -7,9 +7,7 @@
 //
 #import "WTImageSelectViewController.h"
 #import "WTImageCell.h"
-#import "WTWeddingStory.h"
 #import "AppDelegate.h"
-#import "WTAlertView.h"
 #import "LWUtil.h"
 #define kButtonHeight 50.0
 #define kCellWidth ((screenWidth - 15) / 4.0)
@@ -31,8 +29,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
-    self.title = self.fileType == WTFileTypeImage ? @"所有相片" : @"所有视频";
+
+    self.title =  self.fileType == WTFileTypeImage ? @"所有相片" : @"所有视频";
 
 	self.localAssets = [NSMutableArray array];
 	self.selectedAssets = [NSMutableArray array];
@@ -44,7 +42,7 @@
 
 	self.sureButton = [UIButton buttonWithType:UIButtonTypeSystem];
 	self.sureButton.frame = CGRectMake(0, screenHeight-kNavBarHeight , screenWidth,kButtonHeight);
-	[self.sureButton setBackgroundColor:treasureRedColor];
+	[self.sureButton setBackgroundColor:WeddingTimeBaseColor];
 	[self.sureButton setTitle:@"确定" forState:UIControlStateNormal];
 	[self.sureButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
 	[self.view addSubview:self.sureButton];
@@ -54,13 +52,15 @@
 - (void)loadAsset
 {
 	[self.activityView startAnimating];
-	[[AppDelegate assetLibrary] enumerateGroupsWithTypes:ALAssetsGroupSavedPhotos usingBlock:^(ALAssetsGroup *group, BOOL *stop) {
+	[[AppDelegate assetLibrary] enumerateGroupsWithTypes:ALAssetsGroupAll usingBlock:^(ALAssetsGroup *group, BOOL *stop) {
 		if(group){
 			ALAssetsFilter *filter = self.fileType == WTFileTypeImage ? [ALAssetsFilter allPhotos] : [ALAssetsFilter allVideos];
 			[group setAssetsFilter:filter];
 			[group enumerateAssetsUsingBlock:^(ALAsset *result, NSUInteger index, BOOL *stop) {
 				if(result){
-					[self.localAssets addObject:result];
+					if(![self.localAssets containsObject:result]) {
+						[self.localAssets addObject:result];
+					}
 				}else{
 					[self.collectionView reloadData];
 					[self.activityView stopAnimating];
@@ -161,5 +161,14 @@
 	return CGSizeMake(kCellWidth, kCellHeight);
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+	[super viewWillAppear:animated];
+}
+
+- (void)viewDidDisappear:(BOOL)animated
+{
+	[super viewDidDisappear:animated];
+}
 
 @end

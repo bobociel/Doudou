@@ -18,7 +18,6 @@ typedef enum {
 
 #import <Foundation/Foundation.h>
 #import <Qiniu/QiniuSDK.h>
-#import <Qiniu/QNReachability.h>
 #import "WTWeddingStory.h"
 @class WTUploadManager;
 @protocol WTUploadDelegate <NSObject>
@@ -33,7 +32,6 @@ typedef enum {
 @property (nonatomic, strong) QNUploadManager     *uploadManager;
 @property (nonatomic, strong) QNUploadOption         *uploadOption;
 @property (nonatomic, strong) QNFileRecorder          *fileRecord;
-@property (nonatomic, strong) QNReachability           *reachebility;
 @property (nonatomic, assign) WTUploadStatue        uploadState;
 @property (nonatomic, assign) BOOL isCancelUpload;
 @property (nonatomic, assign) id <WTUploadDelegate> delegate;
