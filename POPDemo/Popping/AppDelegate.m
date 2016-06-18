@@ -23,8 +23,11 @@
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
 
-    [[UINavigationBar appearance] setTitleTextAttributes:@{NSFontAttributeName:[UIFont fontWithName:@"Avenir" size:20],
-                                                           NSForegroundColorAttributeName: [UIColor blueColor]}];
+    [[UINavigationBar appearance] setTitleTextAttributes
+	 :@{NSFontAttributeName:[UIFont fontWithName:@"Avenir" size:20],
+		NSForegroundColorAttributeName: [UIColor blueColor]}];
+
+
 
     return YES;
 }
