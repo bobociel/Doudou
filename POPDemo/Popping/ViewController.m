@@ -42,6 +42,27 @@
 	[centerButton.layer addSublayer:_bottomLayer];
 	 */
 
+	NSURLSessionConfiguration *config = [NSURLSessionConfiguration defaultSessionConfiguration];
+	NSURLSession *session = [NSURLSession sessionWithConfiguration:config];
+
+	NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:@"http://dev.lovewith.me/app/v010/u/send_confirm_key/"]];
+	request.HTTPMethod = @"POST";
+	//	[request setValue:@"method" forHTTPHeaderField:@"POST"];
+
+	NSMutableData *bodyData = [NSMutableData data];
+	[bodyData appendData:[@"phone=15093674674" dataUsingEncoding:NSUTF8StringEncoding]];
+	[request setHTTPBody:bodyData];
+
+
+	NSURLSessionDataTask *dataTask = [session dataTaskWithRequest:request completionHandler:^(NSData * data, NSURLResponse *response, NSError *error) {
+
+		id result = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:nil];
+		NSLog(@"%@",result);
+		
+	}];
+
+	[dataTask resume];
+
 }
 
 - (void)viewDidAppear:(BOOL)animated

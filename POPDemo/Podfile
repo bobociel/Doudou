@@ -7,7 +7,7 @@ target 'Popping' do
 
   # Pods for Popping
   pod "pop"
-  pod "AFNetworking"
+  pod "AFNetworking" , '2.6.0'
   target 'PoppingTests' do
     inherit! :search_paths
     # Pods for testing
