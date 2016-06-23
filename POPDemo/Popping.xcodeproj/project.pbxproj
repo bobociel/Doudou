@@ -71,7 +71,6 @@
 		F0C706891D07B6EC00BE095A /* LBAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBAlertView.h; sourceTree = "<group>"; };
 		F0C7068A1D07B6EC00BE095A /* LBAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBAlertView.m; sourceTree = "<group>"; };
 		F0E97E2F1D0EC85B00A91BB0 /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
-		F0F4B08E1D13D40700432B75 /* CF-855.17.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "CF-855.17.xcodeproj"; path = "../../../Downloads/CF-855.17/CF-855.17.xcodeproj"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -190,7 +189,6 @@
 			isa = PBXGroup;
 			children = (
 				F0E97E2F1D0EC85B00A91BB0 /* LaunchScreen.xib */,
-				F0F4B08E1D13D40700432B75 /* CF-855.17.xcodeproj */,
 				B7FF965C191EB5E300087016 /* AppDelegate */,
 			);
 			name = "View Controller";
@@ -209,13 +207,6 @@
 				F0C7068A1D07B6EC00BE095A /* LBAlertView.m */,
 			);
 			name = AppDelegate;
-			sourceTree = "<group>";
-		};
-		F0F4B08F1D13D40700432B75 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -286,12 +277,6 @@
 			mainGroup = B785AD0819196A2D00621820;
 			productRefGroup = B785AD1219196A2D00621820 /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = F0F4B08F1D13D40700432B75 /* Products */;
-					ProjectRef = F0F4B08E1D13D40700432B75 /* CF-855.17.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				B785AD1019196A2D00621820 /* Popping */,
