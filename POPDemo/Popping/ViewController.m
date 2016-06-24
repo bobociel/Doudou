@@ -6,10 +6,11 @@
 //  Copyright © 2015年 André Schneider. All rights reserved.
 //
 
+#import <objc/runtime.h>
+#import <AFNetworking/AFNetworking.h>
 #import "ViewController.h"
 #import "UIImage+Utils.h"
 #import "LBAlertView.h"
-#import <AFNetworking/AFNetworking.h>
 @interface ViewController ()
 @property (nonatomic, strong) UIView *redView;
 @property (nonatomic, assign) BOOL rotate;
@@ -18,6 +19,21 @@
 @end
 
 @implementation ViewController
+
+void Eat(id self, SEL _cmd){
+	NSLog(@"%p", self);
+	NSLog(@"%@, %@",[self class], [self superclass]);
+
+	Class currentClass = [self class];
+	for(NSInteger i=0; i < 4; i++){
+		NSLog(@"index: %ld for: %@ point:%p", (long)i, currentClass, currentClass
+			  );
+		currentClass = objc_getClass((__bridge void*)currentClass);
+	}
+
+	NSLog(@"NSObject pont:%p",[NSObject class]);
+	NSLog(@"NSObject meta-class: %p", objc_getClass((__bridge void*)[NSObject class]) );
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -41,6 +57,14 @@
 	_bottomLayer.backgroundColor = [UIColor blackColor].CGColor;
 	[centerButton.layer addSublayer:_bottomLayer];
 	 */
+
+	Class person = objc_allocateClassPair([NSObject class], "Person", 0);
+	class_addMethod(person, @selector(eat), (IMP)Eat, "v@:");
+	objc_registerClassPair(person);
+
+	id instance = [[person alloc] init];
+	[instance performSelector:@selector(eat)];
+
 }
 
 - (void)viewDidAppear:(BOOL)animated
