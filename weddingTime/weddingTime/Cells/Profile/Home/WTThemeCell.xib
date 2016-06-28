@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="WTThemeCell" id="gTV-IL-0wX" customClass="WTThemeCell">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="500"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="500"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vYM-hc-dlW">
+                        <rect key="frame" x="0.0" y="361" width="414" height="139"/>
+                        <subviews>
+                            <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HCb-hA-bEh">
+                                <rect key="frame" x="190" y="52" width="35" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="35" id="HRc-m0-dud"/>
+                                    <constraint firstAttribute="height" constant="35" id="ee4-8s-YGv"/>
+                                </constraints>
+                                <state key="normal" image="icon_wedding_unfinish"/>
+                                <state key="selected" image="icon_wedding_finish"/>
+                                <state key="highlighted" image="icon_wedding_finish"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="HCb-hA-bEh" firstAttribute="centerY" secondItem="vYM-hc-dlW" secondAttribute="centerY" id="06O-rM-Ugo"/>
+                            <constraint firstItem="HCb-hA-bEh" firstAttribute="centerX" secondItem="vYM-hc-dlW" secondAttribute="centerX" id="ede-DZ-6je"/>
+                        </constraints>
+                    </view>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zeq-VR-BTT">
+                        <rect key="frame" x="87" y="321" width="240" height="39"/>
+                        <color key="backgroundColor" red="0.97254901960784312" green="0.69019607843137254" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <state key="normal" title="支持实物版请柬配套">
+                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                        <connections>
+                            <action selector="openCardAction:" destination="gTV-IL-0wX" eventType="touchUpInside" id="gNw-Ty-yv7"/>
+                        </connections>
+                    </button>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="c1Y-aZ-H4H">
+                        <rect key="frame" x="87" y="40" width="240" height="320"/>
+                        <color key="backgroundColor" red="0.92549019607843142" green="0.92941176470588238" blue="0.94117647058823528" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="c1Y-aZ-H4H" secondAttribute="height" multiplier="3:4" id="AFM-Ov-cj4"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            </view>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="vYM-hc-dlW" secondAttribute="trailing" id="Cbt-Kx-YDG"/>
+                <constraint firstItem="vYM-hc-dlW" firstAttribute="top" secondItem="c1Y-aZ-H4H" secondAttribute="bottom" constant="1" id="J28-t2-efI"/>
+                <constraint firstItem="c1Y-aZ-H4H" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="40" id="Lgm-le-15E"/>
+                <constraint firstItem="c1Y-aZ-H4H" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="MHP-Ax-u9F"/>
+                <constraint firstItem="zeq-VR-BTT" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="Ody-vu-zOz"/>
+                <constraint firstItem="zeq-VR-BTT" firstAttribute="height" secondItem="c1Y-aZ-H4H" secondAttribute="height" multiplier="0.1222" id="Pma-XN-sPe"/>
+                <constraint firstItem="zeq-VR-BTT" firstAttribute="bottom" secondItem="c1Y-aZ-H4H" secondAttribute="bottom" id="Qrw-xB-dB7"/>
+                <constraint firstAttribute="bottom" secondItem="vYM-hc-dlW" secondAttribute="bottom" id="aZs-GY-wkL"/>
+                <constraint firstItem="c1Y-aZ-H4H" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="hhh-8g-cqp"/>
+                <constraint firstItem="c1Y-aZ-H4H" firstAttribute="width" secondItem="gTV-IL-0wX" secondAttribute="width" multiplier="0.58" id="qPR-C0-lJc"/>
+                <constraint firstItem="zeq-VR-BTT" firstAttribute="width" secondItem="c1Y-aZ-H4H" secondAttribute="width" id="sFv-WJ-mQZ"/>
+                <constraint firstItem="vYM-hc-dlW" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="w0f-y4-5A6"/>
+            </constraints>
+            <connections>
+                <outlet property="imageView" destination="c1Y-aZ-H4H" id="lXS-3h-Kis"/>
+                <outlet property="selectedButton" destination="HCb-hA-bEh" id="Tfi-g2-1ld"/>
+                <outlet property="showCardButton" destination="zeq-VR-BTT" id="LDE-lx-pmY"/>
+            </connections>
+            <point key="canvasLocation" x="359" y="250"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="icon_wedding_finish" width="66" height="66"/>
+        <image name="icon_wedding_unfinish" width="32" height="32"/>
+    </resources>
+</document>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="BottomBudgetView">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="60"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1gS-V6-unB">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="60"/>
+                    <connections>
+                        <action selector="budgetAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="iLE-6B-0g6"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="我的预算" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9qC-a6-R4c">
+                    <rect key="frame" x="15" y="10" width="255" height="22"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="22" id="2y0-76-tmE"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3000" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tNA-hv-SL0">
+                    <rect key="frame" x="15" y="34" width="117" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="190" id="Yd2-Oa-hN6"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="Yd2-Oa-hN6"/>
+                        </mask>
+                    </variation>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_arrow_white" translatesAutoresizingMaskIntoConstraints="NO" id="jJS-eq-4dX">
+                    <rect key="frame" x="294" y="22" width="11" height="16"/>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="0.3921568627" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="tNA-hv-SL0" secondAttribute="trailing" constant="188" id="6kt-gp-oxd"/>
+                <constraint firstAttribute="trailing" secondItem="9qC-a6-R4c" secondAttribute="trailing" constant="50" id="6tJ-aW-fui"/>
+                <constraint firstItem="1gS-V6-unB" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="I4J-Ih-iOV"/>
+                <constraint firstAttribute="trailing" secondItem="1gS-V6-unB" secondAttribute="trailing" id="L9z-Qy-29e"/>
+                <constraint firstItem="tNA-hv-SL0" firstAttribute="top" secondItem="9qC-a6-R4c" secondAttribute="bottom" constant="2" id="ORO-z5-Jv3"/>
+                <constraint firstItem="9qC-a6-R4c" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="15" id="Oqb-rK-2s8"/>
+                <constraint firstAttribute="trailing" secondItem="jJS-eq-4dX" secondAttribute="trailing" constant="15" id="a46-em-gmb"/>
+                <constraint firstItem="1gS-V6-unB" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="bm1-6K-IY8"/>
+                <constraint firstItem="jJS-eq-4dX" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="dzB-ki-VeK"/>
+                <constraint firstItem="tNA-hv-SL0" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="15" id="itR-4B-8zw"/>
+                <constraint firstAttribute="bottom" secondItem="1gS-V6-unB" secondAttribute="bottom" id="o28-dz-Lw1"/>
+                <constraint firstItem="9qC-a6-R4c" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="uqf-MU-q4X"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="arrowView" destination="jJS-eq-4dX" id="5gh-Po-gjM"/>
+                <outlet property="budgetBtn" destination="1gS-V6-unB" id="Fa5-64-iU4"/>
+                <outlet property="companyLabel" destination="9qC-a6-R4c" id="AJd-As-Bu3"/>
+                <outlet property="priceLabel" destination="tNA-hv-SL0" id="Oc3-dU-lQt"/>
+            </connections>
+            <point key="canvasLocation" x="355" y="345"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="icon_arrow_white" width="11" height="16"/>
+    </resources>
+</document>
