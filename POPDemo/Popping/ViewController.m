@@ -20,21 +20,6 @@
 
 @implementation ViewController
 
-void Eat(id self, SEL _cmd){
-	NSLog(@"%p", self);
-	NSLog(@"%@, %@",[self class], [self superclass]);
-
-	Class currentClass = [self class];
-	for(NSInteger i=0; i < 4; i++){
-		NSLog(@"index: %ld for: %@ point:%p", (long)i, currentClass, currentClass
-			  );
-		currentClass = objc_getClass((__bridge void*)currentClass);
-	}
-
-	NSLog(@"NSObject pont:%p",[NSObject class]);
-	NSLog(@"NSObject meta-class: %p", objc_getClass((__bridge void*)[NSObject class]) );
-}
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
@@ -57,14 +42,21 @@ void Eat(id self, SEL _cmd){
 	_bottomLayer.backgroundColor = [UIColor blackColor].CGColor;
 	[centerButton.layer addSublayer:_bottomLayer];
 	 */
+}
 
-	Class person = objc_allocateClassPair([NSObject class], "Person", 0);
-	class_addMethod(person, @selector(eat), (IMP)Eat, "v@:");
-	objc_registerClassPair(person);
+void Eat(id self, SEL _cmd){
+	NSLog(@"%p", self);
+	NSLog(@"%@, %@",[self class], [self superclass]);
 
-	id instance = [[person alloc] init];
-	[instance performSelector:@selector(eat)];
+	Class currentClass = [self class];
+	for(NSInteger i=0; i < 4; i++){
+		NSLog(@"index: %ld for: %@ point:%p", (long)i, currentClass, currentClass
+			  );
+		currentClass = objc_getClass((__bridge void*)currentClass);
+	}
 
+	NSLog(@"NSObject pont:%p",[NSObject class]);
+	NSLog(@"NSObject meta-class: %p", objc_getClass((__bridge void*)[NSObject class]) );
 }
 
 - (void)viewDidAppear:(BOOL)animated
