@@ -11,6 +11,7 @@
 #import "ViewController.h"
 #import "UIImage+Utils.h"
 #import "LBAlertView.h"
+
 @interface ViewController ()
 @property (nonatomic, strong) UIView *redView;
 @property (nonatomic, assign) BOOL rotate;
