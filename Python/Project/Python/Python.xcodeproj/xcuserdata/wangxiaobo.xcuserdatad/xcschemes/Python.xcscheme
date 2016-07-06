@@ -58,7 +58,7 @@
       </MacroExpansion>
       <CommandLineArguments>
          <CommandLineArgument
-            argument = "$(SRCROOT)/server.py"
+            argument = "$(SRCROOT)/Demo/main.py"
             isEnabled = "YES">
          </CommandLineArgument>
       </CommandLineArguments>

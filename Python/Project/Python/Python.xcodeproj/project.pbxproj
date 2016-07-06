@@ -7,23 +7,77 @@
 	objects = {
 
 /* Begin PBXFileReference section */
-		F04D82991D24BAE8004B32B5 /* main.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = main.py; sourceTree = "<group>"; };
-		F04D829A1D24C550004B32B5 /* demo.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = demo.py; sourceTree = "<group>"; };
-		F094C01C1D2A5E6D00541622 /* server.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = server.py; sourceTree = "<group>"; };
-		F0C1DDDC1D26779F00B4E377 /* text.text */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = text.text; sourceTree = "<group>"; };
-		F0D8E9AE1D27A86600355778 /* python.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = python.db; sourceTree = "<group>"; };
+		F0E8ECEA1D2B9EB300262199 /* __init__.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = __init__.py; sourceTree = "<group>"; };
+		F0E8ECEB1D2B9EB300262199 /* settings.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = settings.py; sourceTree = "<group>"; };
+		F0E8ECEC1D2B9EB300262199 /* urls.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = urls.py; sourceTree = "<group>"; };
+		F0E8ECED1D2B9EB300262199 /* wsgi.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = wsgi.py; sourceTree = "<group>"; };
+		F0E8ECEE1D2B9EB300262199 /* manage.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = manage.py; sourceTree = "<group>"; };
+		F0E8ECF11D2B9F8800262199 /* error.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = error.py; sourceTree = "<group>"; };
+		F0E8ECF21D2B9F8800262199 /* function.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = function.py; sourceTree = "<group>"; };
+		F0E8ECF31D2B9F8800262199 /* main.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = main.py; sourceTree = "<group>"; };
+		F0E8ECF41D2B9F8800262199 /* object.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = object.py; sourceTree = "<group>"; };
+		F0E8ECF51D2B9F8800262199 /* python.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = python.db; sourceTree = "<group>"; };
+		F0E8ECF61D2B9F8800262199 /* server.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = server.py; sourceTree = "<group>"; };
+		F0E8ECF71D2B9F8800262199 /* text.text */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = text.text; sourceTree = "<group>"; };
+		F0E8ECF81D2B9F8800262199 /* app.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = app.py; sourceTree = "<group>"; };
+		F0E8ECFA1D2BAB1E00262199 /* home.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = home.html; sourceTree = "<group>"; };
+		F0E8ECFB1D2BAB4D00262199 /* form.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = form.html; sourceTree = "<group>"; };
+		F0E8ECFC1D2BAB5900262199 /* sign_ok.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = sign_ok.html; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
 		F04D828E1D24B84A004B32B5 = {
 			isa = PBXGroup;
 			children = (
-				F04D82991D24BAE8004B32B5 /* main.py */,
-				F094C01C1D2A5E6D00541622 /* server.py */,
-				F04D829A1D24C550004B32B5 /* demo.py */,
-				F0D8E9AE1D27A86600355778 /* python.db */,
-				F0C1DDDC1D26779F00B4E377 /* text.text */,
+				F0E8ECF01D2B9F8800262199 /* Demo */,
+				F0E8ECE81D2B9EB300262199 /* HelloWorld */,
 			);
+			sourceTree = "<group>";
+		};
+		F0E8ECE81D2B9EB300262199 /* HelloWorld */ = {
+			isa = PBXGroup;
+			children = (
+				F0E8ECE91D2B9EB300262199 /* HelloWorld */,
+				F0E8ECEE1D2B9EB300262199 /* manage.py */,
+			);
+			path = HelloWorld;
+			sourceTree = "<group>";
+		};
+		F0E8ECE91D2B9EB300262199 /* HelloWorld */ = {
+			isa = PBXGroup;
+			children = (
+				F0E8ECEA1D2B9EB300262199 /* __init__.py */,
+				F0E8ECEB1D2B9EB300262199 /* settings.py */,
+				F0E8ECEC1D2B9EB300262199 /* urls.py */,
+				F0E8ECED1D2B9EB300262199 /* wsgi.py */,
+			);
+			path = HelloWorld;
+			sourceTree = "<group>";
+		};
+		F0E8ECF01D2B9F8800262199 /* Demo */ = {
+			isa = PBXGroup;
+			children = (
+				F0E8ECF91D2BAB1100262199 /* templates */,
+				F0E8ECF31D2B9F8800262199 /* main.py */,
+				F0E8ECF81D2B9F8800262199 /* app.py */,
+				F0E8ECF61D2B9F8800262199 /* server.py */,
+				F0E8ECF21D2B9F8800262199 /* function.py */,
+				F0E8ECF41D2B9F8800262199 /* object.py */,
+				F0E8ECF11D2B9F8800262199 /* error.py */,
+				F0E8ECF51D2B9F8800262199 /* python.db */,
+				F0E8ECF71D2B9F8800262199 /* text.text */,
+			);
+			path = Demo;
+			sourceTree = "<group>";
+		};
+		F0E8ECF91D2BAB1100262199 /* templates */ = {
+			isa = PBXGroup;
+			children = (
+				F0E8ECFA1D2BAB1E00262199 /* home.html */,
+				F0E8ECFB1D2BAB4D00262199 /* form.html */,
+				F0E8ECFC1D2BAB5900262199 /* sign_ok.html */,
+			);
+			path = templates;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
