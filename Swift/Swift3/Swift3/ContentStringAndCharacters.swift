@@ -12,7 +12,7 @@ class ContentStringAndCharacters: NSObject {
     override init() {
         super.init()
         /******************* 1，字符串字面量(string literal) *******************/
-
+        
         /******************* 2，空字符串(empty string) *******************/
 
         /******************* 3，可变字符串(strig mutablility) *******************/
