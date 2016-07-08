@@ -44,8 +44,8 @@
                                             <rect key="frame" x="0.0" y="0.0" width="567" height="64"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Basics" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mq4-EZ-Jsn">
-                                                    <rect key="frame" x="18" y="22" width="549" height="24"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mq4-EZ-Jsn">
+                                                    <rect key="frame" x="18" y="22" width="549" height="0.0"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
@@ -86,10 +86,10 @@
             </objects>
             <point key="canvasLocation" x="36" y="1156"/>
         </scene>
-        <!--View Controller-->
+        <!--Content View Controller-->
         <scene sceneID="1s3-dk-jfo">
             <objects>
-                <viewController id="Rld-cf-Aav" sceneMemberID="viewController">
+                <viewController id="Rld-cf-Aav" customClass="ContentViewController" customModule="Swift3" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="z05-50-XkJ"/>
                         <viewControllerLayoutGuide type="bottom" id="xF2-hB-i4k"/>

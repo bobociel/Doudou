@@ -8,40 +8,53 @@
 
 import UIKit
 
-enum ContentType {
-    case ContentTypeTheBasics
-    case ContentTypeOperation
-    case ContentTypeStringAndCharacters
-    case ContentTypeCollectionTypes
-    case ContentTypeControlFlow
-    case ContentTypeFunctions
-    case ContentTypeClosures
-    case ContentTypeEnumerations
-    case ContentTypeClassAndStrutures
-    case ContentTypeProperties
-    case ContentTypeMethods
-    case ContentTypeSubscripts
-    case ContentTypeInheritance
-    case ContentTypeInitialization
-    case ContentTypeDeinitialization
-    case ContentTypeARC
-    case ContentTypeOptionalChaining
-    case ContentTypeErrorHandling
-    case ContentTypeTypeCasting
-    case ContentTypeNestedTypes
-    case ContentTypeExtensions
-    case ContentTypeProtocols
-    case ContentTypeGenerics
-    case ContentTypeAccessControl
-    case ContentTypeAdvancedOperators
+enum  ContentType: Int {
+    case TheBasics
+    case Operation
+    case StringAndCharacters
+    case CollectionTypes
+    case ControlFlow
+    case Functions
+    case Closures
+    case Enumerations
+    case ClassAndStrutures
+    case Properties
+    case Methods
+    case Subscripts
+    case Inheritance
+    case Initialization
+    case Deinitialization
+    case ARC
+    case OptionalChaining
+    case ErrorHandling
+    case TypeCasting
+    case NestedTypes
+    case Extensions
+    case Protocols
+    case Generics
+    case AccessControl
+    case AdvancedOperators
 }
 
 class ContentViewController: UIViewController {
+    var _contentType: ContentType?
+    var contentType: ContentType? { get{return _contentType;} set(type){
+        _contentType = type
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        ContentTheBasics.init()
+        if _contentType != nil{
+            switch _contentType! {
+            case .TheBasics:
+                let contentTheBasics = ContentTheBasics.init()
+                print(contentTheBasics)
+            default:
+                print("default end")
+            }
+        }
     }
 
     override func didReceiveMemoryWarning() {
