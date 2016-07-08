@@ -95,9 +95,17 @@ func fib(m: Int) -> (Int, Int){
 
 fib(3)
 
+var two: Int?
+let three = two ?? 3
+let four = (three == 0) ? 3 : 4
+
+
 let btn = UIButton.init(frame: CGRectMake(10, 10, 100, 100));
 btn.backgroundColor = UIColor.greenColor();
 btn.setTitle("点击", forState: .Normal)
 
+UIView.animateWithDuration(0.5) { 
+    btn.frame = CGRectMake(10, 10, 200, 200)
+};
 
 
