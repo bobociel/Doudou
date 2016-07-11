@@ -11,12 +11,15 @@ import UIKit
 class ContentAdvancedOperators: NSObject {
     override init() {
         super.init()
+
+        /******************* 1，Bitwise Operators *******************/
+
+        /******************* 2，Overflow Operators *******************/
+
+        /******************* 3，Precedence and Associativity *******************/
+
+        /******************* 4，Operator Functions *******************/
+
+        /******************* 5， Custom Operators *******************/
     }
-
-/*Bitwise Operators
- Overflow Operators
- Precedence and Associativity
- Operator Functions
- Custom Operators*/
-
 }

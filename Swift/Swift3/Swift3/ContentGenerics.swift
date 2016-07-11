@@ -11,15 +11,23 @@ import UIKit
 class ContentGenerics: NSObject {
     override init() {
         super.init()
-    }
 
-/*The Problem That Generics Solve
- Generic Functions
- Type Parameters
- Naming Type Parameters
- Generic Types
- Extending a Generic Type
- Type Constraints
- Associated Types
- Where Clauses*/
+        /******************* 1，The Problem That Generics Solve *******************/
+
+        /******************* 2，Generic Functions *******************/
+
+        /******************* 3，Type Parameters *******************/
+
+        /******************* 4，Naming Type Parameters *******************/
+
+        /******************* 5，Generic Types *******************/
+
+        /******************* 6，Extending a Generic Type *******************/
+
+        /******************* 7，Type Constraints *******************/
+
+        /******************* 8，Associated Types *******************/
+
+        /******************* 9，Where Clauses *******************/
+    }
 }

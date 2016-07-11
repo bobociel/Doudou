@@ -51,6 +51,18 @@ class ContentViewController: UIViewController {
             case .TheBasics:
                 let contentTheBasics = ContentTheBasics.init()
                 print(contentTheBasics)
+            case .Operation:
+                let contentOperators = ContentOperators.init()
+                print(contentOperators)
+            case .StringAndCharacters:
+                let contentString = ContentStringAndCharacters.init()
+                print(contentString)
+            case .CollectionTypes:
+                let contentCollectionTypes = ContentCollectionTypes.init()
+                print(contentCollectionTypes)
+            case .ControlFlow:
+                let contentControlFlow = ContentControlFlow.init()
+                print(contentControlFlow)
             default:
                 print("default end")
             }
