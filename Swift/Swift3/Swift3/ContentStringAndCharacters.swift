@@ -62,8 +62,8 @@ class ContentStringAndCharacters: NSObject {
         /******************* 10，字符串的访问和修改(Accessing and Modifying a String) *******************/
         //TODO
         //(1),字符串索引
-        let startIndex = characterString.startIndex
-        let endIndex = characterString.endIndex
+//        let startIndex = characterString.startIndex
+//        let endIndex = characterString.endIndex
 //        let afterStartIndex = characterString.index(after: startIndex)
 //        let beforeEndIndex = characterString.index(before: endIndex)
 //        let offsetIndex = characterString.index(startIndex, offsetBy: 2)

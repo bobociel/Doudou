@@ -70,25 +70,33 @@ class ContentControlFlow: NSObject {
             print("this is out the box")
         }
         //⑤--值绑定(Value binding)
-        switch (0,2) {
-        case (let x, 0):
-            print("this is on x:\(x)")
-        case (0, let y):
-            print("this is on y:\(y)")
-        case let(x, y):
-            print("this is on (\(x),\(y))")
+        var tupleArray = [(2,0),(0,2),(2,2)]
+        print(tupleArray)
+        tupleLoop: for tuple in tupleArray{
+            switch tuple {
+            case (let x, 0):
+                print("this is on x:\(x)")
+            case (0, let y):
+                print("this is on y:\(y)")
+            case let(x, y):
+                print("this is on (\(x),\(y))")
+            }
         }
+
         //⑥--where
-        switch (2,2) {
-        case let(x, y) where x > y:
-            print("this is on x > y")
-        case let(x,y) where x < y:
-            print("this is on x < y")
-        case let(x,y) where x == y:
-            print("this is on x == y")
-        default:
-            print("this is not point")
+        tupleLoop: for tuple in tupleArray{
+            switch tuple {
+            case let(x, y) where x > y:
+                print("this is on x > y")
+            case let(x,y) where x < y:
+                print("this is on x < y")
+            case let(x,y) where x == y:
+                print("this is on x == y")
+            default:
+                print("this is not point")
+            }
         }
+
         //⑦--复合案例
         switch "b" {
         case "a","b":
@@ -155,14 +163,16 @@ class ContentControlFlow: NSObject {
             print("I hope the weather is nice in \(location).")
         }
 
-        greet(person: ["name": "John"])
-        greet(person: ["name": "Jane", "location": "Cupertino"])
+        greet(["name": "John"])
+        greet(["name": "Jane", "location": "Cupertino"])
 
         /******************* 5，检查API可用性(Checking API Availability) *******************/
         if #available(iOS 9, OSX 10.10, *) {
             // Use iOS 9 APIs on iOS, and use OS X v10.10 APIs on OS X
+            print("OK")
         } else {
             // Fall back to earlier iOS and OS X APIs
+            print("not ok")
         }
 
     }

@@ -122,7 +122,7 @@ class ContentTheBasics: NSObject {
         let hexadecimalInteger = 0x11
         print("\(decimalInteger),\(binaryInteger),\(octalInteger),\(hexadecimalInteger)")
 
-        //2：天文数字 e3 = 10^3  p2 = 2^2
+        //2：科学计数法(十进制浮点数可选指数、十六进制浮点数必须指数)
         let decimalDouble = 12.758
         let exponentDouble = 12.758e1
         let hexadecimalDouble = 0x1.3p2

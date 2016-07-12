@@ -67,13 +67,16 @@ class ContentCollectionTypes: NSObject {
         /******************* 3，集合(Set) *******************/
         //(1),Set Type 和Hash Value
         print("1".hashValue)
-        //(2),Set Type语法
-        //使用Set创建集合
+
+        //(2),Set Type语法 //使用Set创建集合
+
         //(3),初始化空Set Type
         let emptySet = Set<Character>()
+
         //(4),使用数组字面量创建Set
         var aSet: Set<String> = ["One", "Two", "Three"]
         print(aSet)
+        
         //(5),访问和修改Set
         if emptySet.isEmpty{
             print("emptySer is empty")
@@ -97,11 +100,10 @@ class ContentCollectionTypes: NSObject {
 //            print(s)
 //        }
         //(7),Set的集合运算
-        let oddDigits: Set = [1, 3, 5, 7, 9]
-        let evenDigits: Set = [0, 2, 4, 6, 8]
-        let singleDigitPrimeNumbers: Set = [2, 3, 5, 7]
-
         //TODO
+//        let oddDigits: Set = [1, 3, 5, 7, 9]
+//        let evenDigits: Set = [0, 2, 4, 6, 8]
+//        let singleDigitPrimeNumbers: Set = [2, 3, 5, 7]
 //        oddDigits.union(evenDigits).sorted()
 //        // [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 //        oddDigits.intersection(evenDigits).sorted()
@@ -113,11 +115,11 @@ class ContentCollectionTypes: NSObject {
 
 
         //(8),Set之间的关系
-        let houseAnimals: Set = ["🐶", "🐱"]
-        let farmAnimals: Set = ["🐮", "🐔", "🐑", "🐶", "🐱"]
-        let cityAnimals: Set = ["🐦", "🐭"]
 
         //TODO
+//        let houseAnimals: Set = ["🐶", "🐱"]
+//        let farmAnimals: Set = ["🐮", "🐔", "🐑", "🐶", "🐱"]
+//        let cityAnimals: Set = ["🐦", "🐭"]
 //        houseAnimals.isSubset(of: farmAnimals)
 //        // true
 //        farmAnimals.isSuperset(of: houseAnimals)
@@ -132,9 +134,10 @@ class ContentCollectionTypes: NSObject {
         //(2),字典字面量
         var aDict:[String:Int] = ["One":1,"Two":2,"Three":3]
         var bDict = ["Four":4,"Five":5,"Six":6]
-        print(aDict,bDict)
+        print(emptyDic,aDict,bDict)
         //(3),访问和修改
         aDict["One"] = 2
+        bDict["Seven"] = 7
 //        aDict.updateVlaue(4, forKey:"Three")
 //        aDict.removeValue(forKey:"Two")
         print(aDict)
