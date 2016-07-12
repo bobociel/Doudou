@@ -84,6 +84,15 @@ class ContentViewController: UIViewController {
             case .Subscripts:
                 let contentSubscripts = ContentSubscripts.init()
                 print(contentSubscripts)
+            case .Inheritance:
+                let contentInheritance = ContentInheritance.init()
+                print(contentInheritance)
+            case .Initialization:
+                let contentInitialization = ContentInitialization.init()
+                print(contentInitialization)
+            case .Deinitialization:
+                let contentDeinitialization = ContentDeinitialization.init()
+                print(contentDeinitialization)
             default:
                 print("default end")
             }
