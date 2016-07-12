@@ -11,9 +11,9 @@ import UIKit
 class ContentDeinitialization: NSObject {
     override init() {
         super.init()
-        /******************* 1，How Deinitialization Works *******************/
+        /******************* 1，(析构过程原理)How Deinitialization Works *******************/
 
-        /******************* 2，Deinitializers in Action *******************/
+        /******************* 2，(析构器实践)Deinitializers in Action *******************/
 
     }
 }

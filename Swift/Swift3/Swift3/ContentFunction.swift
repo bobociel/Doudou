@@ -19,7 +19,8 @@ class ContentFunction: NSObject {
             return "Greet to \(person)"
         }
         //TODO
-        print(greetPerson( "小明"), separator: "-", terminator: "!" )
+//        print(greetPerson(person: "白起"))
+        print(greetPerson( "小明"))
         print(greetPerson( "小花"))
 
         /******************* 2，函数的参数和返回值(Function Parameters and Return Value) *******************/
@@ -97,6 +98,7 @@ class ContentFunction: NSObject {
         /*Function parameters are constants by default. Trying to change the value of a function parameter from within the body of that function results in a compile-time error. This means that you can’t change the value of a parameter by mistake. If you want a function to modify a parameter’s value, and you want those changes to persist after the function call has ended, define that parameter as an in-out parameter instead.*/
 
         //TODO
+        //swapPerson( aPerson:inout String, bPerson:inout String)
         func swapPerson(inout aPerson: String, inout bPerson: String){
             let tempA = aPerson
             aPerson = bPerson
@@ -109,12 +111,56 @@ class ContentFunction: NSObject {
 
         /******************* 4，函数类型(Function Types) *******************/
         //(1),使用函数类型
+        func addInts(a: Int, b: Int) -> Int{
+            return a + b
+        }
 
-        //(2),函数作为参数
+        func multiplyInts(a: Int,b: Int) -> Int{
+            return a * b
+        }
 
-        //(3),函数作为返回值
+        var mathFunction: (Int, Int) -> Int = addInts;
+        print(mathFunction(2,5))
+        mathFunction = multiplyInts;
+        print(mathFunction(2,5))
 
+        //(2),函数类型作为参数
+        func paraFuc(mathFunction: (Int, Int) -> Int, a: Int, b: Int){
+            print(mathFunction(a,b))
+        }
+
+        paraFuc(addInts,a: 3,b: 8)
+        paraFuc(multiplyInts,a: 3,b: 8)
+
+        //(3),函数类型作为返回值
+        func returnFuc(isAdd: Bool) -> (Int, Int) -> Int{
+            return isAdd ? addInts : multiplyInts
+        }
+
+        print(returnFuc(true)(5,10))
+        print(returnFuc(false)(5,10))
         /******************* 5，函数的嵌套(Netsed Function) *******************/
+        /*Nested functions are hidden from the outside world by default, but can still be called and used by their enclosing function. An enclosing function can also return one of its nested functions to allow the nested function to be used in another scope.*/
+        func nestedFunc(isAdd: Bool) -> (Int, Int) -> Int{
+            func addMath(a: Int, b: Int) -> Int {return a + b}
+            func multiplyMath(a: Int,b: Int) -> Int { return a * b }
+            return isAdd ? addMath : multiplyMath ;
+        }
 
+        print(nestedFunc(true)(10,10))
+        print(nestedFunc(false)(10,10))
+
+
+        //自己添加----递归函数
+        func recursionFunc(inout n:Int) -> Int{
+            if n == 1{
+                return 1
+            }
+            n -= 1
+            return n + 1 + recursionFunc(&n)
+        }
+
+        var n = 20
+        print( recursionFunc(&n) )
     }
 }

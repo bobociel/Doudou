@@ -12,6 +12,33 @@ class ContentProperties: NSObject {
     override init() {
         super.init()
         /******************* 1，存储属性(Stored Properties) *******************/
+        /*1,计算属性可以用于类、结构体和枚举，存储属性只能用于类和结构体
+         2,存储属性和计算属性通常与特定类型的实例关联。但是，属性也可以直接作用于类型本身，这种属性称为类型属性。
+         3,另外，还可以定义属性观察器来监控属性值的变化，以此来触发一个自定义的操作。属性观察器可以添加到自己定义的存储属性上，也可以添加到从父类继承的属性上。
+         */
+
+        /*
+         由于结构体（struct）属于值类型。当值类型的实例被声明为常量的时候，它的所有属性也就成了常量。
+         属于引用类型的类（class）则不一样。把一个引用类型的实例赋给一个常量后，仍然可以修改该实例的变量属性。
+         */
+        struct FixNumberRange{
+            var firstValue: Int
+            let length: Int
+        }
+
+        var valueRange = FixNumberRange(firstValue: 0, length: 6)
+        print(valueRange)
+        valueRange.firstValue = 10
+        print(valueRange)
+
+        //(1),常量结构体存储属性
+        let valueRange2 = FixNumberRange(firstValue: 12, length: 2)
+        print(valueRange2)
+//        valueRange2.firstValue = 15
+        //(2),延迟存储属性
+
+        //(3),存储属性和实例变量
+        
 
         /******************* 2，计算属性(Computed Properties) *******************/
 
@@ -23,3 +50,4 @@ class ContentProperties: NSObject {
 
     }
 }
+

@@ -63,6 +63,27 @@ class ContentViewController: UIViewController {
             case .ControlFlow:
                 let contentControlFlow = ContentControlFlow.init()
                 print(contentControlFlow)
+            case .Functions:
+                let contentFunctions = ContentFunction.init()
+                print(contentFunctions)
+            case .Closures:
+                let contentClosures = ContentClosures.init()
+                print(contentClosures)
+            case .Enumerations:
+                let contentEnumrations = ContentEnumerations.init()
+                print(contentEnumrations)
+            case .ClassAndStrutures:
+                let contentClassAndStrutures = ContentClassesAndStructures.init()
+                print(contentClassAndStrutures)
+            case .Properties:
+                let contentProperties = ContentProperties.init()
+                print(contentProperties)
+            case .Methods:
+                let contentMethods = ContentMethods.init()
+                print(contentMethods)
+            case .Subscripts:
+                let contentSubscripts = ContentSubscripts.init()
+                print(contentSubscripts)
             default:
                 print("default end")
             }
