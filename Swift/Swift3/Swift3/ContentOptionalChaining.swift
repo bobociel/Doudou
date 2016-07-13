@@ -12,7 +12,21 @@ class ContentOptionalChaining: NSObject {
     override init() {
         super.init()
 
-        /******************* 1，Optional Chaining as an Alternative to Forced Unwrapping *******************/
+        /******************* 1，(使用可选链调用而不是强制展开)Optional Chaining as an Alternative to Forced Unwrapping *******************/
+        class ClassA{
+            var cls: ClassB?
+        }
+
+        class ClassB{
+            var number = 1
+        }
+        let classA = ClassA()
+        print(classA.cls!.number)  //error
+        if let cls = classA.cls?.number{
+            print("\(cls):is not nil");
+        }else{
+            print("is nil")
+        }
 
         /******************* 2，Defining Model Classes for Optional Chaining *******************/
 

@@ -31,23 +31,86 @@ class ContentProperties: NSObject {
         valueRange.firstValue = 10
         print(valueRange)
 
+        class ClassE{
+            var name: String
+            init(name: String){
+                self.name = name
+            }
+        }
+
+        let classE = ClassE(name: "ClassE")
+        print(classE.name)
+
         //(1),常量结构体存储属性
         let valueRange2 = FixNumberRange(firstValue: 12, length: 2)
         print(valueRange2)
 //        valueRange2.firstValue = 15
         //(2),延迟存储属性
+        class Dog: NSObject{
+            override init() {
+                NSThread.sleepForTimeInterval(1)
+                super.init()
+            }
+        }
+        class Person{
+           lazy var dog = Dog()
+        }
+
+        let a = Person()
+        print( a.dog )
 
         //(3),存储属性和实例变量
-        
+
 
         /******************* 2，计算属性(Computed Properties) *******************/
+        /*除存储属性外，类、结构体和枚举可以定义计算属性。计算属性不直接存储值，而是提供一个 getter 和一个可选的 setter，来间接获取和设置其他属性或变量的值。*/
+        //(1),set,get构造器
+        class ClassA{
+            var _name = ""
+            var name: String{
+                get{
+                    return _name
+                }
+                set{
+                    _name = newValue
+                }
+            }
+        }
 
+        let classA = ClassA()
+        classA.name = "classA"
+        print(classA.name)
+
+        //(2),只读属性
+        class ClassB{
+            var name: String{
+                return "classB"
+            }
+        }
+        print( ClassB().name )
         /******************* 3，属性观察者(Properties Observers) *******************/
-
+        class ClassC{
+            var name: String = "default"{
+                willSet{
+                    self.name = newValue
+                    print(newValue)
+                }
+                didSet{
+                    self.name = oldValue
+                    print(oldValue)
+                }
+            }
+        }
+        let classC = ClassC()
+        classC.name = "classC"
+        print( classC.name )
         /******************* 4，全局属性和本地属性(Global Properties and Local Properties) *******************/
 
         /******************* 5，类型属性(Type Properties) *******************/
-
+        class ClassD{
+            static var name = "ClassD"
+        }
+        print( ClassD.name )
     }
 }
 

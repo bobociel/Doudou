@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F05F4D3F1D35F80A004013A6 /* ContentTypeCasting.swift in Sources */ = {isa = PBXBuildFile; fileRef = F05F4D3E1D35F80A004013A6 /* ContentTypeCasting.swift */; };
 		F0EEF32E1D2D03AD00FFB6D6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0EEF32D1D2D03AD00FFB6D6 /* AppDelegate.swift */; };
 		F0EEF3301D2D03AD00FFB6D6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0EEF32F1D2D03AD00FFB6D6 /* ViewController.swift */; };
 		F0EEF3331D2D03AD00FFB6D6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0EEF3311D2D03AD00FFB6D6 /* Main.storyboard */; };
@@ -40,6 +41,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F05F4D3E1D35F80A004013A6 /* ContentTypeCasting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentTypeCasting.swift; sourceTree = "<group>"; };
 		F0EEF32A1D2D03AD00FFB6D6 /* Swift3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Swift3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0EEF32D1D2D03AD00FFB6D6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F0EEF32F1D2D03AD00FFB6D6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -125,6 +127,7 @@
 				F0F5EA7A1D2FA67400FB9769 /* ContentARC.swift */,
 				F0F5EA7D1D2FA69800FB9769 /* ContentOptionalChaining.swift */,
 				F0F5EA7F1D2FA6AA00FB9769 /* ContentErrorHandling.swift */,
+				F05F4D3E1D35F80A004013A6 /* ContentTypeCasting.swift */,
 				F0F5EA811D2FA6BC00FB9769 /* ContentNestedTypes.swift */,
 				F0F5EA831D2FA6CE00FB9769 /* ContentExtensions.swift */,
 				F0F5EA871D2FA6EB00FB9769 /* ContentProtocols.swift */,
@@ -211,6 +214,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F0EEF3301D2D03AD00FFB6D6 /* ViewController.swift in Sources */,
+				F05F4D3F1D35F80A004013A6 /* ContentTypeCasting.swift in Sources */,
 				F0F5EA801D2FA6AA00FB9769 /* ContentErrorHandling.swift in Sources */,
 				F0F5EA791D2FA65E00FB9769 /* ContentDeinitialization.swift in Sources */,
 				F0F5EA8E1D2FA72700FB9769 /* ContentAdvancedOperators.swift in Sources */,

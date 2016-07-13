@@ -9,23 +9,23 @@
 import UIKit
 
 enum  ContentType: Int {
-    case TheBasics
+    case TheBasics = 0
     case Operation
     case StringAndCharacters
     case CollectionTypes
     case ControlFlow
     case Functions
-    case Closures
+    case Closures = 6
     case Enumerations
     case ClassAndStrutures
     case Properties
     case Methods
-    case Subscripts
+    case Subscripts = 11
     case Inheritance
     case Initialization
     case Deinitialization
-    case ARC
-    case OptionalChaining
+    case ARC = 15
+    case OptionalChaining = 16
     case ErrorHandling
     case TypeCasting
     case NestedTypes
@@ -93,6 +93,36 @@ class ContentViewController: UIViewController {
             case .Deinitialization:
                 let contentDeinitialization = ContentDeinitialization.init()
                 print(contentDeinitialization)
+            case .ARC:
+                let contentARC = ContentARC.init()
+                print(contentARC)
+            case .OptionalChaining:
+                let contentOptionalChaining = ContentOptionalChaining.init()
+                print(contentOptionalChaining)
+            case .ErrorHandling:
+                let contentErrorHandling = ContentErrorHandling.init()
+                print(contentErrorHandling)
+            case .TypeCasting:
+                let contentTypeCasting = ContentTypeCasting.init()
+                print(contentTypeCasting)
+            case .NestedTypes:
+                let contentNestedTypes = ContentNestedTypes.init()
+                print(contentNestedTypes)
+            case .Extensions:
+                let contentExtensions = ContentExtensions.init()
+                print(contentExtensions)
+            case .Protocols:
+                let contentProtocols = ContentProtocols.init()
+                print(contentProtocols)
+            case .Generics:
+                let contentGenerics = ContentGenerics.init()
+                print(contentGenerics)
+            case .AccessControl:
+                let contentAccessControl = ContentAccessControl.init()
+                print(contentAccessControl)
+            case . AdvancedOperators:
+                let contentAdvancedOperators = ContentAdvancedOperators.init()
+                print(contentAdvancedOperators)
             default:
                 print("default end")
             }

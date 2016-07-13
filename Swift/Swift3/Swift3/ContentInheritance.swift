@@ -14,14 +14,15 @@ class ContentInheritance: NSObject {
         /******************* 1，定义基类(Defining a Base Class) *******************/
         /*Swift classes do not inherit from a universal base class. Classes you define without specifying a superclass automatically become base classes for you to build upon.*/
         class Animal{
-            var name = "Animal"
+            var name : String{
+                return "name:\(self.name)"
+            }
             func run(name: String = "Animal") -> String {
-                self.name = name
-                return "\(name),run"
+                return "\(self.name),run"
             }
 
             final func call(name: String) -> String {
-                return "\(name),call"
+                return "\(self.name),call"
             }
         }
         print( Animal().run() )
@@ -34,6 +35,13 @@ class ContentInheritance: NSObject {
         print(Cat().run())
 
         /******************* 3，覆盖(Overriding) *******************/
+        class Mouse: Animal{
+            override var name: String{
+                return "supername:\(super.name)+selfname:\(self.name)"
+            }
+        }
+        print( Mouse().name )
+
         class Dog: Animal{
             var age = 12
             override private func run(name: String = "Dog") -> String {
@@ -50,6 +58,5 @@ class ContentInheritance: NSObject {
 
          You can mark an entire class as final by writing the final modifier before the class keyword in its class definition (final class). Any attempt to subclass a final class is reported as a compile-time error.
          */
-        
     }
 }
