@@ -20,7 +20,18 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "分享", style: .Plain, target: self, action: #selector(ViewController.shareAction))
+
         dataArray = ["The Basics","Operation","String And Characters","Collection Types","ControlFlow","Functions","Closures","Enumerations","Class And Strutures","Properties","Methods","Subscripts","Inheritance","Deinitialization","ARC","Optional Chaining","Error Handling","Type Casting","Nested Types","Extensions","Protocols","Generics","Access Control","Advanced Operators"]
+
+    }
+
+    func shareAction() {
+        let req = SendMessageToWXReq()
+        req.text = "Hello"
+        req.bText = true
+        req.scene = 0;
+        WXApi.sendReq(req);
     }
 
     //MARK: - UITableVIew

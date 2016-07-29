@@ -28,23 +28,22 @@ class ContentEnumerations: NSObject {
             case Winter
         }
 
-        var summ = Season.Winter
-        summ = .Spring
+        let summ = Season(rawValue: "Spring")
         print(summ)
 
         /******************* 2，(Matching Enumeration Values with a Switch Statement)*******************/
         //--枚举值匹配和Switch语句
-        switch summ {
-        case .Spring:
-            print("春天")
-        case .Summner:
-            print("夏天")
-        case .Autumn:
-            print("秋天")
-        case .Winter:
-            print("冬天")
-        default:
-            print("季节")
+        if let sum = summ{
+            switch sum {
+            case .Spring:
+                print("春天")
+            case .Summner:
+                print("夏天")
+            case .Autumn:
+                print("秋天")
+            case .Winter:
+                print("冬天")
+            }
         }
 
         /******************* 3，关联值(Associated Values) *******************/
@@ -72,7 +71,11 @@ class ContentEnumerations: NSObject {
          注意
          原始值和关联值是不同的。原始值是在定义枚举时被预先填充的值，像上述三个 ASCII 码。对于一个特定的枚举成员，它的原始值始终不变。关联值是创建一个基于枚举成员的常量或变量时才设置的值，枚举成员的关联值可以变化。
          */
-        //(1),原始值的隐式赋值
+        //(1),原始值的隐式赋值,访问原始值
+        enum Genders: Int {
+            case Male = 1, Female
+        }
+
         print(CompassPoint.west.rawValue)
         print(Season.Autumn.rawValue)
 
@@ -82,7 +85,27 @@ class ContentEnumerations: NSObject {
         // west is a "optional value"
 
         /******************* 5，枚举的递归(Recursive Enumerations) *******************/
-        
 
+        indirect enum Math {
+            case Number(Int)
+            case Addition(Math,Math)
+            case Multiplication(Math,Math)
+        }
+
+        func evaluate(math: Math) -> Int{
+            switch math {
+            case let .Number(value):
+                return value;
+            case let .Addition(left,right):
+                return evaluate(left) + evaluate(right)
+            case let .Multiplication(left,right):
+                return evaluate(left) * evaluate(right)
+            }
+        }
+
+        var sum = Math.Addition(.Number(4), .Number(5))
+        print(evaluate( sum) )
+        sum = Math.Multiplication(.Number(9), .Number(8))
+        print(evaluate( sum) )
     }
 }

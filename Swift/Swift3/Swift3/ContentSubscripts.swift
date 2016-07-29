@@ -52,6 +52,18 @@ class ContentSubscripts: NSObject {
         print(sub[2],sub[3])
 
         /******************* 3，下标选项(Subscript Options) *******************/
-        //TODO
+        //subscript 里的参数不能使用默认值和inout属性
+        class SubClass{
+            var array: Array = [1,2,3]
+            subscript(index: Int) -> Int{
+                assert(index < self.array.count, "Index out of Range")
+                return array[index]
+            }
+        }
+
+        let aSubClass = SubClass()
+        aSubClass.array = [3,4,5]
+        print(aSubClass[2])
+
     }
 }

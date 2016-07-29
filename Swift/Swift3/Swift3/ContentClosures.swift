@@ -63,12 +63,41 @@ class ContentClosures: NSObject {
         print( names.sort{$0 > $1} )
 
         /******************* 3，值(Capture Values) *******************/
+        func makeIncrease(increase amount: Int) -> () -> Int{
+            var sum: Int = 0
+            func increase() -> Int{
+                sum += amount
+                return sum;
+            }
+            return increase;
+        }
+
+        let increateTen = makeIncrease(increase: 10)
+        print( increateTen() )
+        print( increateTen() )
+
+        let increateSenven =  makeIncrease(increase: 7)
+        print(increateSenven() )
+        print(increateSenven() )
+
+        let increate10 = makeIncrease(increase: 10)
+        print( increate10() )
+        print( increate10() )
 
         /******************* 4，闭包是引用类型(Closures Are Reference Value) *******************/
+        print( increateTen() )
 
         /******************* 5，非逃逸闭包(Nonescaping Closures) *******************/
+        
 
         /******************* 6，自动闭包(Auto Closures) *******************/
-        
+//        自动闭包，顾名思义是一种自动创建的闭包，用于包装函数参数的表达式，可以说是一种简便语法。
+//        自动闭包不接受任何参数，被调用时会返回被包装在其中的表达式的值。
+        var arry = ["1","2","3","4","5"]
+        let removeArray = { arry.removeLast() }
+        print(arry)
+
+        removeArray()
+        print(arry)
     }
 }

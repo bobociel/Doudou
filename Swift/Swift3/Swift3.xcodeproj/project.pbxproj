@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F0541CA01D4B69AD0043FFE2 /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F0541C9B1D4B69AD0043FFE2 /* libWeChatSDK.a */; };
+		F0541CA11D4B69AD0043FFE2 /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = F0541C9C1D4B69AD0043FFE2 /* README.txt */; };
+		F0541CA61D4B6B730043FFE2 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0541CA51D4B6B730043FFE2 /* SystemConfiguration.framework */; };
+		F0541CA81D4B6B9F0043FFE2 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F0541CA71D4B6B9F0043FFE2 /* libc++.tbd */; };
+		F0541CAA1D4B6BB10043FFE2 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F0541CA91D4B6BB10043FFE2 /* libz.tbd */; };
+		F0541CAC1D4B6BB90043FFE2 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F0541CAB1D4B6BB90043FFE2 /* libsqlite3.0.tbd */; };
+		F0541CAE1D4B6CC40043FFE2 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0541CAD1D4B6CC40043FFE2 /* CoreTelephony.framework */; };
+		F0541CB01D4B6D210043FFE2 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0541CAF1D4B6D210043FFE2 /* Constant.swift */; };
 		F05F4D3F1D35F80A004013A6 /* ContentTypeCasting.swift in Sources */ = {isa = PBXBuildFile; fileRef = F05F4D3E1D35F80A004013A6 /* ContentTypeCasting.swift */; };
 		F0EEF32E1D2D03AD00FFB6D6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0EEF32D1D2D03AD00FFB6D6 /* AppDelegate.swift */; };
 		F0EEF3301D2D03AD00FFB6D6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0EEF32F1D2D03AD00FFB6D6 /* ViewController.swift */; };
@@ -41,39 +49,51 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		F05F4D3E1D35F80A004013A6 /* ContentTypeCasting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentTypeCasting.swift; sourceTree = "<group>"; };
+		F0541C9B1D4B69AD0043FFE2 /* libWeChatSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libWeChatSDK.a; sourceTree = "<group>"; };
+		F0541C9C1D4B69AD0043FFE2 /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
+		F0541C9D1D4B69AD0043FFE2 /* WechatAuthSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WechatAuthSDK.h; sourceTree = "<group>"; };
+		F0541C9E1D4B69AD0043FFE2 /* WXApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApi.h; sourceTree = "<group>"; };
+		F0541C9F1D4B69AD0043FFE2 /* WXApiObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApiObject.h; sourceTree = "<group>"; };
+		F0541CA21D4B6A2E0043FFE2 /* Swift3-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Swift3-Bridging-Header.h"; sourceTree = "<group>"; };
+		F0541CA51D4B6B730043FFE2 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		F0541CA71D4B6B9F0043FFE2 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		F0541CA91D4B6BB10043FFE2 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		F0541CAB1D4B6BB90043FFE2 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		F0541CAD1D4B6CC40043FFE2 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		F0541CAF1D4B6D210043FFE2 /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		F05F4D3E1D35F80A004013A6 /* ContentTypeCasting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContentTypeCasting.swift; path = ../../ContentTypeCasting.swift; sourceTree = "<group>"; };
 		F0EEF32A1D2D03AD00FFB6D6 /* Swift3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Swift3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0EEF32D1D2D03AD00FFB6D6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F0EEF32F1D2D03AD00FFB6D6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F0EEF32F1D2D03AD00FFB6D6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = ../../ViewController.swift; sourceTree = "<group>"; };
 		F0EEF3321D2D03AD00FFB6D6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F0EEF3341D2D03AD00FFB6D6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F0EEF3371D2D03AD00FFB6D6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F0EEF3391D2D03AD00FFB6D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F0F5EA581D2F685B00FB9769 /* ContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentViewController.swift; sourceTree = "<group>"; };
-		F0F5EA5A1D2F6A0400FB9769 /* ContentTheBasics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentTheBasics.swift; sourceTree = "<group>"; };
-		F0F5EA5C1D2F86A300FB9769 /* ContentOperators.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentOperators.swift; sourceTree = "<group>"; };
-		F0F5EA5E1D2F8E7A00FB9769 /* ContentStringAndCharacters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentStringAndCharacters.swift; sourceTree = "<group>"; };
-		F0F5EA601D2F8E8A00FB9769 /* ContentCollectionTypes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentCollectionTypes.swift; sourceTree = "<group>"; };
-		F0F5EA621D2F979500FB9769 /* ContentControlFlow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentControlFlow.swift; sourceTree = "<group>"; };
-		F0F5EA641D2F9B1300FB9769 /* ContentFunction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentFunction.swift; sourceTree = "<group>"; };
-		F0F5EA661D2F9C9800FB9769 /* ContentClosures.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentClosures.swift; sourceTree = "<group>"; };
-		F0F5EA681D2F9E5400FB9769 /* ContentEnumerations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentEnumerations.swift; sourceTree = "<group>"; };
-		F0F5EA6A1D2F9FD300FB9769 /* ContentClassesAndStructures.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentClassesAndStructures.swift; sourceTree = "<group>"; };
-		F0F5EA6C1D2F9FEC00FB9769 /* ContentProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentProperties.swift; sourceTree = "<group>"; };
-		F0F5EA6E1D2FA00000FB9769 /* ContentMethods.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentMethods.swift; sourceTree = "<group>"; };
-		F0F5EA701D2FA02700FB9769 /* ContentSubscripts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentSubscripts.swift; sourceTree = "<group>"; };
-		F0F5EA721D2FA41100FB9769 /* ContentInheritance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentInheritance.swift; sourceTree = "<group>"; };
-		F0F5EA741D2FA4EB00FB9769 /* ContentInitialization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentInitialization.swift; sourceTree = "<group>"; };
-		F0F5EA781D2FA65E00FB9769 /* ContentDeinitialization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentDeinitialization.swift; sourceTree = "<group>"; };
-		F0F5EA7A1D2FA67400FB9769 /* ContentARC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentARC.swift; sourceTree = "<group>"; };
-		F0F5EA7D1D2FA69800FB9769 /* ContentOptionalChaining.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentOptionalChaining.swift; sourceTree = "<group>"; };
-		F0F5EA7F1D2FA6AA00FB9769 /* ContentErrorHandling.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentErrorHandling.swift; sourceTree = "<group>"; };
-		F0F5EA811D2FA6BC00FB9769 /* ContentNestedTypes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentNestedTypes.swift; sourceTree = "<group>"; };
-		F0F5EA831D2FA6CE00FB9769 /* ContentExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentExtensions.swift; sourceTree = "<group>"; };
-		F0F5EA871D2FA6EB00FB9769 /* ContentProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentProtocols.swift; sourceTree = "<group>"; };
-		F0F5EA891D2FA6FC00FB9769 /* ContentGenerics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentGenerics.swift; sourceTree = "<group>"; };
-		F0F5EA8B1D2FA70F00FB9769 /* ContentAccessControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentAccessControl.swift; sourceTree = "<group>"; };
-		F0F5EA8D1D2FA72700FB9769 /* ContentAdvancedOperators.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentAdvancedOperators.swift; sourceTree = "<group>"; };
+		F0F5EA581D2F685B00FB9769 /* ContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContentViewController.swift; path = ../../ContentViewController.swift; sourceTree = "<group>"; };
+		F0F5EA5A1D2F6A0400FB9769 /* ContentTheBasics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContentTheBasics.swift; path = ../../ContentTheBasics.swift; sourceTree = "<group>"; };
+		F0F5EA5C1D2F86A300FB9769 /* ContentOperators.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContentOperators.swift; path = ../../ContentOperators.swift; sourceTree = "<group>"; };
+		F0F5EA5E1D2F8E7A00FB9769 /* ContentStringAndCharacters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContentStringAndCharacters.swift; path = ../../ContentStringAndCharacters.swift; sourceTree = "<group>"; };
+		F0F5EA601D2F8E8A00FB9769 /* ContentCollectionTypes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContentCollectionTypes.swift; path = ../../ContentCollectionTypes.swift; sourceTree = "<group>"; };
+		F0F5EA621D2F979500FB9769 /* ContentControlFlow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContentControlFlow.swift; path = ../../ContentControlFlow.swift; sourceTree = "<group>"; };
+		F0F5EA641D2F9B1300FB9769 /* ContentFunction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContentFunction.swift; path = ../../ContentFunction.swift; sourceTree = "<group>"; };
+		F0F5EA661D2F9C9800FB9769 /* ContentClosures.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContentClosures.swift; path = ../../ContentClosures.swift; sourceTree = "<group>"; };
+		F0F5EA681D2F9E5400FB9769 /* ContentEnumerations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContentEnumerations.swift; path = ../../ContentEnumerations.swift; sourceTree = "<group>"; };
+		F0F5EA6A1D2F9FD300FB9769 /* ContentClassesAndStructures.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContentClassesAndStructures.swift; path = ../../ContentClassesAndStructures.swift; sourceTree = "<group>"; };
+		F0F5EA6C1D2F9FEC00FB9769 /* ContentProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContentProperties.swift; path = ../../ContentProperties.swift; sourceTree = "<group>"; };
+		F0F5EA6E1D2FA00000FB9769 /* ContentMethods.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContentMethods.swift; path = ../../ContentMethods.swift; sourceTree = "<group>"; };
+		F0F5EA701D2FA02700FB9769 /* ContentSubscripts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContentSubscripts.swift; path = ../../ContentSubscripts.swift; sourceTree = "<group>"; };
+		F0F5EA721D2FA41100FB9769 /* ContentInheritance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContentInheritance.swift; path = ../../ContentInheritance.swift; sourceTree = "<group>"; };
+		F0F5EA741D2FA4EB00FB9769 /* ContentInitialization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContentInitialization.swift; path = ../../ContentInitialization.swift; sourceTree = "<group>"; };
+		F0F5EA781D2FA65E00FB9769 /* ContentDeinitialization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContentDeinitialization.swift; path = ../../ContentDeinitialization.swift; sourceTree = "<group>"; };
+		F0F5EA7A1D2FA67400FB9769 /* ContentARC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContentARC.swift; path = ../../ContentARC.swift; sourceTree = "<group>"; };
+		F0F5EA7D1D2FA69800FB9769 /* ContentOptionalChaining.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContentOptionalChaining.swift; path = ../../ContentOptionalChaining.swift; sourceTree = "<group>"; };
+		F0F5EA7F1D2FA6AA00FB9769 /* ContentErrorHandling.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContentErrorHandling.swift; path = ../../ContentErrorHandling.swift; sourceTree = "<group>"; };
+		F0F5EA811D2FA6BC00FB9769 /* ContentNestedTypes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContentNestedTypes.swift; path = ../../ContentNestedTypes.swift; sourceTree = "<group>"; };
+		F0F5EA831D2FA6CE00FB9769 /* ContentExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContentExtensions.swift; path = ../../ContentExtensions.swift; sourceTree = "<group>"; };
+		F0F5EA871D2FA6EB00FB9769 /* ContentProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContentProtocols.swift; path = ../../ContentProtocols.swift; sourceTree = "<group>"; };
+		F0F5EA891D2FA6FC00FB9769 /* ContentGenerics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContentGenerics.swift; path = ../../ContentGenerics.swift; sourceTree = "<group>"; };
+		F0F5EA8B1D2FA70F00FB9769 /* ContentAccessControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContentAccessControl.swift; path = ../../ContentAccessControl.swift; sourceTree = "<group>"; };
+		F0F5EA8D1D2FA72700FB9769 /* ContentAdvancedOperators.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContentAdvancedOperators.swift; path = ../../ContentAdvancedOperators.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,32 +101,39 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F0541CA61D4B6B730043FFE2 /* SystemConfiguration.framework in Frameworks */,
+				F0541CAE1D4B6CC40043FFE2 /* CoreTelephony.framework in Frameworks */,
+				F0541CAC1D4B6BB90043FFE2 /* libsqlite3.0.tbd in Frameworks */,
+				F0541CAA1D4B6BB10043FFE2 /* libz.tbd in Frameworks */,
+				F0541CA81D4B6B9F0043FFE2 /* libc++.tbd in Frameworks */,
+				F0541CA01D4B69AD0043FFE2 /* libWeChatSDK.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		F0EEF3211D2D03AC00FFB6D6 = {
+		F0541C9A1D4B69A30043FFE2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				F0EEF32C1D2D03AD00FFB6D6 /* Swift3 */,
-				F0EEF32B1D2D03AD00FFB6D6 /* Products */,
+				F0541CAD1D4B6CC40043FFE2 /* CoreTelephony.framework */,
+				F0541CAB1D4B6BB90043FFE2 /* libsqlite3.0.tbd */,
+				F0541CA91D4B6BB10043FFE2 /* libz.tbd */,
+				F0541CA71D4B6B9F0043FFE2 /* libc++.tbd */,
+				F0541CA51D4B6B730043FFE2 /* SystemConfiguration.framework */,
+				F0541C9B1D4B69AD0043FFE2 /* libWeChatSDK.a */,
+				F0541C9C1D4B69AD0043FFE2 /* README.txt */,
+				F0541C9D1D4B69AD0043FFE2 /* WechatAuthSDK.h */,
+				F0541C9E1D4B69AD0043FFE2 /* WXApi.h */,
+				F0541C9F1D4B69AD0043FFE2 /* WXApiObject.h */,
 			);
+			name = Frameworks;
+			path = Swift3/Frameworks;
 			sourceTree = "<group>";
 		};
-		F0EEF32B1D2D03AD00FFB6D6 /* Products */ = {
+		F0541CA41D4B6A5D0043FFE2 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				F0EEF32A1D2D03AD00FFB6D6 /* Swift3.app */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		F0EEF32C1D2D03AD00FFB6D6 /* Swift3 */ = {
-			isa = PBXGroup;
-			children = (
-				F0EEF32D1D2D03AD00FFB6D6 /* AppDelegate.swift */,
 				F0EEF32F1D2D03AD00FFB6D6 /* ViewController.swift */,
 				F0F5EA581D2F685B00FB9769 /* ContentViewController.swift */,
 				F0F5EA5A1D2F6A0400FB9769 /* ContentTheBasics.swift */,
@@ -134,10 +161,39 @@
 				F0F5EA891D2FA6FC00FB9769 /* ContentGenerics.swift */,
 				F0F5EA8B1D2FA70F00FB9769 /* ContentAccessControl.swift */,
 				F0F5EA8D1D2FA72700FB9769 /* ContentAdvancedOperators.swift */,
-				F0EEF3311D2D03AD00FFB6D6 /* Main.storyboard */,
-				F0EEF3341D2D03AD00FFB6D6 /* Assets.xcassets */,
+			);
+			name = ViewController;
+			path = Frameworks/ViewController;
+			sourceTree = "<group>";
+		};
+		F0EEF3211D2D03AC00FFB6D6 = {
+			isa = PBXGroup;
+			children = (
+				F0541C9A1D4B69A30043FFE2 /* Frameworks */,
+				F0EEF32C1D2D03AD00FFB6D6 /* Swift3 */,
+				F0EEF32B1D2D03AD00FFB6D6 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F0EEF32B1D2D03AD00FFB6D6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F0EEF32A1D2D03AD00FFB6D6 /* Swift3.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F0EEF32C1D2D03AD00FFB6D6 /* Swift3 */ = {
+			isa = PBXGroup;
+			children = (
+				F0EEF32D1D2D03AD00FFB6D6 /* AppDelegate.swift */,
+				F0541CAF1D4B6D210043FFE2 /* Constant.swift */,
+				F0541CA21D4B6A2E0043FFE2 /* Swift3-Bridging-Header.h */,
 				F0EEF3361D2D03AD00FFB6D6 /* LaunchScreen.storyboard */,
+				F0EEF3311D2D03AD00FFB6D6 /* Main.storyboard */,
 				F0EEF3391D2D03AD00FFB6D6 /* Info.plist */,
+				F0EEF3341D2D03AD00FFB6D6 /* Assets.xcassets */,
+				F0541CA41D4B6A5D0043FFE2 /* ViewController */,
 			);
 			path = Swift3;
 			sourceTree = "<group>";
@@ -174,6 +230,7 @@
 				TargetAttributes = {
 					F0EEF3291D2D03AD00FFB6D6 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 2WFF3BLNE7;
 					};
 				};
 			};
@@ -202,6 +259,7 @@
 			files = (
 				F0EEF3381D2D03AD00FFB6D6 /* LaunchScreen.storyboard in Resources */,
 				F0EEF3351D2D03AD00FFB6D6 /* Assets.xcassets in Resources */,
+				F0541CA11D4B69AD0043FFE2 /* README.txt in Resources */,
 				F0EEF3331D2D03AD00FFB6D6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -223,6 +281,7 @@
 				F0F5EA8A1D2FA6FC00FB9769 /* ContentGenerics.swift in Sources */,
 				F0F5EA751D2FA4EB00FB9769 /* ContentInitialization.swift in Sources */,
 				F0F5EA5F1D2F8E7A00FB9769 /* ContentStringAndCharacters.swift in Sources */,
+				F0541CB01D4B6D210043FFE2 /* Constant.swift in Sources */,
 				F0F5EA6B1D2F9FD300FB9769 /* ContentClassesAndStructures.swift in Sources */,
 				F0F5EA5B1D2F6A0400FB9769 /* ContentTheBasics.swift in Sources */,
 				F0F5EA711D2FA02700FB9769 /* ContentSubscripts.swift in Sources */,
@@ -355,11 +414,19 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Swift3/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Swift3/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.lovewith.lovewith.Swift3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/Swift3/Swift3-Bridging-Header.h";
 			};
 			name = Debug;
 		};
@@ -367,11 +434,19 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Swift3/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Swift3/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.lovewith.lovewith.Swift3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/Swift3/Swift3-Bridging-Header.h";
 			};
 			name = Release;
 		};
