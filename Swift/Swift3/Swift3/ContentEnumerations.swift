@@ -85,7 +85,7 @@ class ContentEnumerations: NSObject {
         // west is a "optional value"
 
         /******************* 5，枚举的递归(Recursive Enumerations) *******************/
-
+        // indirect 表示可递归枚举
         indirect enum Math {
             case Number(Int)
             case Addition(Math,Math)
