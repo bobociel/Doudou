@@ -60,7 +60,7 @@ class ContentProperties: NSObject {
         print( a.dog )
 
         //(3),存储属性和实例变量
-
+        // 在OC中存在属性和对应属性的实例变量，Swift只存在属性没有对应属性的实例变量
 
         /******************* 2，计算属性(Computed Properties) *******************/
         /*除存储属性外，类、结构体和枚举可以定义计算属性。计算属性不直接存储值，而是提供一个 getter 和一个可选的 setter，来间接获取和设置其他属性或变量的值。*/
@@ -105,6 +105,7 @@ class ContentProperties: NSObject {
         classC.name = "classC"
         print( classC.name )
         /******************* 4，全局属性和本地属性(Global Properties and Local Properties) *******************/
+        //以上所写的关于计算与观察属性值的特性同样适用于全局和局部变量。全局变量是在任何函数、方法、闭包、类型上下文外部定义的变量，而局部变量是在函数、方法、闭包中定义的变量。
 
         /******************* 5，类型属性(Type Properties) *******************/
         class ClassD{

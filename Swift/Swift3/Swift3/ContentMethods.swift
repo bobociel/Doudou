@@ -63,7 +63,8 @@ class ContentMethods: NSObject {
 
         /******************* 2，类型方法(Type Methods) *******************/
         /*
-         实例方法是被某个类型的实例调用的方法。你也可以定义在类型本身上调用的方法，这种方法就叫做类型方法（Type Methods）。在方法的func关键字之前加上关键字static，来指定类型方法。类还可以用关键字class来允许子类重写父类的方法实现。
+         1,实例方法是被某个类型的实例调用的方法。你也可以定义在类型本身上调用的方法，这种方法就叫做类型方法（Type Methods）。在方法的func关键字之前加上关键字static，来指定类型方法。类还可以用关键字class来允许子类重写父类的方法实现。
+         2,@discardableResult 描述时，即使不接收返回值也不会警告
          */
 
 
@@ -82,7 +83,6 @@ class ContentMethods: NSObject {
                 return isMale
             }
 
-            //TODO
 //            @discardableResult 
             func sayHello(name: String,isMale: Bool) -> String {
                 if  HelloPerson.isMale(isMale){

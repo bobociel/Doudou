@@ -29,7 +29,7 @@ enum  ContentType: Int {
     case ErrorHandling
     case TypeCasting
     case NestedTypes
-    case Extensions
+    case Extensions = 20
     case Protocols
     case Generics
     case AccessControl
