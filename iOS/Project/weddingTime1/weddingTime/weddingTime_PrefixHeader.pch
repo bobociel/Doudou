@@ -1,0 +1,32 @@
+//
+//  weddingTime_PrefixHeader.pch
+//  weddingTime
+//
+//  Created by 默默 on 15/9/8.
+//  Copyright (c) 2015年 默默. All rights reserved.
+//
+
+#ifndef weddingTime_weddingTime_PrefixHeader_pch
+#define weddingTime_weddingTime_PrefixHeader_pch
+#import <AssetsLibrary/AssetsLibrary.h>
+#import "macrodefine.h"
+#import "UIView+QHUIViewCtg.h"
+#import "NSString+QHNSStringCtg.h"
+#import "WeddingTimeAppInfoManager.h"
+#import "LWUtil.h"
+#import "Masonry.h"
+#import "NotificationControlCenter.h"
+#import "LWUtil.h"
+#import "WTProgressHUD.h"
+#import "UserInfoManager.h"
+#import "UIImageView+ModePlacehoder.h"
+#import "ChatMessageManager.h"
+#import "NetWorkingFailDoErr.h"
+#import "WTAlertView.h"
+#import "WTLocalDataManager.h"
+#import "PostDataService.h"
+#import "SQLiteAssister.h"
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#endif

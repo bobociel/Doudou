@@ -36,11 +36,32 @@ enum  ContentType: Int {
     case AdvancedOperators
 }
 
+public extension UIImage{
+    class func imageWithColor(color: UIColor = UIColor.whiteColor()) -> UIImage? {
+        let rect = CGRect(x: 0, y: 0, width: 1, height: 1)
+        UIGraphicsBeginImageContextWithOptions(rect.size, false, 0)
+        let  content = UIGraphicsGetCurrentContext()
+        CGContextSetFillColorWithColor(content, color.CGColor)
+        CGContextFillRect(content, rect)
+        let image = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return image
+    }
+}
+
 class ContentViewController: UIViewController {
     var _contentType: ContentType?
     var contentType: ContentType? { get{return _contentType;} set(type){
         _contentType = type
         }
+    }
+
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.navigationBarHidden = false
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage.imageWithColor(UIColor.redColor()), forBarMetrics: .Default)
+        self.navigationController?.navigationBar.tintColor = UIColor.redColor()
+        self.navigationController?.navigationBar.shadowImage = UIImage.init()
     }
 
     override func viewDidLoad() {

@@ -16,6 +16,13 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
 
     @IBOutlet weak var tableView: UITableView!
     var dataArray = [String]()
+
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+//        self.navigationController?.navigationBar.setBackgroundImage(UIImage.imageWithColor(UIColor.blueColor()), forBarMetrics: .Default)
+//        self.navigationController?.navigationBar.shadowImage = UIImage.init()
+        self.navigationController?.navigationBarHidden = true
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" restorationIdentifier="WeddingHomePageStoryCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="WeddingHomePageStoryCell" rowHeight="120" id="KGk-i7-Jjw" customClass="WeddingHomePageStoryCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="120"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="119"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Q0e-98-Kmv">
+                        <rect key="frame" x="0.0" y="120" width="320" height="0.0"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="0.5" id="dLP-Bu-JL7"/>
+                        </constraints>
+                    </imageView>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BGP-uK-lcl">
+                        <rect key="frame" x="8" y="10" width="100" height="100"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="100" id="aHp-Xq-kj7"/>
+                            <constraint firstAttribute="width" constant="100" id="gvS-Je-Llu"/>
+                        </constraints>
+                    </imageView>
+                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" text="故事" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="0Y2-Aw-7Pd">
+                        <rect key="frame" x="116" y="10" width="196" height="95"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="tintColor" red="1" green="0.2666666667" blue="0.51372549020000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="49" id="3E7-OJ-atY"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="14"/>
+                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="3E7-OJ-atY"/>
+                            </mask>
+                        </variation>
+                    </textView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Q0e-98-Kmv" firstAttribute="top" secondItem="BGP-uK-lcl" secondAttribute="bottom" constant="9.5" id="3Ue-eA-Pgp"/>
+                    <constraint firstItem="Q0e-98-Kmv" firstAttribute="top" secondItem="0Y2-Aw-7Pd" secondAttribute="bottom" constant="15" id="7b5-9n-pqy"/>
+                    <constraint firstItem="Q0e-98-Kmv" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="-8" id="Dcn-tY-THA"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="Q0e-98-Kmv" secondAttribute="trailing" constant="-8" id="GFC-cd-BmN"/>
+                    <constraint firstItem="BGP-uK-lcl" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="ZkO-QK-WgJ"/>
+                    <constraint firstItem="0Y2-Aw-7Pd" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="2" id="dk7-qH-VWj"/>
+                    <constraint firstAttribute="trailing" secondItem="0Y2-Aw-7Pd" secondAttribute="trailing" constant="8" id="g0i-Tl-4RA"/>
+                    <constraint firstItem="BGP-uK-lcl" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="2" id="hYT-Bm-oTg"/>
+                    <constraint firstItem="0Y2-Aw-7Pd" firstAttribute="leading" secondItem="BGP-uK-lcl" secondAttribute="trailing" constant="8" id="hqL-ig-WkR"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="headImage" destination="BGP-uK-lcl" id="Xdn-6W-WSA"/>
+                <outlet property="lineView" destination="Q0e-98-Kmv" id="nAT-gO-G1o"/>
+                <outlet property="textView" destination="0Y2-Aw-7Pd" id="WoK-06-bKY"/>
+            </connections>
+            <point key="canvasLocation" x="228" y="176"/>
+        </tableViewCell>
+    </objects>
+</document>

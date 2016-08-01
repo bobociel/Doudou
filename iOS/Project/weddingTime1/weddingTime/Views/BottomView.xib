@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="BottomView">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="46"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SL2-qG-WdS">
+                    <rect key="frame" x="234" y="11" width="24" height="24"/>
+                    <state key="normal" image="icon_tel"/>
+                    <connections>
+                        <action selector="telAction" destination="iN0-l3-epB" eventType="touchUpInside" id="Q5h-fQ-edM"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ccx-4H-LmN">
+                    <rect key="frame" x="281" y="11" width="24" height="24"/>
+                    <state key="normal" image="icon_chat_sup"/>
+                    <connections>
+                        <action selector="covAction" destination="iN0-l3-epB" eventType="touchUpInside" id="tQI-lW-lKz"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tNA-hv-SL0">
+                    <rect key="frame" x="15" y="12" width="190" height="17"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="190" id="Zur-0r-BeY"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="0.3921568627" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="tNA-hv-SL0" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="15" id="4Em-iR-frL"/>
+                <constraint firstItem="Ccx-4H-LmN" firstAttribute="leading" secondItem="SL2-qG-WdS" secondAttribute="trailing" constant="22" id="PNr-nj-BAb"/>
+                <constraint firstItem="tNA-hv-SL0" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="12" id="XQR-bm-9k3"/>
+                <constraint firstItem="Ccx-4H-LmN" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="btU-Oq-RUn"/>
+                <constraint firstItem="SL2-qG-WdS" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="qVV-S4-Ytf"/>
+                <constraint firstAttribute="trailing" secondItem="Ccx-4H-LmN" secondAttribute="trailing" constant="15" id="uUH-b2-bn5"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="conButton" destination="Ccx-4H-LmN" id="37r-tg-O9i"/>
+                <outlet property="priceLabel" destination="tNA-hv-SL0" id="Oc3-dU-lQt"/>
+                <outlet property="telButton" destination="SL2-qG-WdS" id="qFt-uF-ZIO"/>
+            </connections>
+            <point key="canvasLocation" x="355" y="344"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="icon_chat_sup" width="24" height="24"/>
+        <image name="icon_tel" width="24" height="24"/>
+    </resources>
+</document>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="WTWebViewCell" id="KGk-i7-Jjw" customClass="WTWebViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="200"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="199"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Jel-ru-W4k">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="200"/>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="Jel-ru-W4k" secondAttribute="height" multiplier="8:5" id="uZJ-BZ-plo"/>
+                        </constraints>
+                    </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8WR-H6-2Q7">
+                        <rect key="frame" x="125" y="65" width="70" height="70"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="70" id="Ylf-cB-Caz"/>
+                            <constraint firstAttribute="height" constant="70" id="tnX-WB-1Od"/>
+                        </constraints>
+                        <state key="normal" image="video_icon"/>
+                        <connections>
+                            <action selector="playVideo:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="9SV-PC-Db0"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="8WR-H6-2Q7" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="1Kw-fT-qqv"/>
+                    <constraint firstItem="8WR-H6-2Q7" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="8j3-hk-Lrw"/>
+                    <constraint firstItem="Jel-ru-W4k" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="FxZ-bZ-4XF"/>
+                    <constraint firstAttribute="trailing" secondItem="Jel-ru-W4k" secondAttribute="trailing" id="RYU-fg-dla"/>
+                    <constraint firstItem="Jel-ru-W4k" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="See-fB-fbp"/>
+                    <constraint firstItem="Jel-ru-W4k" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="heu-GH-62M"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="videoImage" destination="Jel-ru-W4k" id="Piv-tf-dfh"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="video_icon" width="68" height="68"/>
+    </resources>
+</document>

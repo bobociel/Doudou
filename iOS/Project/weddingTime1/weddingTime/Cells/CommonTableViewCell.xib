@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="CommonTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="405"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="azg-8Y-RBK">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="400"/>
+                    <subviews>
+                        <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fLa-ia-foY">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="300"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="OYq-kX-7Ab">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="300"/>
+                                </imageView>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_video" translatesAutoresizingMaskIntoConstraints="NO" id="xnA-Wc-qyN">
+                                    <rect key="frame" x="173" y="116" width="68" height="68"/>
+                                </imageView>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="OYq-kX-7Ab" firstAttribute="top" secondItem="fLa-ia-foY" secondAttribute="top" id="Bm7-r7-eXR"/>
+                                <constraint firstAttribute="bottom" secondItem="OYq-kX-7Ab" secondAttribute="bottom" id="G8d-aI-XXJ"/>
+                                <constraint firstItem="xnA-Wc-qyN" firstAttribute="centerY" secondItem="fLa-ia-foY" secondAttribute="centerY" id="NES-Rp-jOO"/>
+                                <constraint firstItem="xnA-Wc-qyN" firstAttribute="centerX" secondItem="fLa-ia-foY" secondAttribute="centerX" id="PsL-3y-Dht"/>
+                                <constraint firstAttribute="trailing" secondItem="OYq-kX-7Ab" secondAttribute="trailing" id="jxd-rV-syR"/>
+                                <constraint firstItem="OYq-kX-7Ab" firstAttribute="leading" secondItem="fLa-ia-foY" secondAttribute="leading" id="y1g-Gk-jZ5"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RaD-oN-5pb">
+                            <rect key="frame" x="0.0" y="300" width="414" height="100"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="喜来乐大酒店" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="40a-wV-Btk">
+                                    <rect key="frame" x="20" y="20" width="374" height="22"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="作品 10000  ·   喜欢 10000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XGJ-dB-oHu">
+                                    <rect key="frame" x="20" y="56" width="160" height="15"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="160" id="DME-N0-59s"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                    <color key="textColor" red="0.47843137254901957" green="0.50196078431372548" blue="0.53725490196078429" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="￥3000000.00起" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y9q-yG-cxh">
+                                    <rect key="frame" x="181" y="49" width="213" height="17"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <color key="textColor" red="1" green="0.3921568627" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="40a-wV-Btk" firstAttribute="leading" secondItem="RaD-oN-5pb" secondAttribute="leading" constant="20" id="L3H-i6-4ym"/>
+                                <constraint firstItem="XGJ-dB-oHu" firstAttribute="leading" secondItem="RaD-oN-5pb" secondAttribute="leading" constant="20" id="R2D-WU-2c4"/>
+                                <constraint firstItem="y9q-yG-cxh" firstAttribute="leading" secondItem="XGJ-dB-oHu" secondAttribute="trailing" constant="1" id="U0c-Yh-Eg7"/>
+                                <constraint firstAttribute="trailing" secondItem="40a-wV-Btk" secondAttribute="trailing" constant="20" id="USK-aY-HWH"/>
+                                <constraint firstItem="XGJ-dB-oHu" firstAttribute="top" secondItem="40a-wV-Btk" secondAttribute="bottom" constant="15" id="gBD-gO-vha"/>
+                                <constraint firstItem="40a-wV-Btk" firstAttribute="top" secondItem="RaD-oN-5pb" secondAttribute="top" constant="20" id="nLk-MT-vrO"/>
+                                <constraint firstAttribute="trailing" secondItem="y9q-yG-cxh" secondAttribute="trailing" constant="20" id="rJN-I2-pbR"/>
+                                <constraint firstItem="y9q-yG-cxh" firstAttribute="top" secondItem="40a-wV-Btk" secondAttribute="bottom" constant="7" id="udt-m0-15f"/>
+                            </constraints>
+                        </view>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qb8-Sd-Mq9">
+                            <rect key="frame" x="368" y="256" width="26" height="24"/>
+                            <state key="normal" image="icon_unlike">
+                                <color key="titleColor" red="1" green="0.3921568627" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <state key="selected" image="icon_like"/>
+                            <connections>
+                                <action selector="likeIconAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="La1-Yb-atG"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="fLa-ia-foY" secondAttribute="trailing" id="AUJ-yi-OHI"/>
+                        <constraint firstItem="fLa-ia-foY" firstAttribute="top" secondItem="azg-8Y-RBK" secondAttribute="top" id="M9s-16-VjJ"/>
+                        <constraint firstItem="RaD-oN-5pb" firstAttribute="top" secondItem="Qb8-Sd-Mq9" secondAttribute="bottom" constant="20" id="VR0-NC-gZT"/>
+                        <constraint firstItem="RaD-oN-5pb" firstAttribute="height" secondItem="azg-8Y-RBK" secondAttribute="height" multiplier="0.25" id="Xyj-BP-jbY"/>
+                        <constraint firstAttribute="trailing" secondItem="Qb8-Sd-Mq9" secondAttribute="trailing" constant="20" id="ba8-JE-cBj"/>
+                        <constraint firstAttribute="trailing" secondItem="RaD-oN-5pb" secondAttribute="trailing" id="cEl-gT-Wfh"/>
+                        <constraint firstItem="fLa-ia-foY" firstAttribute="height" secondItem="azg-8Y-RBK" secondAttribute="height" multiplier="0.75" id="jGj-oK-VYv"/>
+                        <constraint firstItem="RaD-oN-5pb" firstAttribute="leading" secondItem="azg-8Y-RBK" secondAttribute="leading" id="nBV-Wo-T7A"/>
+                        <constraint firstAttribute="bottom" secondItem="RaD-oN-5pb" secondAttribute="bottom" id="pDO-s7-wQ0"/>
+                        <constraint firstItem="RaD-oN-5pb" firstAttribute="top" secondItem="fLa-ia-foY" secondAttribute="bottom" id="pRV-ci-n5S"/>
+                        <constraint firstItem="fLa-ia-foY" firstAttribute="leading" secondItem="azg-8Y-RBK" secondAttribute="leading" id="pUc-6k-TsV"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.96862745098039216" green="0.96862745098039216" blue="0.96862745098039216" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="azg-8Y-RBK" secondAttribute="bottom" constant="5" id="8q0-EP-7lT"/>
+                <constraint firstItem="azg-8Y-RBK" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="kXP-Zz-nSM"/>
+                <constraint firstAttribute="trailing" secondItem="azg-8Y-RBK" secondAttribute="trailing" id="l8R-bS-9eg"/>
+                <constraint firstItem="azg-8Y-RBK" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="yV3-xP-pM7"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <nil key="simulatedTopBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="detailLabel" destination="XGJ-dB-oHu" id="NJA-Tr-a8u"/>
+                <outlet property="likeButton" destination="Qb8-Sd-Mq9" id="GMs-d0-AFH"/>
+                <outlet property="nameLabel" destination="40a-wV-Btk" id="oxR-s3-NNX"/>
+                <outlet property="priceLabel" destination="y9q-yG-cxh" id="S6Y-nc-Qaz"/>
+                <outlet property="topImage" destination="OYq-kX-7Ab" id="LuS-dC-azx"/>
+                <outlet property="videoIcon" destination="xnA-Wc-qyN" id="gdE-1X-UHD"/>
+            </connections>
+            <point key="canvasLocation" x="362" y="320"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="icon_like" width="26" height="25"/>
+        <image name="icon_unlike" width="26" height="24"/>
+        <image name="icon_video" width="68" height="68"/>
+    </resources>
+</document>

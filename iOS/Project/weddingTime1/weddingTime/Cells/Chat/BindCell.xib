@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="BindCell" rowHeight="57" id="G5q-m6-kk5" customClass="ChatListCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="98"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="G5q-m6-kk5" id="YBf-1Z-1cq">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="97.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1vh-O4-8g0">
+                        <rect key="frame" x="58" y="97" width="262" height="1"/>
+                        <animations/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="kTN-nr-P5P"/>
+                        </constraints>
+                    </imageView>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="utc-7X-kRy">
+                        <rect key="frame" x="12" y="24" width="50" height="50"/>
+                        <animations/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="50" id="7fL-PR-c6J"/>
+                            <constraint firstAttribute="width" constant="50" id="P67-Ww-Vhe"/>
+                        </constraints>
+                    </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OVo-7C-Hxf">
+                        <rect key="frame" x="293" y="40" width="12" height="18"/>
+                        <animations/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="12" id="RGZ-Gt-afc"/>
+                            <constraint firstAttribute="height" constant="18" id="mKd-10-guu"/>
+                        </constraints>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <state key="normal" image="icon_arrow_right"/>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="未绑定另一半" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="120" translatesAutoresizingMaskIntoConstraints="NO" id="Fbp-NU-o0F">
+                        <rect key="frame" x="77" y="37.5" width="120" height="23.5"/>
+                        <animations/>
+                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <animations/>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                <constraints>
+                    <constraint firstItem="utc-7X-kRy" firstAttribute="leading" secondItem="YBf-1Z-1cq" secondAttribute="leadingMargin" constant="4" id="0QL-qs-m9p"/>
+                    <constraint firstItem="1vh-O4-8g0" firstAttribute="top" secondItem="utc-7X-kRy" secondAttribute="bottom" constant="23" id="76g-le-haB"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="OVo-7C-Hxf" secondAttribute="trailing" constant="7" id="Bxb-mB-97c"/>
+                    <constraint firstItem="utc-7X-kRy" firstAttribute="top" secondItem="YBf-1Z-1cq" secondAttribute="topMargin" constant="16" id="CnM-a7-azC"/>
+                    <constraint firstItem="Fbp-NU-o0F" firstAttribute="leading" secondItem="YBf-1Z-1cq" secondAttribute="leadingMargin" constant="69" id="KAN-0O-1mF"/>
+                    <constraint firstItem="1vh-O4-8g0" firstAttribute="leading" secondItem="YBf-1Z-1cq" secondAttribute="leadingMargin" constant="50" id="P6o-8a-u8w"/>
+                    <constraint firstItem="Fbp-NU-o0F" firstAttribute="leading" secondItem="utc-7X-kRy" secondAttribute="trailing" constant="16" id="VIM-vu-80A"/>
+                    <constraint firstAttribute="centerY" secondItem="Fbp-NU-o0F" secondAttribute="centerY" id="pQf-Dz-hPe"/>
+                    <constraint firstItem="OVo-7C-Hxf" firstAttribute="top" secondItem="YBf-1Z-1cq" secondAttribute="topMargin" constant="32" id="sAX-A1-nLy"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="1vh-O4-8g0" secondAttribute="trailing" constant="-8" id="taT-fx-Z18"/>
+                </constraints>
+                <variation key="default">
+                    <mask key="constraints">
+                        <exclude reference="VIM-vu-80A"/>
+                    </mask>
+                </variation>
+            </tableViewCellContentView>
+            <animations/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <connections>
+                <outlet property="avatar" destination="utc-7X-kRy" id="e4v-p9-IFf"/>
+                <outlet property="lineHeight" destination="kTN-nr-P5P" id="LFV-ri-vbv"/>
+                <outlet property="lineImage" destination="1vh-O4-8g0" id="kGw-Nl-kAr"/>
+            </connections>
+            <point key="canvasLocation" x="259" y="209.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="icon_arrow_right" width="9" height="14"/>
+    </resources>
+</document>

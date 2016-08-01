@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="WTWeddingCardCell">
+            <rect key="frame" x="0.0" y="0.0" width="160" height="216"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="A40-N2-Uvr">
+                    <rect key="frame" x="10" y="10" width="140" height="149"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="婚礼请柬" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5po-Fv-pcS">
+                    <rect key="frame" x="10" y="169" width="140" height="16"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="￥5.5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PMe-RV-qx8">
+                    <rect key="frame" x="10" y="190" width="140" height="16"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gCn-M1-brh">
+                    <rect key="frame" x="159" y="0.0" width="1" height="216"/>
+                    <color key="backgroundColor" red="0.93333333333333335" green="0.93333333333333335" blue="0.93333333333333335" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="1" id="2cG-aU-Xrx"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="90b-BB-4iG">
+                    <rect key="frame" x="0.0" y="215" width="160" height="1"/>
+                    <color key="backgroundColor" red="0.93333333333333335" green="0.93333333333333335" blue="0.93333333333333335" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="cU0-nG-ypw"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.96862745098039216" green="0.96862745098039216" blue="0.96862745098039216" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="PMe-RV-qx8" secondAttribute="bottom" constant="10" id="0aH-aF-LDQ"/>
+                <constraint firstAttribute="bottom" secondItem="90b-BB-4iG" secondAttribute="bottom" id="1Bt-N4-gb3"/>
+                <constraint firstAttribute="trailing" secondItem="A40-N2-Uvr" secondAttribute="trailing" constant="10" id="3oh-2w-0qf"/>
+                <constraint firstItem="5po-Fv-pcS" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="9c8-KA-f6Q"/>
+                <constraint firstAttribute="bottom" secondItem="gCn-M1-brh" secondAttribute="bottom" id="9n8-PH-dGu"/>
+                <constraint firstAttribute="trailing" secondItem="gCn-M1-brh" secondAttribute="trailing" id="BbV-jv-1by"/>
+                <constraint firstAttribute="trailing" secondItem="PMe-RV-qx8" secondAttribute="trailing" constant="10" id="Fyg-Wl-LC7"/>
+                <constraint firstItem="5po-Fv-pcS" firstAttribute="top" secondItem="A40-N2-Uvr" secondAttribute="bottom" constant="10" id="IEA-fC-qoM"/>
+                <constraint firstItem="PMe-RV-qx8" firstAttribute="top" secondItem="5po-Fv-pcS" secondAttribute="bottom" constant="5" id="Mwc-qc-3Ms"/>
+                <constraint firstItem="A40-N2-Uvr" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="VjT-vl-h1D"/>
+                <constraint firstAttribute="trailing" secondItem="5po-Fv-pcS" secondAttribute="trailing" constant="10" id="aix-xc-ovh"/>
+                <constraint firstAttribute="trailing" secondItem="90b-BB-4iG" secondAttribute="trailing" id="duc-gA-UlO"/>
+                <constraint firstItem="gCn-M1-brh" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="lDK-6g-cwh"/>
+                <constraint firstItem="A40-N2-Uvr" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="mXj-97-1a7"/>
+                <constraint firstItem="PMe-RV-qx8" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="szO-YG-DHd"/>
+                <constraint firstItem="90b-BB-4iG" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="yMd-fd-d4G"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="cardImageView" destination="A40-N2-Uvr" id="Xdc-0h-29R"/>
+                <outlet property="cardName" destination="5po-Fv-pcS" id="8Dn-5k-W83"/>
+                <outlet property="cardPrice" destination="PMe-RV-qx8" id="17s-8r-mbK"/>
+            </connections>
+            <point key="canvasLocation" x="339" y="329"/>
+        </view>
+    </objects>
+</document>
