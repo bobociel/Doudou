@@ -108,4 +108,20 @@ UIView.animateWithDuration(0.5) {
     btn.frame = CGRectMake(10, 10, 200, 200)
 };
 
+var block = {
+    (num: Int) -> Int in
+    return num + 10
+}
+
+block(3)
+
+func printHello(num: Int, block: ()->()){
+    for _ in 1...num{
+        block()
+    }
+}
+
+printHello(3) { 
+    print("Hello")
+}
 

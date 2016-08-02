@@ -9,6 +9,7 @@
         <scene sceneID="Rjv-Lz-buJ">
             <objects>
                 <navigationController id="xw3-GA-yqz" sceneMemberID="viewController">
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="jhr-xn-od1">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -24,27 +25,27 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Swift3" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Swift3" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="65" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="j6d-IS-HT0">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="ItemCell" rowHeight="65" id="xHj-c0-7OV" customClass="ItemCell" customModule="Swift3" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="92" width="600" height="65"/>
+                                        <rect key="frame" x="0.0" y="92" width="320" height="65"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="xHj-c0-7OV" id="Onn-bY-tpz">
-                                            <rect key="frame" x="0.0" y="0.0" width="567" height="64"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="287" height="64"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mq4-EZ-Jsn">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mq4-EZ-Jsn">
                                                     <rect key="frame" x="18" y="22" width="549" height="0.0"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -76,7 +77,14 @@
                             <constraint firstItem="j6d-IS-HT0" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="xV4-qX-lgV"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="vXU-Oo-jMT"/>
+                    <navigationItem key="navigationItem" id="vXU-Oo-jMT">
+                        <barButtonItem key="leftBarButtonItem" title="Draw" id="te5-BD-FEa">
+                            <connections>
+                                <segue destination="Xen-jH-SDj" kind="show" identifier="goDraw" id="vLl-bU-dBS"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="tableView" destination="j6d-IS-HT0" id="DlG-pc-5uz"/>
                         <segue destination="Rld-cf-Aav" kind="show" identifier="goContent" id="fop-Ag-Xs6"/>
@@ -84,7 +92,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="36" y="1156"/>
+            <point key="canvasLocation" x="-296" y="1156"/>
         </scene>
         <!--Content View Controller-->
         <scene sceneID="1s3-dk-jfo">
@@ -95,14 +103,66 @@
                         <viewControllerLayoutGuide type="bottom" id="xF2-hB-i4k"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="cvw-hH-Viq">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EM3-b5-qXU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="735" y="1156"/>
+            <point key="canvasLocation" x="113" y="820"/>
+        </scene>
+        <!--Draw View Controller-->
+        <scene sceneID="NNn-3M-5AH">
+            <objects>
+                <viewController id="Xen-jH-SDj" customClass="DrawViewController" customModule="Swift3" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Zob-0m-lO9"/>
+                        <viewControllerLayoutGuide type="bottom" id="k79-3X-HI5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="cjM-mP-z9x">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="g7a-Eg-kra">
+                                <rect key="frame" x="0.0" y="70" width="320" height="29"/>
+                                <segments>
+                                    <segment title="铅笔"/>
+                                    <segment title="直尺"/>
+                                    <segment title="虚线"/>
+                                    <segment title="矩形"/>
+                                    <segment title="圆形"/>
+                                    <segment title="橡皮擦"/>
+                                </segments>
+                                <connections>
+                                    <action selector="segmentChanged:" destination="Xen-jH-SDj" eventType="valueChanged" id="jtf-Pj-DZc"/>
+                                </connections>
+                            </segmentedControl>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HUn-AI-H9X" customClass="Board" customModule="Swift3" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="106" width="320" height="462"/>
+                                <color key="backgroundColor" red="1" green="0.2666666667" blue="0.51372549020000002" alpha="1" colorSpace="calibratedRGB"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="g7a-Eg-kra" firstAttribute="top" secondItem="Zob-0m-lO9" secondAttribute="bottom" constant="6" id="Twc-GE-sgI"/>
+                            <constraint firstItem="k79-3X-HI5" firstAttribute="top" secondItem="HUn-AI-H9X" secondAttribute="bottom" id="kdX-mP-E6R"/>
+                            <constraint firstItem="HUn-AI-H9X" firstAttribute="top" secondItem="g7a-Eg-kra" secondAttribute="bottom" constant="8" id="l3u-NQ-ycg"/>
+                            <constraint firstItem="g7a-Eg-kra" firstAttribute="leading" secondItem="cjM-mP-z9x" secondAttribute="leading" id="nWr-Hb-ecz"/>
+                            <constraint firstAttribute="trailing" secondItem="HUn-AI-H9X" secondAttribute="trailing" id="ocI-9r-gFb"/>
+                            <constraint firstAttribute="trailing" secondItem="g7a-Eg-kra" secondAttribute="trailing" id="uHz-aG-yrp"/>
+                            <constraint firstItem="HUn-AI-H9X" firstAttribute="leading" secondItem="cjM-mP-z9x" secondAttribute="leading" id="zqa-49-6hH"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="board" destination="HUn-AI-H9X" id="zXD-Af-azo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DdT-bt-BQp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="113" y="1484"/>
         </scene>
     </scenes>
 </document>

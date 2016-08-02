@@ -21,7 +21,6 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         super.viewWillAppear(animated)
 //        self.navigationController?.navigationBar.setBackgroundImage(UIImage.imageWithColor(UIColor.blueColor()), forBarMetrics: .Default)
 //        self.navigationController?.navigationBar.shadowImage = UIImage.init()
-        self.navigationController?.navigationBarHidden = true
     }
     
     override func viewDidLoad() {
@@ -85,8 +84,10 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     }
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        let vc = segue.destinationViewController as! ContentViewController
-        vc.contentType = ContentType(rawValue: sender as! Int )!
+        if segue.identifier != "goDraw"{
+            let vc = segue.destinationViewController as! ContentViewController
+            vc.contentType = ContentType(rawValue: sender as! Int )!
+        }
     }
 
     override func didReceiveMemoryWarning() {

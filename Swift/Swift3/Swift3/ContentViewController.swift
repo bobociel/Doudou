@@ -58,10 +58,10 @@ class ContentViewController: UIViewController {
 
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        self.navigationController?.navigationBarHidden = false
-        self.navigationController?.navigationBar.setBackgroundImage(UIImage.imageWithColor(UIColor.redColor()), forBarMetrics: .Default)
-        self.navigationController?.navigationBar.tintColor = UIColor.redColor()
-        self.navigationController?.navigationBar.shadowImage = UIImage.init()
+//        self.navigationController?.navigationBarHidden = false
+//        self.navigationController?.navigationBar.setBackgroundImage(UIImage.imageWithColor(UIColor.redColor()), forBarMetrics: .Default)
+//        self.navigationController?.navigationBar.tintColor = UIColor.redColor()
+//        self.navigationController?.navigationBar.shadowImage = UIImage.init()
     }
 
     override func viewDidLoad() {

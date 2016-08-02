@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F02E8BAC1D50ABB00032529C /* DrawViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02E8BAB1D50ABB00032529C /* DrawViewController.swift */; };
+		F02E8BAE1D50AD150032529C /* Board.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02E8BAD1D50AD150032529C /* Board.swift */; };
 		F0541CA01D4B69AD0043FFE2 /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F0541C9B1D4B69AD0043FFE2 /* libWeChatSDK.a */; };
 		F0541CA11D4B69AD0043FFE2 /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = F0541C9C1D4B69AD0043FFE2 /* README.txt */; };
 		F0541CA61D4B6B730043FFE2 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0541CA51D4B6B730043FFE2 /* SystemConfiguration.framework */; };
@@ -49,6 +51,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F02E8BAB1D50ABB00032529C /* DrawViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawViewController.swift; sourceTree = "<group>"; };
+		F02E8BAD1D50AD150032529C /* Board.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Board.swift; sourceTree = "<group>"; };
 		F0541C9B1D4B69AD0043FFE2 /* libWeChatSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libWeChatSDK.a; sourceTree = "<group>"; };
 		F0541C9C1D4B69AD0043FFE2 /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
 		F0541C9D1D4B69AD0043FFE2 /* WechatAuthSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WechatAuthSDK.h; sourceTree = "<group>"; };
@@ -113,28 +117,9 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		F0541C9A1D4B69A30043FFE2 /* Frameworks */ = {
+		F02E8BAF1D50AD1F0032529C /* Content */ = {
 			isa = PBXGroup;
 			children = (
-				F0541CAD1D4B6CC40043FFE2 /* CoreTelephony.framework */,
-				F0541CAB1D4B6BB90043FFE2 /* libsqlite3.0.tbd */,
-				F0541CA91D4B6BB10043FFE2 /* libz.tbd */,
-				F0541CA71D4B6B9F0043FFE2 /* libc++.tbd */,
-				F0541CA51D4B6B730043FFE2 /* SystemConfiguration.framework */,
-				F0541C9B1D4B69AD0043FFE2 /* libWeChatSDK.a */,
-				F0541C9C1D4B69AD0043FFE2 /* README.txt */,
-				F0541C9D1D4B69AD0043FFE2 /* WechatAuthSDK.h */,
-				F0541C9E1D4B69AD0043FFE2 /* WXApi.h */,
-				F0541C9F1D4B69AD0043FFE2 /* WXApiObject.h */,
-			);
-			name = Frameworks;
-			path = Swift3/Frameworks;
-			sourceTree = "<group>";
-		};
-		F0541CA41D4B6A5D0043FFE2 /* ViewController */ = {
-			isa = PBXGroup;
-			children = (
-				F0EEF32F1D2D03AD00FFB6D6 /* ViewController.swift */,
 				F0F5EA581D2F685B00FB9769 /* ContentViewController.swift */,
 				F0F5EA5A1D2F6A0400FB9769 /* ContentTheBasics.swift */,
 				F0F5EA5C1D2F86A300FB9769 /* ContentOperators.swift */,
@@ -161,6 +146,43 @@
 				F0F5EA891D2FA6FC00FB9769 /* ContentGenerics.swift */,
 				F0F5EA8B1D2FA70F00FB9769 /* ContentAccessControl.swift */,
 				F0F5EA8D1D2FA72700FB9769 /* ContentAdvancedOperators.swift */,
+			);
+			name = Content;
+			sourceTree = "<group>";
+		};
+		F02E8BB01D50AD300032529C /* Draw */ = {
+			isa = PBXGroup;
+			children = (
+				F02E8BAD1D50AD150032529C /* Board.swift */,
+				F02E8BAB1D50ABB00032529C /* DrawViewController.swift */,
+			);
+			name = Draw;
+			sourceTree = "<group>";
+		};
+		F0541C9A1D4B69A30043FFE2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F0541CAD1D4B6CC40043FFE2 /* CoreTelephony.framework */,
+				F0541CAB1D4B6BB90043FFE2 /* libsqlite3.0.tbd */,
+				F0541CA91D4B6BB10043FFE2 /* libz.tbd */,
+				F0541CA71D4B6B9F0043FFE2 /* libc++.tbd */,
+				F0541CA51D4B6B730043FFE2 /* SystemConfiguration.framework */,
+				F0541C9B1D4B69AD0043FFE2 /* libWeChatSDK.a */,
+				F0541C9C1D4B69AD0043FFE2 /* README.txt */,
+				F0541C9D1D4B69AD0043FFE2 /* WechatAuthSDK.h */,
+				F0541C9E1D4B69AD0043FFE2 /* WXApi.h */,
+				F0541C9F1D4B69AD0043FFE2 /* WXApiObject.h */,
+			);
+			name = Frameworks;
+			path = Swift3/Frameworks;
+			sourceTree = "<group>";
+		};
+		F0541CA41D4B6A5D0043FFE2 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F0EEF32F1D2D03AD00FFB6D6 /* ViewController.swift */,
+				F02E8BB01D50AD300032529C /* Draw */,
+				F02E8BAF1D50AD1F0032529C /* Content */,
 			);
 			name = ViewController;
 			path = Frameworks/ViewController;
@@ -283,6 +305,8 @@
 				F0F5EA5F1D2F8E7A00FB9769 /* ContentStringAndCharacters.swift in Sources */,
 				F0541CB01D4B6D210043FFE2 /* Constant.swift in Sources */,
 				F0F5EA6B1D2F9FD300FB9769 /* ContentClassesAndStructures.swift in Sources */,
+				F02E8BAE1D50AD150032529C /* Board.swift in Sources */,
+				F02E8BAC1D50ABB00032529C /* DrawViewController.swift in Sources */,
 				F0F5EA5B1D2F6A0400FB9769 /* ContentTheBasics.swift in Sources */,
 				F0F5EA711D2FA02700FB9769 /* ContentSubscripts.swift in Sources */,
 				F0F5EA821D2FA6BC00FB9769 /* ContentNestedTypes.swift in Sources */,
