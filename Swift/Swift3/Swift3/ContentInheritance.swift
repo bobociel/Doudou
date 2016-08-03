@@ -17,11 +17,11 @@ class ContentInheritance: NSObject {
             var name : String{
                 return "name:\(self.name)"
             }
-            func run(name: String = "Animal") -> String {
+            func run(_ name: String = "Animal") -> String {
                 return "\(self.name),run"
             }
 
-            final func call(name: String) -> String {
+            final func call(_ name: String) -> String {
                 return "\(self.name),call"
             }
         }
@@ -44,7 +44,7 @@ class ContentInheritance: NSObject {
 
         class Dog: Animal{
             var age = 12
-            override private func run(name: String = "Dog") -> String {
+            override private func run(_ name: String = "Dog") -> String {
                 return "\(name), run fast"
             }
         }

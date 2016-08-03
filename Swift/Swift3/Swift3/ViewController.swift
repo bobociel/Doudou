@@ -17,7 +17,7 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     @IBOutlet weak var tableView: UITableView!
     var dataArray = [String]()
 
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
 //        self.navigationController?.navigationBar.setBackgroundImage(UIImage.imageWithColor(UIColor.blueColor()), forBarMetrics: .Default)
 //        self.navigationController?.navigationBar.shadowImage = UIImage.init()
@@ -26,7 +26,7 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "分享", style: .Plain, target: self, action: #selector(ViewController.shareAction))
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "分享", style: .plain, target: self, action: #selector(ViewController.shareAction))
 
         dataArray = ["The Basics",
                      "Operation",
@@ -60,32 +60,32 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         req.text = "Hello"
         req.bText = true
         req.scene = 0;
-        WXApi.sendReq(req);
+        WXApi.send(req);
     }
 
     //MARK: - UITableVIew
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return dataArray.count;
     }
 
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("ItemCell")
-        cell?.textLabel?.text = dataArray[indexPath.row]
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ItemCell")
+        cell?.textLabel?.text = dataArray[(indexPath as NSIndexPath).row]
         return cell!;
     }
 
-    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 44;
     }
 
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        tableView.deselectRowAtIndexPath(indexPath, animated: true);
-        self.performSegueWithIdentifier("goContent", sender: indexPath.row )
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true);
+        self.performSegue(withIdentifier: "goContent", sender: (indexPath as NSIndexPath).row )
     }
 
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier != "goDraw"{
-            let vc = segue.destinationViewController as! ContentViewController
+            let vc = segue.destination as! ContentViewController
             vc.contentType = ContentType(rawValue: sender as! Int )!
         }
     }

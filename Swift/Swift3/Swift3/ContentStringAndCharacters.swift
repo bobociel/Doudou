@@ -27,7 +27,7 @@ class ContentStringAndCharacters: NSObject {
         /*
          Swift’s String type is a value type. If you create a new String value, that String value is copied when it is passed to a function or method, or when it is assigned to a constant or variable. In each case, a new copy of the existing String value is created, and the new copy is passed or assigned, not the original version. Value types are described in Structures and Enumerations Are Value Types.
         */
-        func changeString(str: String){
+        func changeString(_ str: String){
             print(str)
         }
 
@@ -60,19 +60,19 @@ class ContentStringAndCharacters: NSObject {
         print(characterString.characters.count)
 
         /******************* 10，字符串的访问和修改(Accessing and Modifying a String) *******************/
-        //TODO
+
         //(1),字符串索引
-//        let startIndex = characterString.startIndex
-//        let endIndex = characterString.endIndex
-//        let afterStartIndex = characterString.index(after: startIndex)
-//        let beforeEndIndex = characterString.index(before: endIndex)
-//        let offsetIndex = characterString.index(startIndex, offsetBy: 2)
+        let startIndex = characterString.startIndex
+        let endIndex = characterString.endIndex
+        let afterStartIndex = characterString.index(after: startIndex)
+        let beforeEndIndex = characterString.index(before: endIndex)
+        let offsetIndex = characterString.index(startIndex, offsetBy: 2)
 
-//        print("startIndex:\(startIndex),endIndex:\(endIndex),afterStartIndex:\(afterStartIndex),beforeEndIndex:\(beforeEndIndex),offsetIndex:\(offsetIndex)" )
+        print("startIndex:\(startIndex),endIndex:\(endIndex),afterStartIndex:\(afterStartIndex),beforeEndIndex:\(beforeEndIndex),offsetIndex:\(offsetIndex)" )
 
-        //(2),插入和移除字符串
-//        characterString.insert("!", at: characterString.endIndex)
-//        characterString.insert("123", at: characterString.startIndex )
+        //(2),插入和移除字符
+        characterString.insert("!", at: characterString.endIndex)
+        characterString.insert("1", at: characterString.startIndex )
 
 
         /******************* 11，字符串比较(Comparing String ) *******************/

@@ -48,19 +48,19 @@ class ContentEnumerations: NSObject {
 
         /******************* 3，关联值(Associated Values) *******************/
         enum BarCode{
-            case UPCA(Int,Int,Int,Int)
-            case QRCode(String)
+            case upca(Int,Int,Int,Int)
+            case qrCode(String)
         }
 
-        var productBar = BarCode.UPCA(0,288,388,0)
+        var productBar = BarCode.upca(0,288,388,0)
         print(productBar)
-        productBar = .QRCode("123456")
+        productBar = .qrCode("123456")
         print(productBar)
 
         switch productBar {
-        case let .UPCA(numberSystem,manufacturer,product,check):
+        case let .upca(numberSystem,manufacturer,product,check):
             print("\(numberSystem),\(manufacturer),\(product),\(check)")
-        case let .QRCode(code):
+        case let .qrCode(code):
             print("\(code)")
         default:
             print("End")
@@ -73,7 +73,7 @@ class ContentEnumerations: NSObject {
          */
         //(1),原始值的隐式赋值,访问原始值
         enum Genders: Int {
-            case Male = 1, Female
+            case male = 1, female
         }
 
         print(CompassPoint.west.rawValue)
@@ -87,25 +87,25 @@ class ContentEnumerations: NSObject {
         /******************* 5，枚举的递归(Recursive Enumerations) *******************/
         // indirect 表示可递归枚举
         indirect enum Math {
-            case Number(Int)
-            case Addition(Math,Math)
-            case Multiplication(Math,Math)
+            case number(Int)
+            case addition(Math,Math)
+            case multiplication(Math,Math)
         }
 
-        func evaluate(math: Math) -> Int{
+        func evaluate(_ math: Math) -> Int{
             switch math {
-            case let .Number(value):
+            case let .number(value):
                 return value;
-            case let .Addition(left,right):
+            case let .addition(left,right):
                 return evaluate(left) + evaluate(right)
-            case let .Multiplication(left,right):
+            case let .multiplication(left,right):
                 return evaluate(left) * evaluate(right)
             }
         }
 
-        var sum = Math.Addition(.Number(4), .Number(5))
+        var sum = Math.addition(.number(4), .number(5))
         print(evaluate( sum) )
-        sum = Math.Multiplication(.Number(9), .Number(8))
+        sum = Math.multiplication(.number(9), .number(8))
         print(evaluate( sum) )
     }
 }

@@ -148,7 +148,7 @@ class ContentControlFlow: NSObject {
 
         /******************* 5，返回语句(Early Exit) *******************/
         //return (在loop语句,跳出所有循环)
-        func greet(person: [String: String]) {
+        func greet(_ person: [String: String]) {
             guard let name = person["name"] else {
                 return
             }

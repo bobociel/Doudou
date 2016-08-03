@@ -22,14 +22,12 @@ class ContentCollectionTypes: NSObject {
         print("emptyArray's count is \(emptyArray.count)")
 
         //(2),创建默认数组
-        //TODO
-//        var defaultArray = Array(repeating: 3, count: 3)
-//        print(defaultArray)
+        let defaultArray = Array(repeating: 3, count: 3) //Swift3
+        print(defaultArray)
 
         //(3),混合两个数组为一个数
-        //TODO
-//        let defaultArray2 = Array(repeating: 2, count: 3)
-//        print(defaultArray + defaultArray2)
+        let defaultArray2 = Array(repeating: 2, count: 3) //Swift3
+        print(defaultArray + defaultArray2)
 
         //(4),使用数组字面量创建数组
         var firArray: [String] = ["One","Two","Three"]
@@ -46,9 +44,8 @@ class ContentCollectionTypes: NSObject {
         }
 
         firArray.append("-")
-        firArray.insert("@", atIndex:4)
-        //TODO
-        //firArray.remove(at: 0)
+        firArray.insert("@", at:4)
+        firArray.remove(at: 0) //Swift3
         firArray.removeLast();
 
         firArray = firArray + sedArray
@@ -59,10 +56,10 @@ class ContentCollectionTypes: NSObject {
             print(a)
         }
 
-        //TODO
-//        for (i,n) in firArray.enumerated{
-//            print("\(i):\(n)")
-//        }
+        //Swift3
+        for (i,n) in firArray.enumerated(){
+            print("\(i):\(n)")
+        }
 
         /******************* 3，集合(Set) *******************/
         //(1),Set Type 和Hash Value
@@ -95,36 +92,34 @@ class ContentCollectionTypes: NSObject {
             print(s)
         }
 
-        //TODO
-//        for s in aSet.sorted(){
-//            print(s)
-//        }
+       for s in aSet.sorted(){
+            print(s)
+        }
         //(7),Set的集合运算
-        //TODO
-//        let oddDigits: Set = [1, 3, 5, 7, 9]
-//        let evenDigits: Set = [0, 2, 4, 6, 8]
-//        let singleDigitPrimeNumbers: Set = [2, 3, 5, 7]
-//        oddDigits.union(evenDigits).sorted()
-//        // [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-//        oddDigits.intersection(evenDigits).sorted()
-//        // []
-//        oddDigits.subtracting(singleDigitPrimeNumbers).sorted()
+        //Swift3
+        let oddDigits: Set = [1, 3, 5, 7, 9]
+        let evenDigits: Set = [0, 2, 4, 6, 8]
+        let singleDigitPrimeNumbers: Set = [2, 3, 5, 7]
+        print( oddDigits.union(evenDigits).sorted() )
+        // [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+        print( oddDigits.intersection(evenDigits).sorted() )
+        // []
+        print( oddDigits.subtracting(singleDigitPrimeNumbers).sorted() )
 //        // [1, 9]
-//        oddDigits.symmetricDifference(singleDigitPrimeNumbers).sorted()
+        print( oddDigits.symmetricDifference(singleDigitPrimeNumbers).sorted() )
         // [1, 2, 9]
 
 
         //(8),Set之间的关系
-
-        //TODO
-//        let houseAnimals: Set = ["🐶", "🐱"]
-//        let farmAnimals: Set = ["🐮", "🐔", "🐑", "🐶", "🐱"]
-//        let cityAnimals: Set = ["🐦", "🐭"]
-//        houseAnimals.isSubset(of: farmAnimals)
-//        // true
-//        farmAnimals.isSuperset(of: houseAnimals)
-//        // true
-//        farmAnimals.isDisjoint(with: cityAnimals)
+        //Swift3
+        let houseAnimals: Set = ["🐶", "🐱"]
+        let farmAnimals: Set = ["🐮", "🐔", "🐑", "🐶", "🐱"]
+        let cityAnimals: Set = ["🐦", "🐭"]
+        print( houseAnimals.isSubset(of: farmAnimals) )
+        // true
+        print( farmAnimals.isSuperset(of: houseAnimals) )
+        // true
+        print( farmAnimals.isDisjoint(with: cityAnimals) )
         // true
 
         /******************* 4，字典(Dictionary) *******************/
@@ -138,15 +133,14 @@ class ContentCollectionTypes: NSObject {
         //(3),访问和修改
         aDict["One"] = 2
         bDict["Seven"] = 7
-//        aDict.updateVlaue(4, forKey:"Three")
-//        aDict.removeValue(forKey:"Two")
+        aDict.updateValue(4, forKey: "Three")
+        aDict.removeValue(forKey:"Two")
         print(aDict)
 
         //(4),迭代
         for (key, value) in aDict{
             print("key:\(key),value:\(value) ")
         }
-
-//        print(aDict.keys(),aDict.values())
+        print(aDict.keys,aDict.values)
     }
 }

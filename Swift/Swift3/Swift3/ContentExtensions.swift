@@ -36,12 +36,12 @@ extension Rect{
     }
 
     //扩展方法1
-    static func RectMake(x: Double, _ y: Double, _ height: Double, _ width: Double) -> Rect{
+    static func RectMake(_ x: Double, _ y: Double, _ height: Double, _ width: Double) -> Rect{
         return Rect(origin: Point(x: x,y: y), size: Size(height: height,width: width))
     }
 
     //扩展方法2
-    func printHello(nums: Int, task: (n: Int) -> () ) {
+    func printHello(_ nums: Int, task: (n: Int) -> () ) {
         var count = 0
         while count < nums {
             count += 1
@@ -50,7 +50,7 @@ extension Rect{
     }
 }
 
-public func RectMake(x: Double, _ y: Double, _ height: Double, _ width: Double) -> Rect {
+public func RectMake(_ x: Double, _ y: Double, _ height: Double, _ width: Double) -> Rect {
     return Rect(origin: Point(x: x,y: y), size: Size(height: height,width: width))
 }
 

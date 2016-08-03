@@ -11,8 +11,8 @@ import UIKit
 protocol SomeProtocol{
     static var nickname: String { get set }
     var fullName: String { get set }
-    static func getNickName(name: String) -> String
-    func getFullName(fullname: String) -> String
+    static func getNickName(_ name: String) -> String
+    func getFullName(_ fullname: String) -> String
 }
 
 class ContentProtocols: NSObject {
@@ -36,11 +36,11 @@ class ContentProtocols: NSObject {
             private static var nickname: String{ get{ return "nickname:\(_nickname)"} set{ _nickname = newValue} }
             private var fullName: String{ get{return _name} set{_name = newValue} }
 
-            private static func getNickName(name: String) -> String {
+            private static func getNickName(_ name: String) -> String {
                 return "nickname:\(name)"
             }
 
-            private func getFullName(fullname: String) -> String {
+            private func getFullName(_ fullname: String) -> String {
                 return "fullName:\(fullname)"
             }
         }

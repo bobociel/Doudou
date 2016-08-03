@@ -48,7 +48,7 @@ class ContentProperties: NSObject {
         //(2),延迟存储属性
         class Dog: NSObject{
             override init() {
-                NSThread.sleepForTimeInterval(1)
+                Thread.sleep(forTimeInterval: 1)
                 super.init()
             }
         }

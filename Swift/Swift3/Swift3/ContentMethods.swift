@@ -23,7 +23,7 @@ class ContentMethods: NSObject {
                 super.init()
             }
 
-            func sayHello(name: String) -> String {
+            func sayHello(_ name: String) -> String {
                 let hello = "Hello,\(name)"
                 return hello
             }
@@ -37,14 +37,14 @@ class ContentMethods: NSObject {
         //(4),在可变方法中对self赋值(Assigning to self Within a Mutating Method)
         struct Point{
             var x = 0,y = 0
-            func comparyX(x:Int) -> Bool{
+            func comparyX(_ x:Int) -> Bool{
                 return self.x > x
             }
-            mutating func increase(x: Int,y: Int){
+            mutating func increase(_ x: Int,y: Int){
                 self.x += x
                 self.y += y
             }
-            mutating func makeSelf(x: Int,y: Int){
+            mutating func makeSelf(_ x: Int,y: Int){
                 self = Point(x: x,y: y)
             }
         }
@@ -78,13 +78,13 @@ class ContentMethods: NSObject {
 
         struct HelloPerson{
             static var isMale = true
-            static func isMale(isMale: Bool) -> Bool{
+            static func isMale(_ isMale: Bool) -> Bool{
                 self.isMale = isMale
                 return isMale
             }
 
 //            @discardableResult 
-            func sayHello(name: String,isMale: Bool) -> String {
+            func sayHello(_ name: String,isMale: Bool) -> String {
                 if  HelloPerson.isMale(isMale){
                     return "Hello,Mr \(name)"
                 }else{

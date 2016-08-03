@@ -103,7 +103,7 @@ class ContentTypeCasting: NSObject {
                 print("Dictionary:\(someDict)")
             case let someObject as Movie:
                 print("Object:\(someObject)")
-            case let someFuc as String -> String:
+            case let someFuc as (String) -> String:
                 print("Function:\(someFuc)")
             default:
                 print("some thing other")

@@ -11,7 +11,7 @@ import CoreGraphics
 
 protocol PaintBrush {
     func supportContinousDrawing() -> Bool
-    func drawInContext(context: CGContextRef)
+    func drawInContext(_ context: CGContext)
 }
 
 class BaseBrush: NSObject, PaintBrush {
@@ -24,7 +24,7 @@ class BaseBrush: NSObject, PaintBrush {
         return false
     }
 
-    func drawInContext(content: CGContextRef) {
+    func drawInContext(_ content: CGContext) {
         assert(false,"need to implement the method in subclass")
     }
 }
@@ -34,13 +34,13 @@ class PencilBrush: BaseBrush {
         return true
     }
 
-    override func drawInContext(context: CGContextRef) {
+    override func drawInContext(_ context: CGContext) {
         if let lastPoint = self.lastPoint{
-            CGContextMoveToPoint(context, lastPoint.x, lastPoint.y)
-            CGContextAddLineToPoint(context, endPoint.x, endPoint.y)
+            context.moveTo(x: lastPoint.x, y: lastPoint.y)
+            context.addLineTo(x: endPoint.x, y: endPoint.y)
         }else{
-            CGContextMoveToPoint(context, startPoint.x, startPoint.y)
-            CGContextAddLineToPoint(context, endPoint.x, endPoint.y)
+            context.moveTo(x: startPoint.x, y: startPoint.y)
+            context.addLineTo(x: endPoint.x, y: endPoint.y)
         }
     }
 }
@@ -50,14 +50,14 @@ class EraserBrush: PencilBrush{
         return true
     }
 
-    override func drawInContext(context: CGContextRef) {
-        CGContextSetBlendMode(context, .Clear)
+    override func drawInContext(_ context: CGContext) {
+        context.setBlendMode(.clear)
         super.drawInContext(context)
     }
 }
 
 enum DrawingState {
-    case Began, Moved, Ended
+    case began, moved, ended
 }
 
 class Board: UIImageView {
@@ -68,43 +68,43 @@ class Board: UIImageView {
     var strokeColor: UIColor
     override init(frame: CGRect) {
         self.strokeWidth = 1
-        self.strokeColor = UIColor.whiteColor()
+        self.strokeColor = UIColor.white
         super.init(frame: frame)
     }
 
     required init(coder aDecoder: NSCoder) {
         self.strokeWidth = 1
-        self.strokeColor = UIColor.whiteColor()
+        self.strokeColor = UIColor.white
         super.init(coder: aDecoder)!
     }
 
-    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         if self.brush != nil{
             self.brush?.lastPoint = nil
-            self.brush?.startPoint = touches.first?.locationInView(self)
+            self.brush?.startPoint = touches.first?.location(in: self)
             self.brush?.endPoint = self.brush?.startPoint
-            self.drawState = .Began
+            self.drawState = .began
             self.drawImage()
         }
     }
 
-    override func touchesMoved(touches: Set<UITouch>, withEvent event: UIEvent?) {
+    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
         if self.brush != nil{
-            self.brush?.endPoint = touches.first?.locationInView(self)
-            self.drawState = .Moved
+            self.brush?.endPoint = touches.first?.location(in: self)
+            self.drawState = .moved
             self.drawImage()
         }
     }
 
-    override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         if self.brush != nil{
-            self.brush?.endPoint = touches.first?.locationInView(self)
-            self.drawState = .Ended
+            self.brush?.endPoint = touches.first?.location(in: self)
+            self.drawState = .ended
             self.drawImage()
         }
     }
 
-    override func touchesCancelled(touches: Set<UITouch>?, withEvent event: UIEvent?) {
+    override func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
         if self.brush != nil{
             self.brush?.endPoint = nil
         }
@@ -115,22 +115,22 @@ class Board: UIImageView {
             UIGraphicsBeginImageContext(self.bounds.size)
 
             let content = UIGraphicsGetCurrentContext()
-            UIColor.clearColor().setFill()
+            UIColor.clear.setFill()
             UIRectFill(self.bounds)
-            CGContextSetLineCap(content, .Round)
-            CGContextSetLineWidth(content, self.strokeWidth)
-            CGContextSetStrokeColorWithColor(content, self.strokeColor.CGColor)
+            content?.setLineCap(.round)
+            content?.setLineWidth(self.strokeWidth)
+            content?.setStrokeColor(self.strokeColor.cgColor)
 
             if let realImage = self.realImage{
-                realImage.drawInRect(self.bounds)
+                realImage.draw(in: self.bounds)
             }
 
             brush?.strokeWidth = self.strokeWidth
             brush?.drawInContext(content!)
-            CGContextStrokePath(content)
+            content?.strokePath()
 
             let  previewImage = UIGraphicsGetImageFromCurrentImageContext()
-            if self.drawState == .Ended  || (brush?.supportContinousDrawing())!{
+            if self.drawState == .ended  || (brush?.supportContinousDrawing())!{
                 self.realImage = previewImage
             }
             UIGraphicsEndImageContext()

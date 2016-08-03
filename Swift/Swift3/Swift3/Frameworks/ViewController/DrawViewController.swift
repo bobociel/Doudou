@@ -19,7 +19,7 @@ class DrawViewController: UIViewController {
         self.board.brush = PencilBrush()
     }
 
-    @IBAction func segmentChanged(sender: UISegmentedControl) {
+    @IBAction func segmentChanged(_ sender: UISegmentedControl) {
         assert(sender.tag < self.brushs!.count, "Out Of Index")
         self.board.brush = self.brushs![sender.selectedSegmentIndex];
         if(sender.selectedSegmentIndex == 5){

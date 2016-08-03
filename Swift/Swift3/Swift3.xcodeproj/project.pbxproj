@@ -253,6 +253,7 @@
 					F0EEF3291D2D03AD00FFB6D6 = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = 2WFF3BLNE7;
+						LastSwiftMigration = 0800;
 					};
 				};
 			};
@@ -451,6 +452,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/Swift3/Swift3-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -471,6 +473,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/Swift3/Swift3-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};

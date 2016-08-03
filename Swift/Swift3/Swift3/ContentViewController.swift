@@ -9,40 +9,40 @@
 import UIKit
 
 enum  ContentType: Int {
-    case TheBasics = 0
-    case Operation
-    case StringAndCharacters
-    case CollectionTypes
-    case ControlFlow
-    case Functions
-    case Closures = 6
-    case Enumerations
-    case ClassAndStrutures
-    case Properties
-    case Methods
-    case Subscripts = 11
-    case Inheritance
-    case Initialization
-    case Deinitialization
-    case ARC = 15
-    case OptionalChaining = 16
-    case ErrorHandling
-    case TypeCasting
-    case NestedTypes
-    case Extensions = 20
-    case Protocols
-    case Generics
-    case AccessControl
-    case AdvancedOperators
+    case theBasics = 0
+    case operation
+    case stringAndCharacters
+    case collectionTypes
+    case controlFlow
+    case functions
+    case closures = 6
+    case enumerations
+    case classAndStrutures
+    case properties
+    case methods
+    case subscripts = 11
+    case inheritance
+    case initialization
+    case deinitialization
+    case arc = 15
+    case optionalChaining = 16
+    case errorHandling
+    case typeCasting
+    case nestedTypes
+    case extensions = 20
+    case protocols
+    case generics
+    case accessControl
+    case advancedOperators
 }
 
 public extension UIImage{
-    class func imageWithColor(color: UIColor = UIColor.whiteColor()) -> UIImage? {
+    class func imageWithColor(_ color: UIColor = UIColor.white) -> UIImage? {
         let rect = CGRect(x: 0, y: 0, width: 1, height: 1)
         UIGraphicsBeginImageContextWithOptions(rect.size, false, 0)
         let  content = UIGraphicsGetCurrentContext()
-        CGContextSetFillColorWithColor(content, color.CGColor)
-        CGContextFillRect(content, rect)
+        content?.setFillColor(color.cgColor)
+        content?.fill(rect)
         let image = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
         return image
@@ -56,7 +56,7 @@ class ContentViewController: UIViewController {
         }
     }
 
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
 //        self.navigationController?.navigationBarHidden = false
 //        self.navigationController?.navigationBar.setBackgroundImage(UIImage.imageWithColor(UIColor.redColor()), forBarMetrics: .Default)
@@ -69,79 +69,79 @@ class ContentViewController: UIViewController {
 
         if _contentType != nil{
             switch _contentType! {
-            case .TheBasics:
+            case .theBasics:
                 let contentTheBasics = ContentTheBasics.init()
                 print(contentTheBasics)
-            case .Operation:
+            case .operation:
                 let contentOperators = ContentOperators.init()
                 print(contentOperators)
-            case .StringAndCharacters:
+            case .stringAndCharacters:
                 let contentString = ContentStringAndCharacters.init()
                 print(contentString)
-            case .CollectionTypes:
+            case .collectionTypes:
                 let contentCollectionTypes = ContentCollectionTypes.init()
                 print(contentCollectionTypes)
-            case .ControlFlow:
+            case .controlFlow:
                 let contentControlFlow = ContentControlFlow.init()
                 print(contentControlFlow)
-            case .Functions:
+            case .functions:
                 let contentFunctions = ContentFunction.init()
                 print(contentFunctions)
-            case .Closures:
+            case .closures:
                 let contentClosures = ContentClosures.init()
                 print(contentClosures)
-            case .Enumerations:
+            case .enumerations:
                 let contentEnumrations = ContentEnumerations.init()
                 print(contentEnumrations)
-            case .ClassAndStrutures:
+            case .classAndStrutures:
                 let contentClassAndStrutures = ContentClassesAndStructures.init()
                 print(contentClassAndStrutures)
-            case .Properties:
+            case .properties:
                 let contentProperties = ContentProperties.init()
                 print(contentProperties)
-            case .Methods:
+            case .methods:
                 let contentMethods = ContentMethods.init()
                 print(contentMethods)
-            case .Subscripts:
+            case .subscripts:
                 let contentSubscripts = ContentSubscripts.init()
                 print(contentSubscripts)
-            case .Inheritance:
+            case .inheritance:
                 let contentInheritance = ContentInheritance.init()
                 print(contentInheritance)
-            case .Initialization:
+            case .initialization:
                 let contentInitialization = ContentInitialization.init()
                 print(contentInitialization)
-            case .Deinitialization:
+            case .deinitialization:
                 let contentDeinitialization = ContentDeinitialization.init()
                 print(contentDeinitialization)
-            case .ARC:
+            case .arc:
                 let contentARC = ContentARC.init()
                 print(contentARC)
-            case .OptionalChaining:
+            case .optionalChaining:
                 let contentOptionalChaining = ContentOptionalChaining.init()
                 print(contentOptionalChaining)
-            case .ErrorHandling:
+            case .errorHandling:
                 let contentErrorHandling = ContentErrorHandling.init()
                 print(contentErrorHandling)
-            case .TypeCasting:
+            case .typeCasting:
                 let contentTypeCasting = ContentTypeCasting.init()
                 print(contentTypeCasting)
-            case .NestedTypes:
+            case .nestedTypes:
                 let contentNestedTypes = ContentNestedTypes.init()
                 print(contentNestedTypes)
-            case .Extensions:
+            case .extensions:
                 let contentExtensions = ContentExtensions.init()
                 print(contentExtensions)
-            case .Protocols:
+            case .protocols:
                 let contentProtocols = ContentProtocols.init()
                 print(contentProtocols)
-            case .Generics:
+            case .generics:
                 let contentGenerics = ContentGenerics.init()
                 print(contentGenerics)
-            case .AccessControl:
+            case .accessControl:
                 let contentAccessControl = ContentAccessControl.init()
                 print(contentAccessControl)
-            case . AdvancedOperators:
+            case . advancedOperators:
                 let contentAdvancedOperators = ContentAdvancedOperators.init()
                 print(contentAdvancedOperators)
             default:
