@@ -71,6 +71,7 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ItemCell")
         cell?.textLabel?.text = dataArray[(indexPath as NSIndexPath).row]
+        cell?.imageView?.image = UIImage(named: "Logo")
         return cell!;
     }
 
