@@ -160,5 +160,32 @@ class ContentFunction: NSObject {
 
         var n = 20
         print( recursionFunc(&n) )
+
+
+        //字符字面量，字符簇字面量创建方法 (方法优先级)
+        func anSeletor() -> Void{
+            print("anSeletor");
+        }
+
+        func 🐱🐶() -> Void{
+            print("猫狗")
+        }
+
+        🐱🐶()
+
+        func 我是方法() -> Void{
+            print("我是方法")
+        }
+
+        我是方法()
+
+        print(Selector("anSeletor"))
+        print(Selector(unicodeScalarLiteral: "🐱🐶"))
+        print(Selector(extendedGraphemeClusterLiteral: "の"))
+        print(Selector(stringLiteral:"anSeletor"))
+    }
+
+    func anSeletor() -> Void{
+        print("anSeletor -----");
     }
 }

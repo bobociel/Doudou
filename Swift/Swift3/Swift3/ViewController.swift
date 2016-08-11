@@ -12,10 +12,9 @@ class ItemCell: UITableViewCell {
     @IBOutlet weak var title: UILabel!
 }
 
-class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
+class ViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
-    var dataArray = [String]()
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -26,35 +25,61 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "分享", style: .plain, target: self, action: #selector(ViewController.shareAction))
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "分享", style: .plain, target: self, action: #selector(ViewController.shareAction) )
 
-        dataArray = ["The Basics",
-                     "Operation",
-                     "String And Characters",
-                     "Collection Types",
-                     "ControlFlow",
-                     "Functions",
-                     "Closures",
-                     "Enumerations",
-                     "Class And Strutures",
-                     "Properties",
-                     "Methods",
-                     "Subscripts",
-                     "Inheritance",
-                     "Initialization",
-                     "Deinitialization",
-                     "ARC",
-                     "Optional Chaining",
-                     "Error Handling",
-                     "Type Casting",
-                     "Nested Types",
-                     "Extensions",
-                     "Protocols",
-                     "Generics",
-                     "Access Control",
-                     "Advanced Operators"]
+        let scrollView = createScroll(btnCount: { () -> Int in
+            return 12
+            }, button: { (index) -> UIButton in
+                let btn = UIButton.init(frame: CGRect(x: 50*index, y: 0, width: 40, height: 40))
+                btn.backgroundColor = UIColor.red
+                return btn
+        })
+
+        view.addSubview(scrollView)
     }
 
+    // MARK:-闭包的使用
+    func createScroll(btnCount:() -> Int, button:(index: Int) -> UIButton ) -> UIScrollView{
+        let scrollView = UIScrollView(frame: CGRect(x: 0, y: 65, width: 320, height: 44))
+        scrollView.contentSize = CGSize(width: 50*btnCount(), height: 44)
+        scrollView.backgroundColor = UIColor(red: 0, green: 0, blue: 1, alpha: 1)
+        for n in 0..<btnCount() {
+            let btn = button(index: n)
+            scrollView.addSubview(btn)
+        }
+        return scrollView
+    }
+
+    // MARK:-数据懒加载
+    lazy var dataArray = {() -> [String] in
+        return ["The Basics",
+                "Operation",
+                "String And Characters",
+                "Collection Types",
+                "ControlFlow",
+                "Functions",
+                "Closures",
+                "Enumerations",
+                "Class And Strutures",
+                "Properties",
+                "Methods",
+                "Subscripts",
+                "Inheritance",
+                "Initialization",
+                "Deinitialization",
+                "ARC",
+                "Optional Chaining",
+                "Error Handling",
+                "Type Casting",
+                "Nested Types",
+                "Extensions",
+                "Protocols",
+                "Generics",
+                "Access Control",
+                "Advanced Operators"]
+    }()
+
+    // MARK:分享
     func shareAction() {
         let req = SendMessageToWXReq()
         req.text = "Hello"
@@ -63,7 +88,15 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         WXApi.send(req);
     }
 
-    //MARK: - UITableVIew
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
+}
+
+extension ViewController: UITableViewDelegate,UITableViewDataSource{
+
+    //MARK: - UITableView
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return dataArray.count;
     }
@@ -90,10 +123,10 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
             vc.contentType = ContentType(rawValue: sender as! Int )!
         }
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
 }
 
+extension ViewController: UITextFieldDelegate{
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        return true
+    }
+}

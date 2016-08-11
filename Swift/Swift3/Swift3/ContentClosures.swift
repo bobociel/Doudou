@@ -96,7 +96,7 @@ class ContentClosures: NSObject {
         let removeArray = { arry.removeLast() }
         print(arry)
 
-        removeArray()
+        print( removeArray() )
         print(arry)
     }
 }
