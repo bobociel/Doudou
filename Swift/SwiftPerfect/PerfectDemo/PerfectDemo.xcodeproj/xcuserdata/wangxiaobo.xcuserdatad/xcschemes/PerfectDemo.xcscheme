@@ -29,6 +29,15 @@
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "F88B06801BDD48DD001FD0CD"
+            BuildableName = "PerfectServer HTTP.app"
+            BlueprintName = "PerfectServer HTTP App"
+            ReferencedContainer = "container:../PerfectServer/PerfectServer.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -42,15 +51,16 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <MacroExpansion>
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "F07935CC1D5EF4E2002853B6"
-            BuildableName = "PerfectDemo.framework"
-            BlueprintName = "PerfectDemo"
-            ReferencedContainer = "container:PerfectDemo.xcodeproj">
+            BlueprintIdentifier = "F88B06801BDD48DD001FD0CD"
+            BuildableName = "PerfectServer HTTP.app"
+            BlueprintName = "PerfectServer HTTP App"
+            ReferencedContainer = "container:../PerfectServer/PerfectServer.xcodeproj">
          </BuildableReference>
-      </MacroExpansion>
+      </BuildableProductRunnable>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>

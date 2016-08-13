@@ -8,14 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		F07935D11D5EF4E2002853B6 /* PerfectDemo.h in Headers */ = {isa = PBXBuildFile; fileRef = F07935D01D5EF4E2002853B6 /* PerfectDemo.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F07935D91D5EF52D002853B6 /* PerfectModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = F07935D81D5EF52D002853B6 /* PerfectModule.swift */; };
+		F07935DB1D5EF8F2002853B6 /* PerfectMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = F07935DA1D5EF8F2002853B6 /* PerfectMain.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		F07935CD1D5EF4E2002853B6 /* PerfectDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PerfectDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F07935D01D5EF4E2002853B6 /* PerfectDemo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PerfectDemo.h; sourceTree = "<group>"; };
 		F07935D21D5EF4E2002853B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F07935D81D5EF52D002853B6 /* PerfectModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PerfectModule.swift; sourceTree = "<group>"; };
+		F07935DA1D5EF8F2002853B6 /* PerfectMain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PerfectMain.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,7 +49,7 @@
 			isa = PBXGroup;
 			children = (
 				F07935D01D5EF4E2002853B6 /* PerfectDemo.h */,
-				F07935D81D5EF52D002853B6 /* PerfectModule.swift */,
+				F07935DA1D5EF8F2002853B6 /* PerfectMain.swift */,
 				F07935D21D5EF4E2002853B6 /* Info.plist */,
 			);
 			path = PerfectDemo;
@@ -133,7 +133,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F07935D91D5EF52D002853B6 /* PerfectModule.swift in Sources */,
+				F07935DB1D5EF8F2002853B6 /* PerfectMain.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -235,6 +235,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
 				DEPLOYMENT_LOCATION = YES;
+				DSTROOT = "$(CONFIGURATION_BUILD_DIR)";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -256,6 +257,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
 				DEPLOYMENT_LOCATION = YES;
+				DSTROOT = "$(CONFIGURATION_BUILD_DIR)";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
