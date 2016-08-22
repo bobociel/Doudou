@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		BD4694918B886554B7EABA81 /* Pods_SwiftProjDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F66B0EA6FA99113DCA09D6C4 /* Pods_SwiftProjDemo.framework */; };
+		F04F46D41D65559B00150911 /* Supplier.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04F46D31D65559B00150911 /* Supplier.swift */; };
+		F04F46D61D6555AA00150911 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04F46D51D6555AA00150911 /* Post.swift */; };
+		F04F46D81D6555BC00150911 /* Hotel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04F46D71D6555BC00150911 /* Hotel.swift */; };
+		F04F46DA1D65562000150911 /* Subject.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04F46D91D65562000150911 /* Subject.swift */; };
+		F04F46DC1D65611300150911 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04F46DB1D65611300150911 /* Model.swift */; };
 		F0CEE8471D6445F300032741 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CEE8461D6445F300032741 /* AppDelegate.swift */; };
 		F0CEE8491D6445F300032741 /* DiscoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CEE8481D6445F300032741 /* DiscoverViewController.swift */; };
 		F0CEE84E1D6445F300032741 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F0CEE84D1D6445F300032741 /* Assets.xcassets */; };
@@ -23,10 +28,24 @@
 		F0CEE87B1D645F3D00032741 /* DiscoverCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CEE8791D645F3D00032741 /* DiscoverCell.swift */; };
 		F0CEE87C1D645F3D00032741 /* DiscoverCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0CEE87A1D645F3D00032741 /* DiscoverCell.xib */; };
 		F0CEE87E1D6469F200032741 /* AppInfoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CEE87D1D6469F200032741 /* AppInfoManager.swift */; };
+		F0CEE8801D6471A200032741 /* SupplierListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CEE87F1D6471A200032741 /* SupplierListViewController.swift */; };
+		F0CEE8821D6471B300032741 /* HotelListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CEE8811D6471B300032741 /* HotelListViewController.swift */; };
+		F0CEE8841D6471C100032741 /* SupplierDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CEE8831D6471C100032741 /* SupplierDetailViewController.swift */; };
+		F0CEE8861D6471D100032741 /* PostListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CEE8851D6471D100032741 /* PostListViewController.swift */; };
+		F0CEE8881D64723200032741 /* SubjectListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CEE8871D64723200032741 /* SubjectListViewController.swift */; };
+		F0CEE88A1D64726200032741 /* SubjectCaseListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CEE8891D64726200032741 /* SubjectCaseListViewController.swift */; };
+		F0CEE88C1D64726D00032741 /* SubjectDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CEE88B1D64726D00032741 /* SubjectDetailViewController.swift */; };
+		F0CEE88E1D6472E700032741 /* SupplierContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CEE88D1D6472E700032741 /* SupplierContainerViewController.swift */; };
+		F0CEE8901D64730400032741 /* BaoContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CEE88F1D64730400032741 /* BaoContainerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		253FC759549ACCC57E19C8C3 /* Pods-SwiftProjDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftProjDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftProjDemo/Pods-SwiftProjDemo.release.xcconfig"; sourceTree = "<group>"; };
+		F04F46D31D65559B00150911 /* Supplier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Supplier.swift; sourceTree = "<group>"; };
+		F04F46D51D6555AA00150911 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		F04F46D71D6555BC00150911 /* Hotel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Hotel.swift; sourceTree = "<group>"; };
+		F04F46D91D65562000150911 /* Subject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Subject.swift; sourceTree = "<group>"; };
+		F04F46DB1D65611300150911 /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		F0CEE8431D6445F300032741 /* SwiftProjDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftProjDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0CEE8461D6445F300032741 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F0CEE8481D6445F300032741 /* DiscoverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverViewController.swift; sourceTree = "<group>"; };
@@ -44,6 +63,15 @@
 		F0CEE8791D645F3D00032741 /* DiscoverCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoverCell.swift; sourceTree = "<group>"; };
 		F0CEE87A1D645F3D00032741 /* DiscoverCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DiscoverCell.xib; sourceTree = "<group>"; };
 		F0CEE87D1D6469F200032741 /* AppInfoManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppInfoManager.swift; sourceTree = "<group>"; };
+		F0CEE87F1D6471A200032741 /* SupplierListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SupplierListViewController.swift; sourceTree = "<group>"; };
+		F0CEE8811D6471B300032741 /* HotelListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HotelListViewController.swift; sourceTree = "<group>"; };
+		F0CEE8831D6471C100032741 /* SupplierDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SupplierDetailViewController.swift; sourceTree = "<group>"; };
+		F0CEE8851D6471D100032741 /* PostListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostListViewController.swift; sourceTree = "<group>"; };
+		F0CEE8871D64723200032741 /* SubjectListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubjectListViewController.swift; sourceTree = "<group>"; };
+		F0CEE8891D64726200032741 /* SubjectCaseListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubjectCaseListViewController.swift; sourceTree = "<group>"; };
+		F0CEE88B1D64726D00032741 /* SubjectDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubjectDetailViewController.swift; sourceTree = "<group>"; };
+		F0CEE88D1D6472E700032741 /* SupplierContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SupplierContainerViewController.swift; sourceTree = "<group>"; };
+		F0CEE88F1D64730400032741 /* BaoContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaoContainerViewController.swift; sourceTree = "<group>"; };
 		F265CB5E60614F4244368CA3 /* Pods-SwiftProjDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftProjDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftProjDemo/Pods-SwiftProjDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		F66B0EA6FA99113DCA09D6C4 /* Pods_SwiftProjDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftProjDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -112,7 +140,12 @@
 		F0CEE85C1D64469600032741 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				F04F46DB1D65611300150911 /* Model.swift */,
 				F0CEE8581D64468700032741 /* Discover.swift */,
+				F04F46D31D65559B00150911 /* Supplier.swift */,
+				F04F46D71D6555BC00150911 /* Hotel.swift */,
+				F04F46D51D6555AA00150911 /* Post.swift */,
+				F04F46D91D65562000150911 /* Subject.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -161,6 +194,15 @@
 			children = (
 				F0CEE8721D645D2A00032741 /* Cell */,
 				F0CEE8481D6445F300032741 /* DiscoverViewController.swift */,
+				F0CEE88D1D6472E700032741 /* SupplierContainerViewController.swift */,
+				F0CEE88F1D64730400032741 /* BaoContainerViewController.swift */,
+				F0CEE87F1D6471A200032741 /* SupplierListViewController.swift */,
+				F0CEE8831D6471C100032741 /* SupplierDetailViewController.swift */,
+				F0CEE8851D6471D100032741 /* PostListViewController.swift */,
+				F0CEE8871D64723200032741 /* SubjectListViewController.swift */,
+				F0CEE8891D64726200032741 /* SubjectCaseListViewController.swift */,
+				F0CEE88B1D64726D00032741 /* SubjectDetailViewController.swift */,
+				F0CEE8811D6471B300032741 /* HotelListViewController.swift */,
 			);
 			name = Discover;
 			sourceTree = "<group>";
@@ -328,18 +370,32 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F0CEE8881D64723200032741 /* SubjectListViewController.swift in Sources */,
+				F04F46DC1D65611300150911 /* Model.swift in Sources */,
+				F04F46DA1D65562000150911 /* Subject.swift in Sources */,
 				F0CEE8491D6445F300032741 /* DiscoverViewController.swift in Sources */,
+				F0CEE8841D6471C100032741 /* SupplierDetailViewController.swift in Sources */,
 				F0CEE85F1D6446CD00032741 /* DataManager.swift in Sources */,
+				F0CEE8801D6471A200032741 /* SupplierListViewController.swift in Sources */,
 				F0CEE87B1D645F3D00032741 /* DiscoverCell.swift in Sources */,
+				F0CEE88E1D6472E700032741 /* SupplierContainerViewController.swift in Sources */,
 				F0CEE87E1D6469F200032741 /* AppInfoManager.swift in Sources */,
+				F0CEE8821D6471B300032741 /* HotelListViewController.swift in Sources */,
+				F0CEE8901D64730400032741 /* BaoContainerViewController.swift in Sources */,
 				F0CEE8631D644EA100032741 /* BaseNavigationController.swift in Sources */,
+				F0CEE8861D6471D100032741 /* PostListViewController.swift in Sources */,
+				F04F46D61D6555AA00150911 /* Post.swift in Sources */,
 				F0CEE86A1D644F7000032741 /* ChatViewController.swift in Sources */,
 				F0CEE8471D6445F300032741 /* AppDelegate.swift in Sources */,
 				F0CEE8591D64468700032741 /* Discover.swift in Sources */,
 				F0CEE8651D644EEF00032741 /* BaseViewController.swift in Sources */,
 				F0CEE85B1D64468D00032741 /* HttpManager.swift in Sources */,
+				F04F46D81D6555BC00150911 /* Hotel.swift in Sources */,
+				F0CEE88A1D64726200032741 /* SubjectCaseListViewController.swift in Sources */,
+				F0CEE88C1D64726D00032741 /* SubjectDetailViewController.swift in Sources */,
 				F0CEE8671D644F3D00032741 /* MainViewController.swift in Sources */,
 				F0CEE86B1D644F7000032741 /* PCViewController.swift in Sources */,
+				F04F46D41D65559B00150911 /* Supplier.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

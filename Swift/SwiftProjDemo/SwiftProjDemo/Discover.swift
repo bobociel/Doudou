@@ -6,9 +6,6 @@
 //  Copyright © 2016年 com.lovewith.lovewith. All rights reserved.
 //
 
-import Foundation
-import SwiftyJSON
-
 public enum DiscoverType: UInt {
     case None      = 0
     case Supplier  = 1 //商家
@@ -18,7 +15,7 @@ public enum DiscoverType: UInt {
     case Subject   = 5 //优选
 }
 
-public class DiscoverContent: NSObject {
+public class DiscoverContent: Model, ModelConvert {
     var supplier_id: String = ""
     var title: String = ""
     var content: String = ""
